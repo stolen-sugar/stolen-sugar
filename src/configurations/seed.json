@@ -113,6 +113,9 @@
           "choiceHistory": {
             "SS": ["hole"]
           },
+          "updatedBranch": {
+            "BOOL": true
+          },
           "details": {
             "M": {
               "whySwitch": {

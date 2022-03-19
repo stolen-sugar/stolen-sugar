@@ -9,6 +9,7 @@ public class SpokenFormUser {
     String choice;
     List<String> choiceHistory;
     Map<String, String> details;
+    Boolean updatedBranch;
 
     public SpokenFormUser(String spokenFormId, String userId, String choice) {
         this.spokenFormId = spokenFormId;
@@ -30,6 +31,14 @@ public class SpokenFormUser {
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public Boolean getUpdatedBranch() {
+        return updatedBranch;
+    }
+
+    public void setUpdatedBranch(Boolean updatedBranch) {
+        this.updatedBranch = updatedBranch;
     }
 
     public String getChoice() {
@@ -89,9 +98,13 @@ public class SpokenFormUser {
 
     @Override
     public String toString() {
-        return "SpokenFormUser [choice=" + choice + ", choiceHistory=" + choiceHistory + ", details=" + details
-                + ", spokenFormId=" + spokenFormId + ", userId=" + userId + "]";
+        return "SpokenFormUser{" +
+                "spokenFormId='" + spokenFormId + '\'' +
+                ", userId='" + userId + '\'' +
+                ", choice='" + choice + '\'' +
+                ", choiceHistory=" + choiceHistory +
+                ", details=" + details +
+                ", updatedBranch=" + updatedBranch +
+                '}';
     }
-    
-    
 }
