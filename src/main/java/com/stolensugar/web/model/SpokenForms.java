@@ -4,14 +4,14 @@ import java.util.List;
 import java.util.Objects;
 
 public class SpokenForms {
-    String id;
-    String repoId;
-    String command;
-    String fileName;
-    String configuration;
-    String appName;
-    String defaultName;
-    List<String> alternatives;
+    private String id;
+    private String repoId;
+    private String command;
+    private String fileName;
+    private String configuration;
+    private String appName;
+    private String defaultName;
+    private List<String> alternatives;
 
     public SpokenForms(String id, String repoId, String command, String fileName, String configuration, String appName, String defaultName, List<String> alternatives) {
         this.id = id;

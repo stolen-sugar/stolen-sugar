@@ -3,10 +3,10 @@ package com.stolensugar.web.model;
 import java.util.Objects;
 
 public class Repo {
-    String name;
-    String appName;
-    String url;
-    String id;
+    private String name;
+    private String appName;
+    private String url;
+    private String id;
     
     public Repo(String name, String url, String appName, String id) {
         this.name = name;

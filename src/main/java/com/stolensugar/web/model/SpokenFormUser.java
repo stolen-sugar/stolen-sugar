@@ -4,12 +4,12 @@ import java.util.List;
 import java.util.Map;
 
 public class SpokenFormUser {
-    String spokenFormId;
-    String userId;
-    String choice;
-    List<String> choiceHistory;
-    Map<String, String> details;
-    Boolean updatedBranch;
+    private String spokenFormId;
+    private String userId;
+    private String choice;
+    private List<String> choiceHistory;
+    private Map<String, String> details;
+    private Boolean updatedBranch;
 
     public SpokenFormUser(String spokenFormId, String userId, String choice) {
         this.spokenFormId = spokenFormId;

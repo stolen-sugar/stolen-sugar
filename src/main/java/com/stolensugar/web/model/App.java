@@ -1,8 +1,8 @@
 package com.stolensugar.web.model;
 
 public class App {
-    String name;
-    String url;
+    private String name;
+    private String url;
 
     public String getUrl() {
         return url;
