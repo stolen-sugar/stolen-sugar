@@ -3,7 +3,7 @@ package com.stolensugar.web.model;
 import java.util.List;
 import java.util.Objects;
 
-public class SpokenForms {
+public class SpokenForm {
     private String id;
     private String repoId;
     private String command;
@@ -13,7 +13,7 @@ public class SpokenForms {
     private String defaultName;
     private List<String> alternatives;
 
-    public SpokenForms(String id, String repoId, String command, String fileName, String configuration, String appName, String defaultName, List<String> alternatives) {
+    public SpokenForm(String id, String repoId, String command, String fileName, String configuration, String appName, String defaultName, List<String> alternatives) {
         this.id = id;
         this.repoId = repoId;
         this.command = command;
@@ -106,7 +106,7 @@ public class SpokenForms {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        SpokenForms that = (SpokenForms) o;
+        SpokenForm that = (SpokenForm) o;
         return getId().equals(that.getId()) && getRepoId().equals(that.getRepoId()) && getCommand().equals(that.getCommand()) && getFileName().equals(that.getFileName()) && getConfiguration().equals(that.getConfiguration()) && getAppName().equals(that.getAppName()) && getDefaultName().equals(that.getDefaultName()) && getAlternatives().equals(that.getAlternatives());
     }
 
