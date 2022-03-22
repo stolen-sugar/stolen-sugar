@@ -3,6 +3,7 @@ package com.stolensugar.web.dagger;
 import javax.inject.Singleton;
 
 import com.stolensugar.web.activity.GetUserActivity;
+import com.stolensugar.web.activity.CreateSpokenFormUserActivity;
 
 import dagger.Component;
 
@@ -12,5 +13,5 @@ import dagger.Component;
 })
 public interface ApplicationComponent {
     GetUserActivity provideGetUserActivity();
-
+    CreateSpokenFormUserActivity provideCreateSpokenFormUserActivity();
 }

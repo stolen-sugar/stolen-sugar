@@ -1,38 +1,55 @@
-package com.stolensugar.web.model;
+package com.stolensugar.web.dynamodb.models;
+
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBRangeKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
 import java.util.List;
 import java.util.Map;
+import javax.validation.constraints.NotBlank;
 
-public class SpokenFormUser {
+@DynamoDBTable(tableName = "spokenFormUsers")
+public class SpokenFormUserModel {
+
+    @NotBlank
     private String spokenFormId;
+
+    @NotBlank
     private String userId;
+
+    @NotBlank
     private String choice;
+
     private List<String> choiceHistory;
     private Map<String, String> details;
     private Boolean updatedBranch;
 
-    public SpokenFormUser(String spokenFormId, String userId, String choice) {
+    public SpokenFormUserModel(String spokenFormId, String userId, String choice) {
         this.spokenFormId = spokenFormId;
         this.userId = userId;
         this.choice = choice;
     }
 
-    public String getSpokenFormId() {
-        return spokenFormId;
+    @DynamoDBHashKey(attributeName = "userId")
+    public String getUserId() {
+        return userId;
     }
 
     public void setSpokenFormId(String spokenFormId) {
         this.spokenFormId = spokenFormId;
     }
 
-    public String getUserId() {
-        return userId;
+    @DynamoDBRangeKey(attributeName = "spokenFormId")
+    public String getSpokenFormId() {
+        return spokenFormId;
     }
 
     public void setUserId(String userId) {
         this.userId = userId;
     }
 
+    @DynamoDBAttribute(attributeName = "imageavatarUrl")
     public Boolean getUpdatedBranch() {
         return updatedBranch;
     }
@@ -41,6 +58,7 @@ public class SpokenFormUser {
         this.updatedBranch = updatedBranch;
     }
 
+    @DynamoDBAttribute(attributeName = "choice")
     public String getChoice() {
         return choice;
     }
@@ -49,6 +67,7 @@ public class SpokenFormUser {
         this.choice = choice;
     }
 
+    @DynamoDBAttribute(attributeName = "choiceHistory")
     public List<String> getChoiceHistory() {
         return choiceHistory;
     }
@@ -57,6 +76,7 @@ public class SpokenFormUser {
         this.choiceHistory = choiceHistory;
     }
 
+    @DynamoDBAttribute(attributeName = "details")
     public Map<String, String> getDetails() {
         return details;
     }
@@ -82,7 +102,7 @@ public class SpokenFormUser {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        SpokenFormUser other = (SpokenFormUser) obj;
+        SpokenFormUserModel other = (SpokenFormUserModel) obj;
         if (spokenFormId == null) {
             if (other.spokenFormId != null)
                 return false;
@@ -98,7 +118,7 @@ public class SpokenFormUser {
 
     @Override
     public String toString() {
-        return "SpokenFormUser{" +
+        return "SpokenFormUserModel{" +
                 "spokenFormId='" + spokenFormId + '\'' +
                 ", userId='" + userId + '\'' +
                 ", choice='" + choice + '\'' +
@@ -107,61 +127,4 @@ public class SpokenFormUser {
                 ", updatedBranch=" + updatedBranch +
                 '}';
     }
-
-    public static Builder builder() {return new Builder();}
-
-    public SpokenFormUser(Builder builder) {
-        this.spokenFormId = builder.spokenFormId;
-        this.userId = builder.userId;
-        this.choice = builder.choice;
-        this.choiceHistory = builder.choiceHistory;
-        this.details = builder.details;
-        this.updatedBranch = builder.updatedBranch;
-    }
-
-    public static final class Builder {
-        private String spokenFormId;
-        private String userId;
-        private String choice;
-        private List<String> choiceHistory;
-        private Map<String, String> details;
-        private Boolean updatedBranch;
-
-        private Builder() { 
-
-        }
-
-        public Builder withSpokenFormId(String spokenFormId) {
-            this.spokenFormId = spokenFormId;
-            return this;
-        }
-
-        public Builder withChoice(String choice) { 
-            this.choice = choice;
-            return this;
-        }
-
-        public Builder withChoiceHistory(List<String> choiceHistory) {
-            this.choiceHistory = choiceHistory;
-            return this;
-        }
-
-        public Builder withDetails(Map<String, String> details) {
-            this.details = details;
-            return this;
-        }
-
-        public Builder withUpdatedBranch(Boolean updatedBranch) {
-            this.updatedBranch = updatedBranch;
-            return this;
-        }
-
-        public Builder withUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-
-        public SpokenFormUser build() {return new SpokenFormUser(this);}
-    }
-
 }
