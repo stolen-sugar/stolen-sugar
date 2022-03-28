@@ -55,6 +55,19 @@ dependencies {
 	implementation 'com.google.guava:guava:30.1.1-jre'
 
 	testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.10.0'
+
+    // For seedCommands
+    implementation('com.squareup.retrofit2:retrofit:2.9.0')
+    implementation('com.squareup.okhttp3:okhttp:4.9.3')
+    implementation('com.squareup.retrofit2:converter-jackson:2.9.0')
+    implementation('com.squareup.moshi:moshi:1.13.0')
+    implementation('com.googlecode.json-simple:json-simple:1.1.1')
+
+	compileOnly 'org.projectlombok:lombok:1.18.22'
+	annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+	testCompileOnly 'org.projectlombok:lombok:1.18.22'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
 }
 
 tasks.named('test') {

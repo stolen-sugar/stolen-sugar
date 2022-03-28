@@ -26,7 +26,7 @@ public class Controller {
     @GetMapping(value = "/users/{id}", produces = {"application/json"})
     public ResponseEntity<?> getUser(@PathVariable String id) {
         GetUserActivity userActivity = component.provideGetUserActivity();
-        GetUserRequest getUserRequest = GetUserRequest.builder().withUserId(id).build();
+        GetUserRequest getUserRequest = GetUserRequest.builder().userId(id).build();
         return new ResponseEntity<>(userActivity.execute(getUserRequest), HttpStatus.OK);
     }
 

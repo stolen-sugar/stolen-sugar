@@ -8,10 +8,10 @@ import com.stolensugar.web.dynamodb.models.UserModel;
 public class ModelConverter {
     public static User toUser(UserModel user) {
         return User.builder()
-                .withId(user.getId())
-                .withName(user.getName())
-                .withImageAvatarUrl(user.getImageavatarUrl())
-                .withReposUrl(user.getReposUrl())
+                .id(user.getId())
+                .name(user.getName())
+                .imageavatarUrl(user.getImageavatarUrl())
+                .reposUrl(user.getReposUrl())
                 .build();
     }   
     
