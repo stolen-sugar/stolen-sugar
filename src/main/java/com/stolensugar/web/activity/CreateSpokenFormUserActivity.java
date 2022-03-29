@@ -29,11 +29,9 @@ public class CreateSpokenFormUserActivity {
      * @return CreateSpokenFormUserResponse Response object containing the requested spokenFormUser.
      */
     public CreateSpokenFormUserResponse execute(final CreateSpokenFormUserRequest request) {
-        SpokenFormUserModel spokenFormUserModel = spokenFormUserDao.createSpokenFormUser(
-            request.getSpokenFormId(), request.getUserId(), request.getChoice()
-        );
+        SpokenFormUserModel spokenFormUserModel = spokenFormUserDao.createSpokenFormUser(request);
         return CreateSpokenFormUserResponse.builder()
-            .withSpokenFormUser(ModelConverter.toSpokenFormUser(spokenFormUserModel))
+            .spokenFormUser(ModelConverter.toSpokenFormUser(spokenFormUserModel))
             .build();
     }
 }

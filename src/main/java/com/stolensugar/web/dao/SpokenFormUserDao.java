@@ -1,10 +1,12 @@
 package com.stolensugar.web.dao;
 import javax.inject.Inject;
+import java.util.UUID;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.kms.model.AlreadyExistsException;
 import com.amazonaws.services.kms.model.NotFoundException;
 import com.stolensugar.web.dynamodb.models.SpokenFormUserModel;
+import com.stolensugar.web.model.requests.CreateSpokenFormUserRequest;
 
 public class SpokenFormUserDao {
     private final DynamoDBMapper dynamoDbMapper;
@@ -54,10 +56,8 @@ public class SpokenFormUserDao {
      * @param spokenFormUserModel model associated with the spokenFormUser.
      * @return The newly created spokenFormUser.
      */
-    public SpokenFormUserModel saveSpokenFormUser(SpokenFormUserModel spokenFormUserModel) {
+    public void saveSpokenFormUser(SpokenFormUserModel spokenFormUserModel) {
         dynamoDbMapper.save(spokenFormUserModel);
-
-        return spokenFormUserModel;
     }    
 
     /**
@@ -67,8 +67,12 @@ public class SpokenFormUserDao {
      * @param spokenFormId spoken form Id associated with the spokenFormUser
      * @return The newly created spokenFormUser.
      */
-    public SpokenFormUserModel createSpokenFormUser(String userId, String spokenFormId, String choice) {
-        SpokenFormUserModel newSpokenFormUser = new SpokenFormUserModel(userId, spokenFormId, choice);
-        return saveSpokenFormUser(newSpokenFormUser);
+    public SpokenFormUserModel createSpokenFormUser(CreateSpokenFormUserRequest request) {
+        String uuid = UUID.randomUUID().toString();
+        SpokenFormUserModel newSpokenFormUser =
+                SpokenFormUserModel.builder().id(uuid).userId(request.getUserId()).spokenFormId(request.getSpokenFormId()).choice(request.getChoice()).build();
+        saveSpokenFormUser(newSpokenFormUser);
+
+        return newSpokenFormUser;
     }
 }

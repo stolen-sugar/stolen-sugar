@@ -34,7 +34,8 @@ public class Controller {
             produces = {"application/json"})
     public ResponseEntity<?> createSpokenFormUser(@Valid @RequestBody SpokenFormUserModel spokenFormUser) {
         CreateSpokenFormUserActivity spokenFormUserActivity = component.provideCreateSpokenFormUserActivity();
-        CreateSpokenFormUserRequest spokenFormUserRequest = CreateSpokenFormUserRequest.builder().withUserId(spokenFormUser.getUserId()).withSpokenFormId(spokenFormUser.getSpokenFormId() ).withChoice(spokenFormUser.getChoice()).build();
+        CreateSpokenFormUserRequest spokenFormUserRequest =
+                CreateSpokenFormUserRequest.builder().userId(spokenFormUser.getUserId()).spokenFormId(spokenFormUser.getSpokenFormId() ).choice(spokenFormUser.getChoice()).build();
         return new ResponseEntity<>(spokenFormUserActivity.execute(spokenFormUserRequest), HttpStatus.OK);
     }
 }
