@@ -32,6 +32,12 @@
           "id": {
             "S": "1"
           },
+          "primary": {
+            "BOOL": true
+          },
+          "userId":{
+            "S": "1"
+          },
           "name": {
             "S": "Talon main repo"
           },
@@ -40,6 +46,32 @@
           },
           "url": {
             "S": "https://github.com/knausj85/knausj_talon"
+          }
+        }
+      }
+    }
+  ],
+  "branches": [
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "1"
+          },
+          "name": {
+            "S": "master"
+          },
+          "repId": {
+            "S": "1"
+          },
+          "primary": {
+            "BOOL": true
+          },
+          "url": {
+            "S": "https://github.com/knausj85/knausj_talon/tree/master"
+          },
+          "lastUpdate": {
+            "S": "2022-03-28T12:36:31.107582506Z"
           }
         }
       }
@@ -59,10 +91,7 @@
             "S": "Talon"
           },
           "alternatives": {
-            "SS": ["period"]
-          },
-          "repoId": {
-            "S": "1"
+            "SS": ["period", "drip"]
           },
           "command": {
             "S": "."
@@ -70,7 +99,7 @@
           "fileName": {
             "S": "/blob/master/code/keys.py"
           },
-          "configuration": {
+          "context": {
             "S": "symbol_key_words"
           }
         }
@@ -101,11 +130,17 @@
     {
       "PutRequest": {
         "Item": {
+          "id": {
+            "S": "1"
+          },
           "spokenFormId": {
             "S": "1"
           },
           "userId": {
             "S": "1"
+          },
+          "branchId":{
+             "S": "1" 
           },
           "choice": {
             "S": "period"
@@ -113,8 +148,8 @@
           "choiceHistory": {
             "SS": ["hole"]
           },
-          "updatedBranch": {
-            "BOOL": true
+          "pullRequestAvailable": {
+            "BOOL": false
           },
           "details": {
             "M": {

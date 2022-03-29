@@ -32,6 +32,17 @@ Resources:
           KeyType: "HASH"
       BillingMode: "PAY_PER_REQUEST"
       TableName: "repos"
+  BranchesTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: "id"
+          AttributeType: "S"
+      KeySchema:
+        - AttributeName: "id"
+          KeyType: "HASH"
+      BillingMode: "PAY_PER_REQUEST"
+      TableName: "branches"
   SpokenFormsTable:
     Type: AWS::DynamoDB::Table
     Properties:
@@ -47,14 +58,10 @@ Resources:
     Type: AWS::DynamoDB::Table
     Properties:
       AttributeDefinitions:
-        - AttributeName: "userId"
-          AttributeType: "S"
-        - AttributeName: "spokenFormId"
+        - AttributeName: "id"
           AttributeType: "S"
       KeySchema:
-        - AttributeName: "userId"
+        - AttributeName: "id"
           KeyType: "HASH"
-        - AttributeName: "spokenFormId"
-          KeyType: "RANGE"
       BillingMode: "PAY_PER_REQUEST"
       TableName: "spokenFormUsers"
