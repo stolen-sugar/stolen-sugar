@@ -9,5 +9,4 @@ public class User {
     @Getter @Setter private String name;
     @Getter @Setter private String imageavatarUrl;
     @Getter @Setter private String reposUrl;
-
 }

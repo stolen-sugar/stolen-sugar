@@ -17,14 +17,9 @@ public class ModelConverter {
     
     public static SpokenFormUser toSpokenFormUser(SpokenFormUserModel spokenFormUser ) {
         return SpokenFormUser.builder()
-                .id(spokenFormUser.getId())
                 .userId(spokenFormUser.getUserId())
-                .spokenFormId(spokenFormUser.getSpokenFormId())
-                .choice(spokenFormUser.getChoice())
-                .choiceHistory(spokenFormUser.getChoiceHistory())
-                .details(spokenFormUser.getDetails())
-                .branchId(spokenFormUser.getBranchId())
-                .pullRequestAvailable(spokenFormUser.getPullRequestAvailable())
+                .spokenFormFullName(spokenFormUser.getSpokenFormFullName())
+                .choices(spokenFormUser.getChoices())
                 .build();
     }
 }

@@ -40,14 +40,10 @@ public class CreateSpokenFormUserActivity {
         int size = request.getSpokenFormUsers().size();
 
         for(int i = 0; i < size; i++) {
-            String uuid = UUID.randomUUID().toString();
             SpokenFormUserModel spokenFormUserModel = SpokenFormUserModel.builder()
-                .id(uuid)
                 .userId(request.getSpokenFormUsers().get(i).getUserId())
-                .spokenFormId(request.getSpokenFormUsers().get(i).getSpokenFormId())
-                .choice(request.getSpokenFormUsers().get(i).getChoice())
-                .pullRequestAvailable(true)
-                .branchId(request.getSpokenFormUsers().get(i).getBranchId())
+                .spokenFormFullName(request.getSpokenFormUsers().get(i).getSpokenFormFullName())
+                .choices(request.getSpokenFormUsers().get(i).getChoices())
                 .build();
             newSpokenFormUserModels.add(spokenFormUserModel);
             newSpokenFormUsers.add(ModelConverter.toSpokenFormUser(spokenFormUserModel));
