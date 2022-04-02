@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
+import java.util.List;
+
 @RestController
 public class Controller {
 
@@ -32,10 +34,12 @@ public class Controller {
 
     @PostMapping(value = "/spokenformuser", consumes = {"application/json"},
             produces = {"application/json"})
-    public ResponseEntity<?> createSpokenFormUser(@Valid @RequestBody SpokenFormUserModel spokenFormUser) {
+    public ResponseEntity<?> createSpokenFormUser(@Valid @RequestBody List<SpokenFormUserModel> spokenFormUsers) {
         CreateSpokenFormUserActivity spokenFormUserActivity = component.provideCreateSpokenFormUserActivity();
+
         CreateSpokenFormUserRequest spokenFormUserRequest =
-                CreateSpokenFormUserRequest.builder().userId(spokenFormUser.getUserId()).spokenFormId(spokenFormUser.getSpokenFormId() ).choice(spokenFormUser.getChoice()).build();
+                CreateSpokenFormUserRequest.builder().spokenFormUsers(spokenFormUsers).build();
+
         return new ResponseEntity<>(spokenFormUserActivity.execute(spokenFormUserRequest), HttpStatus.OK);
     }
 }

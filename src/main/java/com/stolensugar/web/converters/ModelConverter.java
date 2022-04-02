@@ -23,7 +23,8 @@ public class ModelConverter {
                 .choice(spokenFormUser.getChoice())
                 .choiceHistory(spokenFormUser.getChoiceHistory())
                 .details(spokenFormUser.getDetails())
+                .branchId(spokenFormUser.getBranchId())
                 .pullRequestAvailable(spokenFormUser.getPullRequestAvailable())
                 .build();
-    }   
+    }
 }
