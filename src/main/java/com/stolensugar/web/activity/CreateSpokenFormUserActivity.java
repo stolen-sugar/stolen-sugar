@@ -11,7 +11,6 @@ import com.stolensugar.web.model.response.CreateSpokenFormUserResponse;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class CreateSpokenFormUserActivity {
     private SpokenFormUserDao spokenFormUserDao;

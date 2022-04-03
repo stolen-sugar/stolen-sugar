@@ -13,7 +13,7 @@ public class SpokenFormUserDao {
     private final DynamoDBMapper dynamoDbMapper;
 
     /**
-     * Instantiates a new SpokenForUser object.
+     * Instantiates a new SpokenFormUser object.
      *
      * @param dynamoDbMapper The {@link DynamoDBMapper} used to interact with the spokenFormUser table.
      */
@@ -23,14 +23,14 @@ public class SpokenFormUserDao {
     }
 
     /**
-     * Returns the SpokenForUser corresponding to the specified user id and the spokenForm id.
+     * Returns the SpokenFormUser corresponding to the specified user id and the spokenForm id.
      * Throws a NotFoundException if the SpokenForUser is not found.
      * @param userId user Id associated with the spokenFormUser.
      * @param spokenFormId spoken form Id associated with the spokenFormUser
      * @return The corresponding spokenFormUser.
      */
     public SpokenFormUserModel getSpokenFormUser(String userId, String spokenFormId) {
-        SpokenFormUserModel spokenFormUser = loadSpokenFormUser(userId, userId);
+        SpokenFormUserModel spokenFormUser = loadSpokenFormUser(userId, spokenFormId);
 
         if (spokenFormUser == null) {
             throw new NotFoundException("SpokenFormUserModel with user id "  + userId + 
