@@ -6,8 +6,10 @@ import lombok.*;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @ToString
 @Builder
+@NoArgsConstructor(force = true, access = AccessLevel.PRIVATE)
+@AllArgsConstructor
 public class SpokenForm {
-    @Getter @Setter @EqualsAndHashCode.Include private String id;
+    @Getter @Setter @EqualsAndHashCode.Include private String fullName;
     @Getter @Setter private String command;
     @Getter @Setter private String fileName;
     @Getter @Setter private String context;

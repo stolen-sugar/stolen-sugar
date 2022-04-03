@@ -1,6 +1,8 @@
 package com.stolensugar.web.converters;
 
+import com.stolensugar.web.dynamodb.models.SpokenFormModel;
 import com.stolensugar.web.dynamodb.models.SpokenFormUserModel;
+import com.stolensugar.web.model.SpokenForm;
 import com.stolensugar.web.model.SpokenFormUser;
 import com.stolensugar.web.model.User;
 import com.stolensugar.web.dynamodb.models.UserModel;
@@ -20,6 +22,17 @@ public class ModelConverter {
                 .userId(spokenFormUser.getUserId())
                 .spokenFormFullName(spokenFormUser.getSpokenFormFullName())
                 .choices(spokenFormUser.getChoices())
+                .build();
+    }
+
+    public static SpokenForm toSpokenForm(SpokenFormModel spokenForm ) {
+        return SpokenForm.builder()
+                .fullName(spokenForm.getFullName())
+                .command(spokenForm.getCommand())
+                .defaultName(spokenForm.getDefaultName())
+                .appName(spokenForm.getAppName())
+                .context(spokenForm.getContext())
+                .fileName(spokenForm.getFileName())
                 .build();
     }
 }

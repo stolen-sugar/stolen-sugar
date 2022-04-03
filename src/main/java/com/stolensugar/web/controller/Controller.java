@@ -1,8 +1,12 @@
 package com.stolensugar.web.controller;
 import com.stolensugar.web.AppApplication;
+import com.stolensugar.web.activity.CreateSpokenFormActivity;
 import com.stolensugar.web.activity.CreateSpokenFormUserActivity;
 import com.stolensugar.web.activity.GetUserActivity;
+import com.stolensugar.web.dynamodb.models.SpokenFormModel;
 import com.stolensugar.web.dynamodb.models.SpokenFormUserModel;
+import com.stolensugar.web.model.SpokenForm;
+import com.stolensugar.web.model.requests.CreateSpokenFormRequest;
 import com.stolensugar.web.model.requests.CreateSpokenFormUserRequest;
 import com.stolensugar.web.model.requests.GetUserRequest;
 import com.stolensugar.web.dagger.ApplicationComponent;
@@ -41,5 +45,16 @@ public class Controller {
                 CreateSpokenFormUserRequest.builder().spokenFormUsers(spokenFormUsers).build();
 
         return new ResponseEntity<>(spokenFormUserActivity.execute(spokenFormUserRequest), HttpStatus.OK);
+    }
+
+    @PostMapping(value = "/spokenform", consumes = {"application/json"},
+            produces = {"application/json"})
+    public ResponseEntity<?> createSpokenForm(@Valid @RequestBody List<SpokenFormModel> spokenForms) {
+        CreateSpokenFormActivity spokenFormActivity = component.provideCreateSpokenFormActivity();
+
+        CreateSpokenFormRequest spokenFormRequest =
+                CreateSpokenFormRequest.builder().spokenForms(spokenForms).build();
+
+        return new ResponseEntity<>(spokenFormActivity.execute(spokenFormRequest), HttpStatus.OK);
     }
 }
