@@ -13,7 +13,10 @@ public class ModelConverter {
                 .id(user.getId())
                 .name(user.getName())
                 .imageavatarUrl(user.getImageavatarUrl())
-                .reposUrl(user.getReposUrl())
+                .talonUrl(user.getTalonUrl())
+                .cursorlessUrl(user.getCursorlessUrl())
+                .cursorlessLastPush(user.getCursorlessLastPush())
+                .talonLastPush(user.getTalonLastPush())
                 .build();
     }   
     

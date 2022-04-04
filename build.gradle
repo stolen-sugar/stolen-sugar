@@ -61,6 +61,9 @@ dependencies {
 
 	testCompileOnly 'org.projectlombok:lombok:1.18.22'
 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+	// For API client
+	implementation('com.squareup.okhttp3:okhttp:4.9.3')
 }
 
 tasks.named('test') {

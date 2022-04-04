@@ -5,6 +5,8 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.kms.model.NotFoundException;
 import com.stolensugar.web.dynamodb.models.UserModel;
 
+import java.util.List;
+
 
 public class UserDao {
     private final DynamoDBMapper dynamoDbMapper;
@@ -35,4 +37,11 @@ public class UserDao {
         return user;
     }
 
+    /**
+     * Creates new Users in database.
+     * @param userModels list of models associated with the spokenFormUsers.
+     */
+    public void saveUser(List<UserModel> userModels) {
+        dynamoDbMapper.batchSave(userModels);
+    }
 }

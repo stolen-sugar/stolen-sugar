@@ -8,9 +8,13 @@ import lombok.*;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @ToString
 @DynamoDBTable(tableName = "users")
+@Builder
 public class UserModel {
     @Setter @Getter(onMethod_={@DynamoDBHashKey}) @EqualsAndHashCode.Include private String id;
     @Setter @Getter(onMethod_={@DynamoDBAttribute}) private String name;
     @Setter @Getter(onMethod_={@DynamoDBAttribute}) private String imageavatarUrl;
-    @Setter @Getter(onMethod_={@DynamoDBAttribute}) private String reposUrl;
+    @Getter @Setter(onMethod_={@DynamoDBAttribute}) private String talonUrl;
+    @Getter @Setter(onMethod_={@DynamoDBAttribute}) private String cursorlessUrl;
+    @Getter @Setter(onMethod_={@DynamoDBAttribute}) private String talonLastPush;
+    @Getter @Setter(onMethod_={@DynamoDBAttribute}) private String cursorlessLastPush;
 }
