@@ -42,7 +42,11 @@ public class CreateSpokenFormUserActivity {
             SpokenFormUserModel spokenFormUserModel = SpokenFormUserModel.builder()
                 .userId(request.getSpokenFormUsers().get(i).getUserId())
                 .spokenFormFullName(request.getSpokenFormUsers().get(i).getSpokenFormFullName())
-                .choices(request.getSpokenFormUsers().get(i).getChoices())
+                .lastUpdated(request.getSpokenFormUsers().get(i).getLastUpdated())
+                .app(request.getSpokenFormUsers().get(i).getApp())
+                .repo(request.getSpokenFormUsers().get(i).getRepo())
+                .branch(request.getSpokenFormUsers().get(i).getBranch())
+                .choice(request.getSpokenFormUsers().get(i).getChoice())
                 .build();
             newSpokenFormUserModels.add(spokenFormUserModel);
             newSpokenFormUsers.add(ModelConverter.toSpokenFormUser(spokenFormUserModel));

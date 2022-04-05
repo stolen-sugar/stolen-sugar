@@ -24,7 +24,11 @@ public class ModelConverter {
         return SpokenFormUser.builder()
                 .userId(spokenFormUser.getUserId())
                 .spokenFormFullName(spokenFormUser.getSpokenFormFullName())
-                .choices(spokenFormUser.getChoices())
+                .lastUpdated(spokenFormUser.getLastUpdated())
+                .app(spokenFormUser.getApp())
+                .repo(spokenFormUser.getRepo())
+                .branch(spokenFormUser.getBranch())
+                .choice(spokenFormUser.getChoice())
                 .build();
     }
 

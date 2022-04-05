@@ -15,6 +15,9 @@ import java.util.Map;
 public class SpokenFormUserModel {
     @Getter(onMethod_={@DynamoDBHashKey}) @Setter @EqualsAndHashCode.Include  private String userId;
     @Getter(onMethod_={@DynamoDBRangeKey}) @Setter @EqualsAndHashCode.Include private String spokenFormFullName;
-    @Getter(onMethod_={@DynamoDBAttribute}) @Setter private Map<String,
-            Map<String, String>> choices;
+    @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String app;
+    @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String repo;
+    @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String branch;
+    @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String choice;
+    @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String lastUpdated;
 }
