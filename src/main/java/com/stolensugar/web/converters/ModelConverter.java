@@ -29,6 +29,8 @@ public class ModelConverter {
                 .repo(spokenFormUser.getRepo())
                 .branch(spokenFormUser.getBranch())
                 .choice(spokenFormUser.getChoice())
+                .context(spokenFormUser.getContext())
+                .file(spokenFormUser.getFile())
                 .build();
     }
 

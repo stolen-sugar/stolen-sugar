@@ -47,6 +47,8 @@ public class CreateSpokenFormUserActivity {
                 .repo(request.getSpokenFormUsers().get(i).getRepo())
                 .branch(request.getSpokenFormUsers().get(i).getBranch())
                 .choice(request.getSpokenFormUsers().get(i).getChoice())
+                .file(request.getSpokenFormUsers().get(i).getFile())
+                .context(request.getSpokenFormUsers().get(i).getContext())
                 .build();
             newSpokenFormUserModels.add(spokenFormUserModel);
             newSpokenFormUsers.add(ModelConverter.toSpokenFormUser(spokenFormUserModel));

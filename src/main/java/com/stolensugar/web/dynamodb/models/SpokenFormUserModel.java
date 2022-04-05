@@ -20,4 +20,6 @@ public class SpokenFormUserModel {
     @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String branch;
     @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String choice;
     @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String lastUpdated;
+    @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String file;
+    @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String context;
 }

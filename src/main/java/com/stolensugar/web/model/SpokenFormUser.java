@@ -15,5 +15,7 @@ public class SpokenFormUser {
     @Getter @Setter private String app;
     @Getter @Setter private String repo;
     @Getter @Setter private String branch;
+    @Getter @Setter private String context;
+    @Getter @Setter private String file;
     @Getter @Setter private String choice;
 }
