@@ -9,9 +9,8 @@ import lombok.*;
 @NoArgsConstructor(force = true, access = AccessLevel.PRIVATE)
 @AllArgsConstructor
 public class SpokenForm {
-    @Getter @Setter @EqualsAndHashCode.Include private String fullName;
-    @Getter @Setter private String command;
-    @Getter @Setter private String fileName;
+    @Getter @Setter @EqualsAndHashCode.Include private String fileName;
+    @Getter @Setter @EqualsAndHashCode.Include private String action;
     @Getter @Setter private String context;
     @Getter @Setter private String appName;
     @Getter @Setter private String defaultName;

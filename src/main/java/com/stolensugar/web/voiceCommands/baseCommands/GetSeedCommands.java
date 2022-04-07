@@ -1,4 +1,4 @@
-package com.stolensugar.web.voiceCommands;
+package com.stolensugar.web.voiceCommands.baseCommands;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,6 +9,7 @@ import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.stolensugar.web.model.SpokenForm;
+
 import java.util.List;
 
 public class GetSeedCommands {
@@ -43,34 +44,37 @@ public class GetSeedCommands {
             List<SpokenForm> spokenForms = new ArrayList<>();
 
 
-            List<SpokenFormCommand> spokenFormRoughList =
-                    Arrays.asList(mapper.readValue(Paths.get("src/main/java" +
+            BaseCommandsMapper baseCommandsMapper =
+                    mapper.readValue(Paths.get("src/main/java" +
                                     "/com/stolensugar" +
                                     "/web/voiceCommands/tempFiles" +
-                                    "/talon_commands.json").toFile(),
-                            SpokenFormCommand[].class));
+                                    "/base_commands.json").toFile(),
+                            BaseCommandsMapper.class);
 
-            for (int i=0;i<spokenFormRoughList.size();i++ ) {
-                SpokenFormCommand spokenFormCommand = spokenFormRoughList.get(i);
-                String fileName = spokenFormCommand.getFile();
-                String context = spokenFormCommand.getContext();
-
-                Iterator<Map.Entry<String, String>> itr =
-                        spokenFormCommand.getCommands().entrySet().iterator();
+            List<Map<String, Object>> commandGroups =
+                    baseCommandsMapper.getCommand_groups();
+            String branch = baseCommandsMapper.getBranch();
+            String repo = baseCommandsMapper.getRepo_id();
+            String timestamp = baseCommandsMapper.getTimestamp();
+            String userId = baseCommandsMapper.getUser_id();
+            for (int i=0;i<commandGroups.size();i++ ) {
+                String context = (String) commandGroups.get(i).get("context");
+                String file = (String) commandGroups.get(i).get("file");
+                Map<String, String> actionList =
+                        (Map<String, String>) commandGroups.get(i).get(
+                                "commands");
+                Iterator<Map.Entry<String, String>> itr = actionList.entrySet().iterator();
 
                 while(itr.hasNext()) {
                     Map.Entry<String, String> entry = itr.next();
                     String defaultName = entry.getKey();
-                    String command = entry.getValue();
-                    String fullName =
-                            appName + "::s::" + context + "::s::" + entry.getKey();
+                    String action = entry.getValue();
 
                     SpokenForm spokenForm = SpokenForm.builder()
-                                    .fileName(fileName)
+                                    .fileName(file)
                                     .context(context)
                                     .defaultName(defaultName)
-                                    .command(command)
-                                    .fullName(fullName)
+                                    .action(action)
                                     .appName(appName)
                                     .build();
                     spokenForms.add(spokenForm);

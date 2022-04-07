@@ -13,8 +13,8 @@ import java.util.Map;
 @ToString
 @Builder
 public class SpokenFormUserModel {
-    @Getter(onMethod_={@DynamoDBHashKey}) @Setter @EqualsAndHashCode.Include  private String userId;
-    @Getter(onMethod_={@DynamoDBRangeKey}) @Setter @EqualsAndHashCode.Include private String spokenFormFullName;
+    @Getter(onMethod_={@DynamoDBHashKey}) @Setter @EqualsAndHashCode.Include  private String action;
+    @Getter(onMethod_={@DynamoDBRangeKey}) @Setter @EqualsAndHashCode.Include private String fullName;
     @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String app;
     @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String repo;
     @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String branch;
@@ -22,4 +22,5 @@ public class SpokenFormUserModel {
     @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String lastUpdated;
     @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String file;
     @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String context;
+    @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String userId;
 }

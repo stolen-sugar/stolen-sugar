@@ -25,16 +25,16 @@ public class SpokenFormUserDao {
     /**
      * Returns the SpokenFormUser corresponding to the specified user id and the spokenForm id.
      * Throws a NotFoundException if the SpokenForUser is not found.
-     * @param userId user Id associated with the spokenFormUser.
-     * @param spokenFormId spoken form Id associated with the spokenFormUser
+     * @param action action associated with the spokenFormUser.
+     * @param fullName fullName associated with the spokenFormUser
      * @return The corresponding spokenFormUser.
      */
-    public SpokenFormUserModel getSpokenFormUser(String userId, String spokenFormId) {
-        SpokenFormUserModel spokenFormUser = loadSpokenFormUser(userId, spokenFormId);
+    public SpokenFormUserModel getSpokenFormUser(String action, String fullName) {
+        SpokenFormUserModel spokenFormUser = loadSpokenFormUser(action, fullName);
 
         if (spokenFormUser == null) {
-            throw new NotFoundException("SpokenFormUserModel with user id "  + userId + 
-            " and the spokenform id " + spokenFormId +  " not found.");
+            throw new NotFoundException("SpokenFormUserModel with action "  + action + 
+            " and the fullName " + fullName +  " not found.");
         }
 
         return spokenFormUser;
@@ -42,19 +42,19 @@ public class SpokenFormUserDao {
 
     /**
      * Loads spokenFormUser from database.
-     * @param userId user Id associated with the spokenFormUser.
-     * @param spokenFormId spoken form Id associated with the spokenFormUser
+     * @param action action associated with the spokenFormUser.
+     * @param fullName fullName associated with the spokenFormUser.
      * @return spokenFormUser from database.
      */
-    public SpokenFormUserModel loadSpokenFormUser(String userId, String spokenFormId) {
-        SpokenFormUserModel spokenFormUser = dynamoDbMapper.load(SpokenFormUserModel.class, userId, spokenFormId);
+    public SpokenFormUserModel loadSpokenFormUser(String action, String fullName) {
+        SpokenFormUserModel spokenFormUser = dynamoDbMapper.load(SpokenFormUserModel.class, action, fullName);
 
         return spokenFormUser;
     }
 
     /**
      * Creates a new spokenFormUser in database.
-     * @param List<SpokenFormUserModel> list of models associated with the spokenFormUsers.
+     * @param spokenFormUserModels list of models associated with the spokenFormUsers.
      */
     public void saveSpokenFormUser(List<SpokenFormUserModel> spokenFormUserModels) {
         dynamoDbMapper.batchSave(spokenFormUserModels);

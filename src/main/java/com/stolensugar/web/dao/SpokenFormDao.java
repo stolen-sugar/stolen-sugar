@@ -22,16 +22,17 @@ public class SpokenFormDao {
     }
 
     /**
-     * Returns the SpokenForm corresponding to the specified  fullName.
-     * Throws a NotFoundException if the SpokenFor is not found.
-     * @param fullName  FullName associated with the spokenForm.
+     * Returns the SpokenForm corresponding to the specified  fileName and action.
+     * Throws a NotFoundException if the SpokenForm is not found.
+     * @param fileName  fileName associated with the spokenForm.
+     * @param action  action associated with the spokenForm.
      * @return The corresponding spokenForm.
      */
-    public SpokenFormModel getSpokenForm( String fullName) {
-        SpokenFormModel spokenForm = loadSpokenForm(fullName);
+    public SpokenFormModel getSpokenForm(String action, String fileName) {
+        SpokenFormModel spokenForm = loadSpokenForm(action, fileName);
 
         if (spokenForm == null) {
-            throw new NotFoundException("SpokenFormModel with fullName "  + fullName +
+            throw new NotFoundException("SpokenFormModel with fullName "  + fileName +
                     " not found.");
         }
 
@@ -40,11 +41,13 @@ public class SpokenFormDao {
 
     /**
      * Loads spokenForm from database.
-     * @param fullName  fullName associated with the spokenForm.
+     * @param action  action associated with the spokenForm.
+     * @param fileName  fullName associated with the spokenForm.
      * @return spokenForm from database.
      */
-    public SpokenFormModel loadSpokenForm(String fullName) {
-        SpokenFormModel spokenForm = dynamoDbMapper.load(SpokenFormModel.class, fullName);
+    public SpokenFormModel loadSpokenForm(String action, String fileName) {
+        SpokenFormModel spokenForm =
+                dynamoDbMapper.load(SpokenFormModel.class, action, fileName);
 
         return spokenForm;
     }

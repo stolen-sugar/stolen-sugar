@@ -23,7 +23,8 @@ public class ModelConverter {
     public static SpokenFormUser toSpokenFormUser(SpokenFormUserModel spokenFormUser ) {
         return SpokenFormUser.builder()
                 .userId(spokenFormUser.getUserId())
-                .spokenFormFullName(spokenFormUser.getSpokenFormFullName())
+                .fullName(spokenFormUser.getFullName())
+                .action(spokenFormUser.getAction())
                 .lastUpdated(spokenFormUser.getLastUpdated())
                 .app(spokenFormUser.getApp())
                 .repo(spokenFormUser.getRepo())
@@ -36,12 +37,12 @@ public class ModelConverter {
 
     public static SpokenForm toSpokenForm(SpokenFormModel spokenForm ) {
         return SpokenForm.builder()
-                .fullName(spokenForm.getFullName())
-                .command(spokenForm.getCommand())
+                .fileName(spokenForm.getFileName())
+                .action(spokenForm.getAction())
                 .defaultName(spokenForm.getDefaultName())
                 .appName(spokenForm.getAppName())
                 .context(spokenForm.getContext())
-                .fileName(spokenForm.getFileName())
+                .alternatives(spokenForm.getAlternatives())
                 .build();
     }
 }

@@ -1,4 +1,4 @@
-package com.stolensugar.web.voiceCommands;
+package com.stolensugar.web.voiceCommands.baseCommands;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

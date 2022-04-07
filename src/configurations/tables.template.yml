@@ -3,25 +3,29 @@ Resources:
     Type: AWS::DynamoDB::Table
     Properties:
       AttributeDefinitions:
-        - AttributeName: "fullName"
-          AttributeType: "S"        
+        - AttributeName: "fileName"
+          AttributeType: "S"   
+        - AttributeName: "action"
+          AttributeType: "S"      
       KeySchema:
-        - AttributeName: "fullName"
+        - AttributeName: "fileName"
           KeyType: "HASH"
+        - AttributeName: "action"
+          KeyType: "RANGE"
       BillingMode: "PAY_PER_REQUEST"
       TableName: "spokenForms"
   SpokenFormUsersTable:
     Type: AWS::DynamoDB::Table
     Properties:
       AttributeDefinitions:
-        - AttributeName: "userId"
+        - AttributeName: "action"
           AttributeType: "S"
-        - AttributeName: "spokenFormFullName"
+        - AttributeName: "fullName"
           AttributeType: "S"
       KeySchema:
-        - AttributeName: "userId"
+        - AttributeName: "action"
           KeyType: "HASH"
-        - AttributeName: "spokenFormFullName"
+        - AttributeName: "fullName"
           KeyType: "RANGE"
       BillingMode: "PAY_PER_REQUEST"
       TableName: "spokenFormUsers"

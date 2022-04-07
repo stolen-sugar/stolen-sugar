@@ -1,5 +1,5 @@
-package com.stolensugar.web.voiceCommands.SpokenFormUser;
-
+package com.stolensugar.web.voiceCommands.baseCommands;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,10 +17,12 @@ import java.util.Map;
 @Builder
 @NoArgsConstructor(force = true, access = AccessLevel.PRIVATE)
 @AllArgsConstructor
-public class SpokenFormUserMapper {
+@JsonIgnoreProperties(ignoreUnknown=true)
+public class BaseCommandsMapper {
     private @Getter @Setter String repo_id;
     private @Getter @Setter String user_id;
     private @Getter @Setter String timestamp;
     private @Getter @Setter String branch;
-    private @Getter @Setter List<Map<String,Object>> command_groups;
+    private @Getter @Setter
+    List<Map<String, Object>> command_groups;
 }

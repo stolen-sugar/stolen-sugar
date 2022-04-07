@@ -10,8 +10,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.stolensugar.web.model.SpokenForm;
 import com.stolensugar.web.model.SpokenFormUser;
-import com.stolensugar.web.voiceCommands.SpokenFormCommand;
-import com.stolensugar.web.voiceCommands.SpokenFormUserMapper;
+import com.stolensugar.web.voiceCommands.baseCommands.SpokenFormCommand;
 
 import java.util.List;
 
@@ -76,12 +75,12 @@ public class SeedSpokenFormUser {
                         Map.Entry<String, String> entry = itr.next();
                         String choice = entry.getKey();
                         String command = entry.getValue();
-                        String spokenFormFullName =
-                                appName + "::s::" + file + "::s::" + context + "::s::" + command;
+                        String fullName = file + "::s::" + user_id;
 
                         SpokenFormUser spokenFormUser = SpokenFormUser.builder()
                                         .userId(user_id)
-                                        .spokenFormFullName(spokenFormFullName)
+                                        .action(command)
+                                        .fullName(fullName)
                                         .lastUpdated(lastUpdated)
                                         .app(appName)
                                         .file(file)

@@ -39,12 +39,12 @@ public class CreateSpokenFormActivity {
 
         for(int i = 0; i < size; i++) {
             SpokenFormModel spokenFormModel = SpokenFormModel.builder()
-                    .fullName(request.getSpokenForms().get(i).getFullName())
-                    .command(request.getSpokenForms().get(i).getCommand())
+                    .fileName(request.getSpokenForms().get(i).getFileName())
+                    .action(request.getSpokenForms().get(i).getAction())
                     .defaultName(request.getSpokenForms().get(i).getDefaultName())
                     .appName(request.getSpokenForms().get(i).getAppName())
                     .context(request.getSpokenForms().get(i).getContext())
-                    .fileName(request.getSpokenForms().get(i).getFileName())
+                    .alternatives(request.getSpokenForms().get(i).getAlternatives())
                     .build();
             newSpokenFormModels.add(spokenFormModel);
             newSpokenForms.add(ModelConverter.toSpokenForm(spokenFormModel));
