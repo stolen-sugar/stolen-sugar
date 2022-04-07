@@ -23,14 +23,13 @@ public class SpokenFormUserTests {
     @Test
     public void createSpokenFormUserShouldReturnCreateNewSpokenFormUser() throws Exception {
         String requestJson = "{\n" +
-                "    \"userId\": \"2\",\n" +
-                "    \"spokenFormId\": \"1\",\n" +
-                "    \"choice\": \"green\"\n" +
+                "    \"userId\": \"6\",\n" +
+                "    \"spokenFormId\": \"7\",\n" +
+                "    \"choice\": \"red\"\n" +
                 "}";
 
-        String responseJson = "{\"spokenFormUser\":{\"spokenFormId\":\"1\"," +
-                "\"userId\":\"2\",\"choice\":\"green\",\"choiceHistory\":null," +
-                "\"details\":null,\"updatedBranch\":null}}";
+        String partialResponseJson = "\"spokenFormId\":\"7\",\"userId\":\"6\",\"choice\":\"red\",\"branchId\":null," +
+                "\"choiceHistory\":null,\"details\":null,\"pullRequestAvailable\":null";
 
         String path = "/spokenformuser";
 
@@ -40,7 +39,7 @@ public class SpokenFormUserTests {
             .characterEncoding("utf-8"))
             .andDo(print())
             .andExpect(status().isOk())
-            .andExpect(content().string(containsString(responseJson)));
+            .andExpect(content().string(containsString(partialResponseJson)));
     }
 }
 

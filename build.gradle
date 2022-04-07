@@ -63,6 +63,15 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 
 	implementation 'org.kohsuke:github-api:1.303'
+
+	compileOnly 'org.projectlombok:lombok:1.18.22'
+	annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+	testCompileOnly 'org.projectlombok:lombok:1.18.22'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+	// For API client
+	implementation('com.squareup.okhttp3:okhttp:4.9.3')
 }
 
 tasks.named('test') {

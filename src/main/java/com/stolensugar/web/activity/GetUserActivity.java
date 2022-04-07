@@ -30,7 +30,7 @@ public class GetUserActivity {
     public GetUserResponse execute(final GetUserRequest request) {
         UserModel userModel = userDao.getUser(request.getUserId());
         return GetUserResponse.builder()
-            .withUser(ModelConverter.toUser(userModel))
+            .user(ModelConverter.toUser(userModel))
             .build();
     }
 }
