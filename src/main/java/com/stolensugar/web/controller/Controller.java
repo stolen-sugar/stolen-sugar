@@ -4,16 +4,19 @@ import com.stolensugar.web.activity.CreateSpokenFormActivity;
 import com.stolensugar.web.activity.CreateSpokenFormUserActivity;
 import com.stolensugar.web.activity.CreateUserActivity;
 import com.stolensugar.web.activity.GetUserActivity;
+import com.stolensugar.web.activity.UpdateItemAlternativesActivity;
 import com.stolensugar.web.dynamodb.models.SpokenFormModel;
 import com.stolensugar.web.dynamodb.models.SpokenFormUserModel;
 import com.stolensugar.web.dynamodb.models.UserModel;
 import com.stolensugar.web.model.SpokenForm;
+import com.stolensugar.web.model.requests.AlternativesMapper;
 import com.stolensugar.web.model.requests.CreateSpokenFormRequest;
 import com.stolensugar.web.model.requests.CreateSpokenFormUserRequest;
 import com.stolensugar.web.model.requests.CreateUserRequest;
 import com.stolensugar.web.model.requests.GetUserRequest;
 import com.stolensugar.web.dagger.ApplicationComponent;
 
+import com.stolensugar.web.model.requests.UpdateItemAlternativesRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -59,6 +62,22 @@ public class Controller {
                 CreateSpokenFormUserRequest.builder().spokenFormUsers(spokenFormUsers).build();
 
         return new ResponseEntity<>(spokenFormUserActivity.execute(spokenFormUserRequest), HttpStatus.OK);
+    }
+
+    @PostMapping(value = "/spokenform/alternatives", consumes = {
+            "application/json"},
+            produces = {"application/json"})
+    public ResponseEntity<?> updateItemAlternatives(@Valid @RequestBody List<AlternativesMapper> updateItemList) {
+
+
+        UpdateItemAlternativesActivity updateItemAlternativesActivity =
+                component.provideUpdateItemAlternativesActivity();
+
+        UpdateItemAlternativesRequest updateItemAlternativesRequest =
+                UpdateItemAlternativesRequest.builder().alternativesMapperList(updateItemList).build();
+
+
+        return new ResponseEntity<>(updateItemAlternativesActivity.execute(updateItemAlternativesRequest), HttpStatus.OK);
     }
 
     @PostMapping(value = "/spokenform", consumes = {"application/json"},
