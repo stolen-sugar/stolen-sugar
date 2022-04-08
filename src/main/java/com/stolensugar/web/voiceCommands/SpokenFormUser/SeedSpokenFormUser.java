@@ -2,6 +2,7 @@ package com.stolensugar.web.voiceCommands.SpokenFormUser;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -13,15 +14,16 @@ import com.stolensugar.web.model.SpokenFormUser;
 import com.stolensugar.web.voiceCommands.baseCommands.SpokenFormCommand;
 
 import java.util.List;
+import java.util.Set;
 
 public class SeedSpokenFormUser {
 
-    public static void main(String[] args){
-        createJsonFile();
-    }
+    Set<String> fileSet;
+    Set<String> fullNameCommandSet = new HashSet<>();
 
 
-    public static void createJsonFile() {
+    public void createJsonFile(Set<String> fileSet) {
+        this.fileSet = fileSet;
         try{
             List<SpokenFormUser> commandList = formatJsonCommandFile("talon");
             if(commandList == null) return;
@@ -39,7 +41,7 @@ public class SeedSpokenFormUser {
         }
     }
 
-    public static List<SpokenFormUser> formatJsonCommandFile(String appName) {
+    public List<SpokenFormUser> formatJsonCommandFile(String appName) {
         try {
             ObjectMapper mapper = new ObjectMapper();
             ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
@@ -50,7 +52,7 @@ public class SeedSpokenFormUser {
                     Arrays.asList(mapper.readValue(Paths.get("src/main/java" +
                                     "/com/stolensugar" +
                                     "/web/voiceCommands/tempFiles" +
-                                    "/alt_commands.json").toFile(),
+                                    "/alt_branches.json").toFile(),
                             SpokenFormUserMapper[].class));
 
             for (int i=0;i<spokenFormUserMappers.size() - 1;i++ ) {
@@ -69,14 +71,19 @@ public class SeedSpokenFormUser {
                     String context = (String) command_groups.get(j).get(
                             "context");
                     String file = (String) command_groups.get(j).get("file");
-
+                    if (!fileSet.contains(file)) {
+                        continue;
+                    }
                     Iterator<Map.Entry<String, String>> itr = commands.entrySet().iterator();
                     while(itr.hasNext()) {
                         Map.Entry<String, String> entry = itr.next();
                         String choice = entry.getKey();
                         String command = entry.getValue();
                         String fullName = file + "::s::" + user_id;
-
+                        if(fullNameCommandSet.contains(command + fullName)) {
+                            continue;
+                        }
+                        fullNameCommandSet.add((command + fullName));
                         SpokenFormUser spokenFormUser = SpokenFormUser.builder()
                                         .userId(user_id)
                                         .action(command)

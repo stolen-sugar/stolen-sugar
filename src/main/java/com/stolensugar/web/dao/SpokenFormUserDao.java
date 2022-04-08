@@ -4,10 +4,8 @@ import javax.inject.Inject;
 import java.util.List;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
-import com.amazonaws.services.kms.model.AlreadyExistsException;
 import com.amazonaws.services.kms.model.NotFoundException;
 import com.stolensugar.web.dynamodb.models.SpokenFormUserModel;
-import com.stolensugar.web.model.requests.CreateSpokenFormUserRequest;
 
 public class SpokenFormUserDao {
     private final DynamoDBMapper dynamoDbMapper;
@@ -57,6 +55,8 @@ public class SpokenFormUserDao {
      * @param spokenFormUserModels list of models associated with the spokenFormUsers.
      */
     public void saveSpokenFormUser(List<SpokenFormUserModel> spokenFormUserModels) {
-        dynamoDbMapper.batchSave(spokenFormUserModels);
+        List<DynamoDBMapper.FailedBatch> failedBatches =
+                dynamoDbMapper.batchSave(spokenFormUserModels);
+        System.out.println(failedBatches);
     }    
 }

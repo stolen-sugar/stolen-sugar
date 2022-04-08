@@ -7,7 +7,9 @@ import com.stolensugar.web.dynamodb.models.SpokenFormModel;
 import javax.inject.Inject;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class SpokenFormDao {
     private final DynamoDBMapper dynamoDbMapper;
@@ -33,8 +35,8 @@ public class SpokenFormDao {
         SpokenFormModel spokenForm = loadSpokenForm(fileName, action);
 
         if (spokenForm == null) {
-            throw new NotFoundException("SpokenFormModel with fullName "  + fileName +
-                    " not found.");
+            throw new NotFoundException("SpokenFormModel with fileName "  + fileName  +
+                    " and action: " + action + " not found.");
         }
 
         return spokenForm;
@@ -43,7 +45,7 @@ public class SpokenFormDao {
     /**
      * Loads spokenForm from database.
      * @param action  action associated with the spokenForm.
-     * @param fileName  fullName associated with the spokenForm.
+     * @param fileName  fileName associated with the spokenForm.
      * @return spokenForm from database.
      */
     public SpokenFormModel loadSpokenForm(String fileName, String action) {
@@ -58,7 +60,10 @@ public class SpokenFormDao {
      * @param spokenFormModels list of models associated with the spokenForms.
      */
     public void saveSpokenForm(List<SpokenFormModel> spokenFormModels) {
-        dynamoDbMapper.batchSave(spokenFormModels);
+        List<DynamoDBMapper.FailedBatch> failedBatches =
+                dynamoDbMapper.batchSave(spokenFormModels);
+
+        System.out.println(failedBatches);
     }
 
     /**
@@ -76,18 +81,18 @@ public class SpokenFormDao {
      * @param alternatives list of alternate terms for spokenForm command.
      */
     public String updateItemAlternatives(String fileName,String action,
-                                   List<String> alternatives) {
+                                   Set<String> alternatives) {
 
 //        should use UpdateItem() instead
 
         SpokenFormModel spokenForm = getSpokenForm(fileName, action);
 
-        List<String> currentAlternatives;
+        Set<String> currentAlternatives;
 
         if (spokenForm.getAlternatives() != null) {
             currentAlternatives = spokenForm.getAlternatives();
         } else {
-            currentAlternatives = new ArrayList<>();
+            currentAlternatives = new HashSet<>();
         }
         
         alternatives.forEach(alternative -> currentAlternatives.add(alternative));
