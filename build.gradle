@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.6.4'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.6.20-RC2'
 }
 
 group = 'com.stolensugar'
@@ -56,6 +57,13 @@ dependencies {
 
 	testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.10.0'
 
+	implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+
+	implementation 'org.kohsuke:github-api:1.303'
+
 	compileOnly 'org.projectlombok:lombok:1.18.22'
 	annotationProcessor 'org.projectlombok:lombok:1.18.22'
 
@@ -68,4 +76,14 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
