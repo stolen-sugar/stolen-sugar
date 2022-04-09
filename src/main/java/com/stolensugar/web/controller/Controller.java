@@ -3,6 +3,7 @@ import com.stolensugar.web.AppApplication;
 import com.stolensugar.web.activity.CreateSpokenFormActivity;
 import com.stolensugar.web.activity.CreateSpokenFormUserActivity;
 import com.stolensugar.web.activity.CreateUserActivity;
+import com.stolensugar.web.activity.GetAllUsersActivity;
 import com.stolensugar.web.activity.GetUserActivity;
 import com.stolensugar.web.activity.UpdateItemAlternativesActivity;
 import com.stolensugar.web.dynamodb.models.SpokenFormModel;
@@ -40,6 +41,12 @@ public class Controller {
         GetUserActivity userActivity = component.provideGetUserActivity();
         GetUserRequest getUserRequest = GetUserRequest.builder().userId(id).build();
         return new ResponseEntity<>(userActivity.execute(getUserRequest), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/users", produces = {"application/json"})
+    public ResponseEntity<?> getAllUsers() {
+        GetAllUsersActivity getAllUsersActivity = component.provideGetAllUsersActivity();
+        return new ResponseEntity<>(getAllUsersActivity.execute(), HttpStatus.OK);
     }
 
     @PostMapping(value = "/users", consumes = {"application/json"},

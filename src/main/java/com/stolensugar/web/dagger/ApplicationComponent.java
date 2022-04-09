@@ -6,6 +6,7 @@ import com.stolensugar.web.activity.CreateSpokenFormActivity;
 import com.stolensugar.web.activity.CreateUserActivity;
 import com.stolensugar.web.activity.GetUserActivity;
 import com.stolensugar.web.activity.CreateSpokenFormUserActivity;
+import com.stolensugar.web.activity.GetAllUsersActivity;
 
 import com.stolensugar.web.activity.UpdateItemAlternativesActivity;
 import dagger.Component;
@@ -20,4 +21,5 @@ public interface ApplicationComponent {
     CreateSpokenFormActivity provideCreateSpokenFormActivity();
     CreateUserActivity provideCreateUserActivity();
     UpdateItemAlternativesActivity provideUpdateItemAlternativesActivity();
+    GetAllUsersActivity provideGetAllUsersActivity();
 }

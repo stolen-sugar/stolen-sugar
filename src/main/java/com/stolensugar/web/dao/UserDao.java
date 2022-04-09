@@ -2,6 +2,7 @@ package com.stolensugar.web.dao;
 import javax.inject.Inject;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
 import com.amazonaws.services.kms.model.NotFoundException;
 import com.stolensugar.web.dynamodb.models.UserModel;
 
@@ -35,6 +36,19 @@ public class UserDao {
         }
 
         return user;
+    }
+
+    /**
+     * Gets a list of all users in the users table.
+     * @return The corresponding User list from the user table.
+     */
+    public List<UserModel> getAllUsers() {
+        DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+
+        List<UserModel> scanResult = dynamoDbMapper.scan(UserModel.class,
+                scanExpression);
+
+        return scanResult;
     }
 
     /**
