@@ -1,5 +1,5 @@
 package com.stolensugar.web.model.response;
-import com.stolensugar.web.dynamodb.models.SpokenFormUserModel;
+import com.stolensugar.web.model.SpokenFormUser;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -13,5 +13,5 @@ import java.util.List;
 public class GetSpokenFormByUserResponse {
     @Getter
     @Setter
-    private List<SpokenFormUserModel> users;
+    private List<SpokenFormUser> users;
 }
