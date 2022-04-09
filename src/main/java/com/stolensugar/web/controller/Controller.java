@@ -4,6 +4,7 @@ import com.stolensugar.web.activity.CreateSpokenFormActivity;
 import com.stolensugar.web.activity.CreateSpokenFormUserActivity;
 import com.stolensugar.web.activity.CreateUserActivity;
 import com.stolensugar.web.activity.GetAllUsersActivity;
+import com.stolensugar.web.activity.GetSpokenFormActivity;
 import com.stolensugar.web.activity.GetSpokenFormByUserActivity;
 import com.stolensugar.web.activity.GetUserActivity;
 import com.stolensugar.web.activity.UpdateItemAlternativesActivity;
@@ -14,6 +15,7 @@ import com.stolensugar.web.model.requests.AlternativesMapper;
 import com.stolensugar.web.model.requests.CreateSpokenFormRequest;
 import com.stolensugar.web.model.requests.CreateSpokenFormUserRequest;
 import com.stolensugar.web.model.requests.CreateUserRequest;
+import com.stolensugar.web.model.requests.GetSpokenFormRequest;
 import com.stolensugar.web.model.requests.GetUserRequest;
 import com.stolensugar.web.dagger.ApplicationComponent;
 
@@ -59,6 +61,22 @@ public class Controller {
             CreateUserRequest.builder().users(users).build();
 
     return new ResponseEntity<>(userActivity.execute(userRequest), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/spokenformbyname", produces = {"application/json"})
+    public ResponseEntity<?> getSpokenForm(@RequestParam String name) {
+        GetSpokenFormActivity getSpokenFormActivity = component.provideGetSpokenFormActivity();
+        GetSpokenFormRequest getSpokenFormRequest =
+                GetSpokenFormRequest.builder().defaultName(name).build();
+        return new ResponseEntity<>(getSpokenFormActivity.execute(getSpokenFormRequest), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/spokenform", produces = {"application" + "/json"})
+    public ResponseEntity<?> getSpokenFormByFile(@RequestParam String file) {
+        GetSpokenFormActivity getSpokenFormActivity = component.provideGetSpokenFormActivity();
+        GetSpokenFormRequest getUserRequest =
+                GetSpokenFormRequest.builder().file(file).build();
+        return new ResponseEntity<>(getSpokenFormActivity.execute(getUserRequest), HttpStatus.OK);
     }
 
     @PostMapping(value = "/spokenformuser", consumes = {"application/json"},

@@ -4,6 +4,7 @@ import javax.inject.Singleton;
 
 import com.stolensugar.web.activity.CreateSpokenFormActivity;
 import com.stolensugar.web.activity.CreateUserActivity;
+import com.stolensugar.web.activity.GetSpokenFormActivity;
 import com.stolensugar.web.activity.GetUserActivity;
 import com.stolensugar.web.activity.CreateSpokenFormUserActivity;
 import com.stolensugar.web.activity.GetAllUsersActivity;
@@ -24,4 +25,5 @@ public interface ApplicationComponent {
     UpdateItemAlternativesActivity provideUpdateItemAlternativesActivity();
     GetAllUsersActivity provideGetAllUsersActivity();
     GetSpokenFormByUserActivity provideGetSpokenFormByUserActivity();
+    GetSpokenFormActivity provideGetSpokenFormActivity();
 }

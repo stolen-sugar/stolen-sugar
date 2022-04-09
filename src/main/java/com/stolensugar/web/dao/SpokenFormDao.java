@@ -1,13 +1,19 @@
 package com.stolensugar.web.dao;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBQueryExpression;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
+import com.amazonaws.services.dynamodbv2.datamodeling.PaginatedQueryList;
+import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.amazonaws.services.kms.model.NotFoundException;
 import com.stolensugar.web.dynamodb.models.SpokenFormModel;
 
 import javax.inject.Inject;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class SpokenFormDao {
@@ -42,12 +48,64 @@ public class SpokenFormDao {
     }
 
     /**
+     * Returns all SpokenForm items in the database
+     * @return The corresponding SpokenFormModel list.
+     */
+    public List<SpokenFormModel> getAllSpokenForms() {
+        DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+
+        List<SpokenFormModel> spokenForm =
+                dynamoDbMapper.scan(SpokenFormModel.class, scanExpression);
+
+
+        return spokenForm;
+    }
+
+    /**
+     * Returns all SpokenForm items in the database
+     * @return The corresponding SpokenFormModel list.
+     */
+    public List<SpokenFormModel> getSpokenForm(String file) {
+        Map<String, AttributeValue> valueMap = new HashMap<>();
+        valueMap.put(":fileName", new AttributeValue().withS(file));
+        DynamoDBQueryExpression<SpokenFormModel> queryExpression = new DynamoDBQueryExpression<SpokenFormModel>()
+                .withIndexName(SpokenFormModel.FILE_NAME_INDEX)
+                .withConsistentRead(false)
+                .withKeyConditionExpression("fileName = :fileName")
+                .withExpressionAttributeValues(valueMap);
+
+        PaginatedQueryList<SpokenFormModel> spokenForms = dynamoDbMapper.query(SpokenFormModel.class,
+                                            queryExpression);
+        return spokenForms;
+    }
+
+    /**
+     * Returns all SpokenForm items in the database
+     * @return The corresponding SpokenFormModel list.
+     */
+    public List<SpokenFormModel> getSpokenFormByName(String name) {
+        Map<String, AttributeValue> valueMap = new HashMap<>();
+        valueMap.put(":defaultName", new AttributeValue().withS(name));
+        DynamoDBQueryExpression<SpokenFormModel> queryExpression = new DynamoDBQueryExpression<SpokenFormModel>()
+                .withIndexName(SpokenFormModel.DEFAULT_NAME_FILE_NAME_INDEX)
+                .withConsistentRead(false)
+                .withKeyConditionExpression("defaultName = :defaultName")
+                .withExpressionAttributeValues(valueMap);
+
+        PaginatedQueryList<SpokenFormModel> spokenForms = dynamoDbMapper.query(SpokenFormModel.class, queryExpression);
+
+        return spokenForms;
+    }
+
+    /**
      * Loads spokenForm from database.
-     * @param action  action associated with the spokenForm.
      * @param fileName  fileName associated with the spokenForm.
      * @return spokenForm from database.
      */
     public SpokenFormModel loadSpokenForm(String fileName, String action) {
+
+
+
         SpokenFormModel spokenForm =
                 dynamoDbMapper.load(SpokenFormModel.class,fileName, action);
 
