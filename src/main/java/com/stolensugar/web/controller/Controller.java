@@ -4,6 +4,7 @@ import com.stolensugar.web.activity.CreateSpokenFormActivity;
 import com.stolensugar.web.activity.CreateSpokenFormUserActivity;
 import com.stolensugar.web.activity.CreateUserActivity;
 import com.stolensugar.web.activity.GetAllUsersActivity;
+import com.stolensugar.web.activity.GetSpokenFormByUserActivity;
 import com.stolensugar.web.activity.GetUserActivity;
 import com.stolensugar.web.activity.UpdateItemAlternativesActivity;
 import com.stolensugar.web.dynamodb.models.SpokenFormModel;
@@ -24,6 +25,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
@@ -69,6 +71,14 @@ public class Controller {
 
         return new ResponseEntity<>(spokenFormUserActivity.execute(spokenFormUserRequest), HttpStatus.OK);
     }
+
+    @GetMapping(value = "/spokenformuser/{id}", produces = {"application/json"})
+    public ResponseEntity<?> getSpokenFormByUser(@PathVariable String id, @RequestParam String app) {
+        GetSpokenFormByUserActivity getSpokenFormByUserActivity = component.provideGetSpokenFormByUserActivity();
+
+        return new ResponseEntity<>(getSpokenFormByUserActivity.execute(id, app), HttpStatus.OK);
+    }
+
 
     @PostMapping(value = "/spokenform/alternatives", consumes = {
             "application/json"},
