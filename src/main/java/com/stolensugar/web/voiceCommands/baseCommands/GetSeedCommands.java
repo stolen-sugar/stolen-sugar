@@ -1,7 +1,6 @@
 package com.stolensugar.web.voiceCommands.baseCommands;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -56,10 +55,6 @@ public class GetSeedCommands {
 
             List<Map<String, Object>> commandGroups =
                     baseCommandsMapper.getCommand_groups();
-            String branch = baseCommandsMapper.getBranch();
-            String repo = baseCommandsMapper.getRepo_id();
-            String timestamp = baseCommandsMapper.getTimestamp();
-            String userId = baseCommandsMapper.getUser_id();
             List<String> bb = new ArrayList<>();
             bb.add("love");
             for (int i=0;i<commandGroups.size();i++ ) {

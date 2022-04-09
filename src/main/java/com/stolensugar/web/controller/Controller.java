@@ -9,7 +9,6 @@ import com.stolensugar.web.activity.UpdateItemAlternativesActivity;
 import com.stolensugar.web.dynamodb.models.SpokenFormModel;
 import com.stolensugar.web.dynamodb.models.SpokenFormUserModel;
 import com.stolensugar.web.dynamodb.models.UserModel;
-import com.stolensugar.web.model.SpokenForm;
 import com.stolensugar.web.model.requests.AlternativesMapper;
 import com.stolensugar.web.model.requests.CreateSpokenFormRequest;
 import com.stolensugar.web.model.requests.CreateSpokenFormUserRequest;

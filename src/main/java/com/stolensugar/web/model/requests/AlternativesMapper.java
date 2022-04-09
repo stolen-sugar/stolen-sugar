@@ -2,7 +2,6 @@ package com.stolensugar.web.model.requests;
 
 import lombok.*;
 
-import java.util.List;
 import java.util.Set;
 
 @EqualsAndHashCode

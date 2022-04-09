@@ -6,7 +6,6 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBRangeKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
 import lombok.*;
-import java.util.Map;
 
 @DynamoDBTable(tableName = "spokenFormUsers")
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
