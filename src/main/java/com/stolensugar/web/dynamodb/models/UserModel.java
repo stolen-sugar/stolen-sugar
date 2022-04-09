@@ -9,6 +9,8 @@ import lombok.*;
 @ToString
 @DynamoDBTable(tableName = "users")
 @Builder
+@NoArgsConstructor(force = true)
+@AllArgsConstructor
 public class UserModel {
     @Setter @Getter(onMethod_={@DynamoDBHashKey}) @EqualsAndHashCode.Include private String id;
     @Setter @Getter(onMethod_={@DynamoDBAttribute}) private String name;
