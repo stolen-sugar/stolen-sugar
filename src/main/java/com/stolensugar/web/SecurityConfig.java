@@ -26,6 +26,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .oauth2Login();
         httpSecurity.cors().configurationSource(corsConfigurationSource());
         httpSecurity.cors().and().csrf().disable();
+
+        httpSecurity.requiresChannel()
+                .requestMatchers(r -> r.getHeader("X-Forwarded-Proto") != null)
+                .requiresSecure();
     }
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
