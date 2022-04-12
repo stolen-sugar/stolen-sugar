@@ -1,23 +1,31 @@
 package com.stolensugar.web.voiceCommands.mochiCards;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.*;
 import lombok.*;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+        "content",
+        "deck-id",
+        "template-id",
+        "fields"
+})
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @ToString
 @Builder
-@NoArgsConstructor(force = true, access = AccessLevel.PRIVATE)
+@NoArgsConstructor(force = true, access = AccessLevel.PUBLIC)
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class MochiMapper {
+    @JsonProperty("content")
     private @Getter @Setter String content;
+    @JsonProperty("deck-id")
     private @Getter @Setter String deckId;
-    private @Getter @Setter String templateId;
-    private @Getter @Setter Map<String, String> action;
-    private @Getter @Setter Map<String, String> choice;
-    private @Getter @Setter Map<String, String> context;
-    private @Getter @Setter Map<String, String> file;
+    @JsonProperty("fields")
+    private @Getter @Setter Fields fields;
+    @JsonIgnore
+    private @Getter @Setter Map<String, Object> additionalProperties = new HashMap<>();
 }
