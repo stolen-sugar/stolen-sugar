@@ -3,30 +3,41 @@ import com.stolensugar.web.AppApplication;
 import com.stolensugar.web.activity.CreateSpokenFormActivity;
 import com.stolensugar.web.activity.CreateSpokenFormUserActivity;
 import com.stolensugar.web.activity.CreateUserActivity;
+import com.stolensugar.web.activity.GetAllUsersActivity;
+import com.stolensugar.web.activity.GetSpokenFormActivity;
+import com.stolensugar.web.activity.GetSpokenFormByUserActivity;
 import com.stolensugar.web.activity.GetUserActivity;
+import com.stolensugar.web.activity.UpdateItemAlternativesActivity;
 import com.stolensugar.web.dynamodb.models.SpokenFormModel;
 import com.stolensugar.web.dynamodb.models.SpokenFormUserModel;
 import com.stolensugar.web.dynamodb.models.UserModel;
-import com.stolensugar.web.model.SpokenForm;
+import com.stolensugar.web.model.requests.AlternativesMapper;
 import com.stolensugar.web.model.requests.CreateSpokenFormRequest;
 import com.stolensugar.web.model.requests.CreateSpokenFormUserRequest;
 import com.stolensugar.web.model.requests.CreateUserRequest;
+import com.stolensugar.web.model.requests.GetSpokenFormRequest;
 import com.stolensugar.web.model.requests.GetUserRequest;
 import com.stolensugar.web.dagger.ApplicationComponent;
 
+import com.stolensugar.web.model.requests.UpdateItemAlternativesRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
 import java.util.List;
 
+@CrossOrigin({"http://localhost:8081", "http://localhost:3000", "https://main" +
+        ".d2hyw43cfq45sa.amplifyapp.com", "https://stolensugar.com", "https" +
+        "://www.stolensugar.com"})
 @RestController
 public class Controller {
 
@@ -37,6 +48,12 @@ public class Controller {
         GetUserActivity userActivity = component.provideGetUserActivity();
         GetUserRequest getUserRequest = GetUserRequest.builder().userId(id).build();
         return new ResponseEntity<>(userActivity.execute(getUserRequest), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/users", produces = {"application/json"})
+    public ResponseEntity<?> getAllUsers() {
+        GetAllUsersActivity getAllUsersActivity = component.provideGetAllUsersActivity();
+        return new ResponseEntity<>(getAllUsersActivity.execute(), HttpStatus.OK);
     }
 
     @PostMapping(value = "/users", consumes = {"application/json"},
@@ -50,6 +67,22 @@ public class Controller {
     return new ResponseEntity<>(userActivity.execute(userRequest), HttpStatus.OK);
     }
 
+    @GetMapping(value = "/spokenformbyname", produces = {"application/json"})
+    public ResponseEntity<?> getSpokenForm(@RequestParam String name) {
+        GetSpokenFormActivity getSpokenFormActivity = component.provideGetSpokenFormActivity();
+        GetSpokenFormRequest getSpokenFormRequest =
+                GetSpokenFormRequest.builder().defaultName(name).build();
+        return new ResponseEntity<>(getSpokenFormActivity.execute(getSpokenFormRequest), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/spokenform", produces = {"application" + "/json"})
+    public ResponseEntity<?> getSpokenFormByFile(@RequestParam String file) {
+        GetSpokenFormActivity getSpokenFormActivity = component.provideGetSpokenFormActivity();
+        GetSpokenFormRequest getUserRequest =
+                GetSpokenFormRequest.builder().file(file).build();
+        return new ResponseEntity<>(getSpokenFormActivity.execute(getUserRequest), HttpStatus.OK);
+    }
+
     @PostMapping(value = "/spokenformuser", consumes = {"application/json"},
             produces = {"application/json"})
     public ResponseEntity<?> createSpokenFormUser(@Valid @RequestBody List<SpokenFormUserModel> spokenFormUsers) {
@@ -59,6 +92,30 @@ public class Controller {
                 CreateSpokenFormUserRequest.builder().spokenFormUsers(spokenFormUsers).build();
 
         return new ResponseEntity<>(spokenFormUserActivity.execute(spokenFormUserRequest), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/spokenformuser/{id}", produces = {"application/json"})
+    public ResponseEntity<?> getSpokenFormByUser(@PathVariable String id, @RequestParam String app) {
+        GetSpokenFormByUserActivity getSpokenFormByUserActivity = component.provideGetSpokenFormByUserActivity();
+
+        return new ResponseEntity<>(getSpokenFormByUserActivity.execute(id, app), HttpStatus.OK);
+    }
+
+
+    @PostMapping(value = "/spokenform/alternatives", consumes = {
+            "application/json"},
+            produces = {"application/json"})
+    public ResponseEntity<?> updateItemAlternatives(@Valid @RequestBody List<AlternativesMapper> updateItemList) {
+
+
+        UpdateItemAlternativesActivity updateItemAlternativesActivity =
+                component.provideUpdateItemAlternativesActivity();
+
+        UpdateItemAlternativesRequest updateItemAlternativesRequest =
+                UpdateItemAlternativesRequest.builder().alternativesMapperList(updateItemList).build();
+
+
+        return new ResponseEntity<>(updateItemAlternativesActivity.execute(updateItemAlternativesRequest), HttpStatus.OK);
     }
 
     @PostMapping(value = "/spokenform", consumes = {"application/json"},

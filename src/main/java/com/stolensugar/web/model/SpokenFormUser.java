@@ -1,9 +1,7 @@
 package com.stolensugar.web.model;
 
-import java.util.List;
 
 import lombok.*;
-import java.util.Map;
 
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @ToString

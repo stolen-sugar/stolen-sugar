@@ -1,7 +1,8 @@
 package com.stolensugar.web.voiceCommands.baseCommands;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -11,18 +12,17 @@ import com.fasterxml.jackson.databind.ObjectWriter;
 import com.stolensugar.web.model.SpokenForm;
 
 import java.util.List;
+import java.util.Set;
 
 public class GetSeedCommands {
-
-    public static void main(String[] args){
-        createJsonFile();
-    }
+    Set<String> fileSet = new HashSet<>();
 
 
-    public static void createJsonFile() {
+
+    public Set<String> createJsonFile() {
         try{
             List<SpokenForm> commandList = formatJsonCommandFile("talon");
-            if(commandList == null) return;
+            if(commandList == null) return null;
 
             ObjectMapper mapper = new ObjectMapper();
             ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
@@ -31,18 +31,20 @@ public class GetSeedCommands {
                             "/web/voiceCommands/tempFiles/commandsReadyForApi" +
                             ".json").toFile(),
                     commandList);
-
+            return fileSet;
         } catch( Exception ex) {
             ex.printStackTrace();
         }
+
+        return null;
     }
 
-    public static List<SpokenForm> formatJsonCommandFile(String appName) {
+    public List<SpokenForm> formatJsonCommandFile(String appName) {
         try {
             ObjectMapper mapper = new ObjectMapper();
             ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
             List<SpokenForm> spokenForms = new ArrayList<>();
-
+            Map<String,SpokenForm> commandCheck = new HashMap<>();
 
             BaseCommandsMapper baseCommandsMapper =
                     mapper.readValue(Paths.get("src/main/java" +
@@ -53,13 +55,12 @@ public class GetSeedCommands {
 
             List<Map<String, Object>> commandGroups =
                     baseCommandsMapper.getCommand_groups();
-            String branch = baseCommandsMapper.getBranch();
-            String repo = baseCommandsMapper.getRepo_id();
-            String timestamp = baseCommandsMapper.getTimestamp();
-            String userId = baseCommandsMapper.getUser_id();
+            List<String> bb = new ArrayList<>();
+            bb.add("love");
             for (int i=0;i<commandGroups.size();i++ ) {
                 String context = (String) commandGroups.get(i).get("context");
                 String file = (String) commandGroups.get(i).get("file");
+                fileSet.add(file);
                 Map<String, String> actionList =
                         (Map<String, String>) commandGroups.get(i).get(
                                 "commands");
@@ -69,15 +70,30 @@ public class GetSeedCommands {
                     Map.Entry<String, String> entry = itr.next();
                     String defaultName = entry.getKey();
                     String action = entry.getValue();
-
-                    SpokenForm spokenForm = SpokenForm.builder()
-                                    .fileName(file)
-                                    .context(context)
-                                    .defaultName(defaultName)
-                                    .action(action)
-                                    .appName(appName)
-                                    .build();
-                    spokenForms.add(spokenForm);
+                    SpokenForm spokenForm;
+                    if(defaultName.equals("`") || defaultName.equals(",")) {
+                        continue;
+                    }
+                    if (commandCheck.containsKey(file + action)) {
+                        spokenForm = commandCheck.get(file + action);
+                        Set<String> currentAlts = spokenForm.getAlternatives();
+                        if(currentAlts == null) {
+                            currentAlts = new HashSet<>();
+                        }
+                        currentAlts.add(defaultName);
+                        spokenForm.setAlternatives(currentAlts);
+                    } else {
+                        spokenForm = SpokenForm.builder()
+                                .fileName(file)
+                                .context(context)
+                                .defaultName(defaultName)
+                                .action(action)
+                                .appName(appName)
+                                .alternatives(null)
+                                .build();
+                        spokenForms.add(spokenForm);
+                    }
+                    commandCheck.put(file + action, spokenForm);
                 }
             }
 

@@ -1,12 +1,20 @@
 package com.stolensugar.web.dao;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBQueryExpression;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
+import com.amazonaws.services.dynamodbv2.datamodeling.PaginatedQueryList;
+import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.amazonaws.services.kms.model.NotFoundException;
 import com.stolensugar.web.dynamodb.models.SpokenFormModel;
 
 import javax.inject.Inject;
 
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class SpokenFormDao {
     private final DynamoDBMapper dynamoDbMapper;
@@ -28,26 +36,78 @@ public class SpokenFormDao {
      * @param action  action associated with the spokenForm.
      * @return The corresponding spokenForm.
      */
-    public SpokenFormModel getSpokenForm(String action, String fileName) {
-        SpokenFormModel spokenForm = loadSpokenForm(action, fileName);
+    public SpokenFormModel getSpokenForm(String fileName, String action) {
+        SpokenFormModel spokenForm = loadSpokenForm(fileName, action);
 
         if (spokenForm == null) {
-            throw new NotFoundException("SpokenFormModel with fullName "  + fileName +
-                    " not found.");
+            throw new NotFoundException("SpokenFormModel with fileName "  + fileName  +
+                    " and action: " + action + " not found.");
         }
 
         return spokenForm;
     }
 
     /**
+     * Returns all SpokenForm items in the database
+     * @return The corresponding SpokenFormModel list.
+     */
+    public List<SpokenFormModel> getAllSpokenForms() {
+        DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+
+        List<SpokenFormModel> spokenForm =
+                dynamoDbMapper.scan(SpokenFormModel.class, scanExpression);
+
+
+        return spokenForm;
+    }
+
+    /**
+     * Returns all SpokenForm items in the database
+     * @return The corresponding SpokenFormModel list.
+     */
+    public List<SpokenFormModel> getSpokenForm(String file) {
+        Map<String, AttributeValue> valueMap = new HashMap<>();
+        valueMap.put(":fileName", new AttributeValue().withS(file));
+        DynamoDBQueryExpression<SpokenFormModel> queryExpression = new DynamoDBQueryExpression<SpokenFormModel>()
+                .withIndexName(SpokenFormModel.FILE_NAME_INDEX)
+                .withConsistentRead(false)
+                .withKeyConditionExpression("fileName = :fileName")
+                .withExpressionAttributeValues(valueMap);
+
+        PaginatedQueryList<SpokenFormModel> spokenForms = dynamoDbMapper.query(SpokenFormModel.class,
+                                            queryExpression);
+        return spokenForms;
+    }
+
+    /**
+     * Returns all SpokenForm items in the database
+     * @return The corresponding SpokenFormModel list.
+     */
+    public List<SpokenFormModel> getSpokenFormByName(String name) {
+        Map<String, AttributeValue> valueMap = new HashMap<>();
+        valueMap.put(":defaultName", new AttributeValue().withS(name));
+        DynamoDBQueryExpression<SpokenFormModel> queryExpression = new DynamoDBQueryExpression<SpokenFormModel>()
+                .withIndexName(SpokenFormModel.DEFAULT_NAME_FILE_NAME_INDEX)
+                .withConsistentRead(false)
+                .withKeyConditionExpression("defaultName = :defaultName")
+                .withExpressionAttributeValues(valueMap);
+
+        PaginatedQueryList<SpokenFormModel> spokenForms = dynamoDbMapper.query(SpokenFormModel.class, queryExpression);
+
+        return spokenForms;
+    }
+
+    /**
      * Loads spokenForm from database.
-     * @param action  action associated with the spokenForm.
-     * @param fileName  fullName associated with the spokenForm.
+     * @param fileName  fileName associated with the spokenForm.
      * @return spokenForm from database.
      */
-    public SpokenFormModel loadSpokenForm(String action, String fileName) {
+    public SpokenFormModel loadSpokenForm(String fileName, String action) {
+
+
+
         SpokenFormModel spokenForm =
-                dynamoDbMapper.load(SpokenFormModel.class, action, fileName);
+                dynamoDbMapper.load(SpokenFormModel.class,fileName, action);
 
         return spokenForm;
     }
@@ -57,6 +117,47 @@ public class SpokenFormDao {
      * @param spokenFormModels list of models associated with the spokenForms.
      */
     public void saveSpokenForm(List<SpokenFormModel> spokenFormModels) {
-        dynamoDbMapper.batchSave(spokenFormModels);
-    }    
+        List<DynamoDBMapper.FailedBatch> failedBatches =
+                dynamoDbMapper.batchSave(spokenFormModels);
+
+        System.out.println(failedBatches);
+    }
+
+    /**
+     * Creates new or update existing spokenForms in database.
+     * @param spokenFormModels list of models associated with the spokenForms.
+     */
+    public void saveSingleSpokenForm(SpokenFormModel spokenFormModels) {
+        dynamoDbMapper.save(spokenFormModels);
+    }
+
+    /**
+     * Add additional vocabulary to the spokenForm in the database.
+     * @param action Partition key associated with the spokenForm.
+     * @param fileName Range key associated with the spokenForm.
+     * @param alternatives list of alternate terms for spokenForm command.
+     */
+    public String updateItemAlternatives(String fileName,String action,
+                                   Set<String> alternatives) {
+
+//        should use UpdateItem() instead
+
+        SpokenFormModel spokenForm = getSpokenForm(fileName, action);
+
+        Set<String> currentAlternatives;
+
+        if (spokenForm.getAlternatives() != null) {
+            currentAlternatives = spokenForm.getAlternatives();
+        } else {
+            currentAlternatives = new HashSet<>();
+        }
+        
+        alternatives.forEach(alternative -> currentAlternatives.add(alternative));
+
+        spokenForm.setAlternatives(currentAlternatives);
+
+        saveSingleSpokenForm(spokenForm);
+
+        return "success";
+    }
 }

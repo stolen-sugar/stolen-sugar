@@ -19,24 +19,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
             .antMatcher("/**").authorizeRequests()
-            .anyRequest().permitAll()
-            // .antMatchers("/").permitAll()
-            // .anyRequest().authenticated()
-            .and()
-            .oauth2Login();
-        httpSecurity.cors().configurationSource(corsConfigurationSource());
-        httpSecurity.cors().and().csrf().disable();
-    }
-    @Bean
-    CorsConfigurationSource corsConfigurationSource() {
-        CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000", "https://stolensugar.com"));
-        configuration.addAllowedHeader("*");
-        configuration.addAllowedMethod("*");
-        configuration.setAllowCredentials(true);
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", configuration);
-        return source;
+            .anyRequest().permitAll();
+        httpSecurity.cors();
     }
 }
 

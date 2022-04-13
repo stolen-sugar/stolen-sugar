@@ -256,7 +256,7 @@
   "context" : "user.modifier_key",
   "appName" : "talon",
   "defaultName" : "alt",
-  "alternatives" : null
+  "alternatives" : [ "option" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "ctrl",
@@ -284,13 +284,6 @@
   "context" : "user.modifier_key",
   "appName" : "talon",
   "defaultName" : "command",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "alt",
-  "context" : "user.modifier_key",
-  "appName" : "talon",
-  "defaultName" : "option",
   "alternatives" : null
 }, {
   "fileName" : "code/keys.py",
@@ -333,14 +326,14 @@
   "context" : "user.special_key",
   "appName" : "talon",
   "defaultName" : "pagedown",
-  "alternatives" : null
+  "alternatives" : [ "page down" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "pageup",
   "context" : "user.special_key",
   "appName" : "talon",
   "defaultName" : "pageup",
-  "alternatives" : null
+  "alternatives" : [ "page up" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "space",
@@ -371,88 +364,39 @@
   "alternatives" : null
 }, {
   "fileName" : "code/keys.py",
-  "action" : "pageup",
-  "context" : "user.special_key",
-  "appName" : "talon",
-  "defaultName" : "page up",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "pagedown",
-  "context" : "user.special_key",
-  "appName" : "talon",
-  "defaultName" : "page down",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
   "action" : ".",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "dot",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : ".",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "point",
-  "alternatives" : null
+  "alternatives" : [ "full stop", "period", "point" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "'",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "quote",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "'",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "apostrophe",
-  "alternatives" : null
+  "alternatives" : [ "apostrophe" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "[",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "L square",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "[",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "left square",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "[",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "square",
-  "alternatives" : null
+  "alternatives" : [ "square", "left square" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "]",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "R square",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "]",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "right square",
-  "alternatives" : null
+  "alternatives" : [ "right square" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "/",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "slash",
-  "alternatives" : null
+  "alternatives" : [ "forward slash" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "\\",
@@ -466,14 +410,7 @@
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "minus",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "-",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "dash",
-  "alternatives" : null
+  "alternatives" : [ "dash" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "=",
@@ -501,154 +438,77 @@
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "bang",
-  "alternatives" : null
+  "alternatives" : [ "exclamation mark", "exclamation point" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "_",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "down score",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "_",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "under score",
-  "alternatives" : null
+  "alternatives" : [ "under score" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "(",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "paren",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "(",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "L paren",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "(",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "left paren",
-  "alternatives" : null
+  "alternatives" : [ "left paren", "L paren" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : ")",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "R paren",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : ")",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "right paren",
-  "alternatives" : null
+  "alternatives" : [ "right paren" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "{",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "brace",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "{",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "left brace",
-  "alternatives" : null
+  "alternatives" : [ "left brace" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "}",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "R brace",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "}",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "right brace",
-  "alternatives" : null
+  "alternatives" : [ "right brace" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "<",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "angle",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "<",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "left angle",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "<",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "less than",
-  "alternatives" : null
+  "alternatives" : [ "less than", "left angle" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : ">",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "rangle",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : ">",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "R angle",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : ">",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "right angle",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : ">",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "greater than",
-  "alternatives" : null
+  "alternatives" : [ "R angle", "right angle", "greater than" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "*",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "star",
-  "alternatives" : null
+  "alternatives" : [ "asterisk" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "#",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "hash",
-  "alternatives" : null
+  "alternatives" : [ "hash sign", "number sign" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "%",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "percent",
-  "alternatives" : null
+  "alternatives" : [ "percent sign" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "^",
@@ -662,7 +522,7 @@
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "amper",
-  "alternatives" : null
+  "alternatives" : [ "ampersand", "and sign" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "|",
@@ -676,182 +536,63 @@
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "dubquote",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "\"",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "double quote",
-  "alternatives" : null
+  "alternatives" : [ "double quote" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "$",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "dollar",
-  "alternatives" : null
+  "alternatives" : [ "dollar sign" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "£",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "pound",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "`",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "`",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : ",",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : ",",
-  "alternatives" : null
+  "alternatives" : [ "pound sign" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "`",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "back tick",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "`",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "grave",
-  "alternatives" : null
+  "alternatives" : [ "grave", "back tick" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : ",",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "comma",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : ".",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "period",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : ".",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "full stop",
-  "alternatives" : null
+  "alternatives" : [ "comma" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : ";",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "semicolon",
-  "alternatives" : null
+  "alternatives" : [ "semicolon" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : ":",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "colon",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "/",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "forward slash",
-  "alternatives" : null
+  "alternatives" : [ "colon" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "?",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "question mark",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "!",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "exclamation mark",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "!",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "exclamation point",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "*",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "asterisk",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "#",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "hash sign",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "#",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "number sign",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "%",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "percent sign",
-  "alternatives" : null
+  "alternatives" : [ "question mark" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "@",
   "context" : "user.symbol_key",
   "appName" : "talon",
   "defaultName" : "at sign",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "&",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "and sign",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "&",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "ampersand",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "$",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "dollar sign",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "£",
-  "context" : "user.symbol_key",
-  "appName" : "talon",
-  "defaultName" : "pound sign",
-  "alternatives" : null
+  "alternatives" : [ "at sign" ]
 }, {
   "fileName" : "code/keys.py",
   "action" : "down",
@@ -879,160 +620,6 @@
   "context" : "user.arrow_key",
   "appName" : "talon",
   "defaultName" : "up",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "`",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "`",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : ",",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : ",",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "`",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "back tick",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "`",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "grave",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : ",",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "comma",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : ".",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "period",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : ".",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "full stop",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : ";",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "semicolon",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : ":",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "colon",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "/",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "forward slash",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "?",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "question mark",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "!",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "exclamation mark",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "!",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "exclamation point",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "*",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "asterisk",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "#",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "hash sign",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "#",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "number sign",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "%",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "percent sign",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "@",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "at sign",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "&",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "and sign",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "&",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "ampersand",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "$",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "dollar sign",
-  "alternatives" : null
-}, {
-  "fileName" : "code/keys.py",
-  "action" : "£",
-  "context" : "user.punctuation",
-  "appName" : "talon",
-  "defaultName" : "pound sign",
   "alternatives" : null
 }, {
   "fileName" : "code/keys.py",
@@ -1929,42 +1516,21 @@
   "context" : "formatters",
   "appName" : "talon",
   "defaultName" : "phrase <user.text>",
-  "alternatives" : null
-}, {
-  "fileName" : "misc/formatters.talon",
-  "action" : "user.insert_formatted(text, \"NOOP\")",
-  "context" : "formatters",
-  "appName" : "talon",
-  "defaultName" : "phrase <user.text> over",
-  "alternatives" : null
+  "alternatives" : [ "phrase <user.text> over" ]
 }, {
   "fileName" : "misc/formatters.talon",
   "action" : "user.insert_formatted(prose, prose_formatter)",
   "context" : "formatters",
   "appName" : "talon",
   "defaultName" : "{user.prose_formatter} <user.prose>",
-  "alternatives" : null
-}, {
-  "fileName" : "misc/formatters.talon",
-  "action" : "user.insert_formatted(prose, prose_formatter)",
-  "context" : "formatters",
-  "appName" : "talon",
-  "defaultName" : "{user.prose_formatter} <user.prose> over",
-  "alternatives" : null
+  "alternatives" : [ "{user.prose_formatter} <user.prose> over" ]
 }, {
   "fileName" : "misc/formatters.talon",
   "action" : "user.insert_many(format_text_list)",
   "context" : "formatters",
   "appName" : "talon",
   "defaultName" : "<user.format_text>+",
-  "alternatives" : null
-}, {
-  "fileName" : "misc/formatters.talon",
-  "action" : "user.insert_many(format_text_list)",
-  "context" : "formatters",
-  "appName" : "talon",
-  "defaultName" : "<user.format_text>+ over",
-  "alternatives" : null
+  "alternatives" : [ "<user.format_text>+ over" ]
 }, {
   "fileName" : "misc/formatters.talon",
   "action" : "user.formatters_reformat_selection(user.formatters)",
@@ -4379,7 +3945,7 @@
   "context" : "go",
   "appName" : "talon",
   "defaultName" : "range <user.text> [over]",
-  "alternatives" : null
+  "alternatives" : [ "loop over [<user.text>] [over]" ]
 }, {
   "fileName" : "lang/go/go.talon",
   "action" : "\"fmt\"",
@@ -4645,13 +4211,6 @@
   "context" : "go",
   "appName" : "talon",
   "defaultName" : "error",
-  "alternatives" : null
-}, {
-  "fileName" : "lang/go/go.talon",
-  "action" : "insert(\"forr \")\ninsert(user.formatted_text(text, \"PRIVATE_CAMEL_CASE\"))",
-  "context" : "go",
-  "appName" : "talon",
-  "defaultName" : "loop over [<user.text>] [over]",
   "alternatives" : null
 }, {
   "fileName" : "lang/go/go.talon",
@@ -5303,28 +4862,14 @@
   "context" : "comment block",
   "appName" : "talon",
   "defaultName" : "block comment <user.text> over",
-  "alternatives" : null
-}, {
-  "fileName" : "lang/tags/comment_block.talon",
-  "action" : "user.code_comment_block()\ninsert(user.text)",
-  "context" : "comment block",
-  "appName" : "talon",
-  "defaultName" : "block comment <user.text>",
-  "alternatives" : null
+  "alternatives" : [ "block comment <user.text>" ]
 }, {
   "fileName" : "lang/tags/comment_block.talon",
   "action" : "edit.line_end()\nuser.code_comment_block_prefix()\nkey(space)\ninsert(user.text)\nkey(space)\nuser.code_comment_block_suffix()",
   "context" : "comment block",
   "appName" : "talon",
   "defaultName" : "(line | inline) block comment <user.text> over",
-  "alternatives" : null
-}, {
-  "fileName" : "lang/tags/comment_block.talon",
-  "action" : "edit.line_end()\nuser.code_comment_block_prefix()\nkey(space)\ninsert(user.text)\nkey(space)\nuser.code_comment_block_suffix()",
-  "context" : "comment block",
-  "appName" : "talon",
-  "defaultName" : "(line | inline) block comment <user.text>",
-  "alternatives" : null
+  "alternatives" : [ "(line | inline) block comment <user.text>" ]
 }, {
   "fileName" : "lang/tags/comment_block.talon",
   "action" : "user.code_comment_block_prefix()",
@@ -5373,28 +4918,14 @@
   "context" : "comment line",
   "appName" : "talon",
   "defaultName" : "comment <user.text> over",
-  "alternatives" : null
-}, {
-  "fileName" : "lang/tags/comment_line.talon",
-  "action" : "user.code_comment_line_prefix()\ninsert(user.text)",
-  "context" : "comment line",
-  "appName" : "talon",
-  "defaultName" : "comment <user.text>",
-  "alternatives" : null
+  "alternatives" : [ "comment <user.text>" ]
 }, {
   "fileName" : "lang/tags/comment_line.talon",
   "action" : "edit.line_end()\nuser.code_comment_line_prefix()\ninsert(user.text)",
   "context" : "comment line",
   "appName" : "talon",
   "defaultName" : "(line | inline) comment <user.text> over",
-  "alternatives" : null
-}, {
-  "fileName" : "lang/tags/comment_line.talon",
-  "action" : "edit.line_end()\nuser.code_comment_line_prefix()\ninsert(user.text)",
-  "context" : "comment line",
-  "appName" : "talon",
-  "defaultName" : "(line | inline) comment <user.text>",
-  "alternatives" : null
+  "alternatives" : [ "(line | inline) comment <user.text>" ]
 }, {
   "fileName" : "lang/tags/data_null.talon",
   "action" : "user.code_insert_null()",
@@ -6934,62 +6465,34 @@
   "context" : "generic browser",
   "appName" : "talon",
   "defaultName" : "downloads show",
-  "alternatives" : null
+  "alternatives" : [ "show downloads" ]
 }, {
   "fileName" : "apps/generic_browser.talon",
   "action" : "browser.show_extensions()",
   "context" : "generic browser",
   "appName" : "talon",
   "defaultName" : "extensions show",
-  "alternatives" : null
+  "alternatives" : [ "show extensions" ]
 }, {
   "fileName" : "apps/generic_browser.talon",
   "action" : "browser.show_history()",
   "context" : "generic browser",
   "appName" : "talon",
   "defaultName" : "history show",
-  "alternatives" : null
+  "alternatives" : [ "show history" ]
 }, {
   "fileName" : "apps/generic_browser.talon",
   "action" : "browser.show_clear_cache()",
   "context" : "generic browser",
   "appName" : "talon",
   "defaultName" : "cache show",
-  "alternatives" : null
+  "alternatives" : [ "show cache" ]
 }, {
   "fileName" : "apps/generic_browser.talon",
   "action" : "browser.toggle_dev_tools()",
   "context" : "generic browser",
   "appName" : "talon",
   "defaultName" : "dev tools [show]",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/generic_browser.talon",
-  "action" : "browser.show_downloads()",
-  "context" : "generic browser",
-  "appName" : "talon",
-  "defaultName" : "show downloads",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/generic_browser.talon",
-  "action" : "browser.show_extensions()",
-  "context" : "generic browser",
-  "appName" : "talon",
-  "defaultName" : "show extensions",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/generic_browser.talon",
-  "action" : "browser.show_history()",
-  "context" : "generic browser",
-  "appName" : "talon",
-  "defaultName" : "show history",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/generic_browser.talon",
-  "action" : "browser.show_clear_cache()",
-  "context" : "generic browser",
-  "appName" : "talon",
-  "defaultName" : "show cache",
   "alternatives" : null
 }, {
   "fileName" : "apps/platforms/win/wsl/wsl.talon",
@@ -9461,7 +8964,7 @@
   "context" : "visual studio",
   "appName" : "talon",
   "defaultName" : "panel marks",
-  "alternatives" : null
+  "alternatives" : [ "go marks" ]
 }, {
   "fileName" : "apps/visualstudio/visual_studio.talon",
   "action" : "key(ctrl-alt-b)",
@@ -9531,7 +9034,7 @@
   "context" : "visual studio",
   "appName" : "talon",
   "defaultName" : "definition show",
-  "alternatives" : null
+  "alternatives" : [ "go implementation" ]
 }, {
   "fileName" : "apps/visualstudio/visual_studio.talon",
   "action" : "key(alt-f12)",
@@ -9545,7 +9048,7 @@
   "context" : "visual studio",
   "appName" : "talon",
   "defaultName" : "references find",
-  "alternatives" : null
+  "alternatives" : [ "go usage" ]
 }, {
   "fileName" : "apps/visualstudio/visual_studio.talon",
   "action" : "key(ctrl-k ctrl-d)",
@@ -9632,13 +9135,6 @@
   "alternatives" : null
 }, {
   "fileName" : "apps/visualstudio/visual_studio.talon",
-  "action" : "key(f12)",
-  "context" : "visual studio",
-  "appName" : "talon",
-  "defaultName" : "go implementation",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/visualstudio/visual_studio.talon",
   "action" : "key(ctrl-1 ctrl-r)\nsleep(100ms)\ninsert(text or \"\")",
   "context" : "visual studio",
   "appName" : "talon",
@@ -9657,20 +9153,6 @@
   "context" : "visual studio",
   "appName" : "talon",
   "defaultName" : "go member [<user.text>]",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/visualstudio/visual_studio.talon",
-  "action" : "key(shift-f12)",
-  "context" : "visual studio",
-  "appName" : "talon",
-  "defaultName" : "go usage",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/visualstudio/visual_studio.talon",
-  "action" : "key(ctrl-k ctrl-w)",
-  "context" : "visual studio",
-  "appName" : "talon",
-  "defaultName" : "go marks",
   "alternatives" : null
 }, {
   "fileName" : "apps/visualstudio/visual_studio.talon",
@@ -9727,7 +9209,7 @@
   "context" : "visual studio",
   "appName" : "talon",
   "defaultName" : "step over",
-  "alternatives" : null
+  "alternatives" : [ "debug step out [of]" ]
 }, {
   "fileName" : "apps/visualstudio/visual_studio.talon",
   "action" : "key(f11)",
@@ -9737,31 +9219,17 @@
   "alternatives" : null
 }, {
   "fileName" : "apps/visualstudio/visual_studio.talon",
-  "action" : "key(f10)",
-  "context" : "visual studio",
-  "appName" : "talon",
-  "defaultName" : "debug step out [of]",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/visualstudio/visual_studio.talon",
   "action" : "key(f5)",
   "context" : "visual studio",
   "appName" : "talon",
   "defaultName" : "debug start",
-  "alternatives" : null
+  "alternatives" : [ "debug continue" ]
 }, {
   "fileName" : "apps/visualstudio/visual_studio.talon",
   "action" : "key(shift-f5)",
   "context" : "visual studio",
   "appName" : "talon",
   "defaultName" : "debug stopper",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/visualstudio/visual_studio.talon",
-  "action" : "key(f5)",
-  "context" : "visual studio",
-  "appName" : "talon",
-  "defaultName" : "debug continue",
   "alternatives" : null
 }, {
   "fileName" : "apps/web/github.talon",
@@ -9818,7 +9286,7 @@
   "context" : "github",
   "appName" : "talon",
   "defaultName" : "(selection open | open selection)",
-  "alternatives" : null
+  "alternatives" : [ "(issue open | open issue)", "other parent commit" ]
 }, {
   "fileName" : "apps/web/github.talon",
   "action" : "insert(\"gc\")",
@@ -9888,7 +9356,7 @@
   "context" : "github",
   "appName" : "talon",
   "defaultName" : "jump to line",
-  "alternatives" : null
+  "alternatives" : [ "label set", "(filter by|edit) labels" ]
 }, {
   "fileName" : "apps/web/github.talon",
   "action" : "key(w)",
@@ -9902,7 +9370,7 @@
   "context" : "github",
   "appName" : "talon",
   "defaultName" : "(url expand | expand url)",
-  "alternatives" : null
+  "alternatives" : [ "mark as read" ]
 }, {
   "fileName" : "apps/web/github.talon",
   "action" : "key(i)",
@@ -9923,14 +9391,14 @@
   "context" : "github",
   "appName" : "talon",
   "defaultName" : "(show|hide) annotations",
-  "alternatives" : null
+  "alternatives" : [ "(filter by|edit) assignee", "assignee set" ]
 }, {
   "fileName" : "apps/web/github.talon",
   "action" : "key(c)",
   "context" : "github",
   "appName" : "talon",
   "defaultName" : "(issue create | create [an] issue)",
-  "alternatives" : null
+  "alternatives" : [ "(issue create | create issue)" ]
 }, {
   "fileName" : "apps/web/github.talon",
   "action" : "key(/)",
@@ -9940,25 +9408,11 @@
   "alternatives" : null
 }, {
   "fileName" : "apps/web/github.talon",
-  "action" : "key(l)",
-  "context" : "github",
-  "appName" : "talon",
-  "defaultName" : "(filter by|edit) labels",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/github.talon",
   "action" : "key(m)",
   "context" : "github",
   "appName" : "talon",
   "defaultName" : "(filter by|edit) milestones",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/github.talon",
-  "action" : "key(a)",
-  "context" : "github",
-  "appName" : "talon",
-  "defaultName" : "(filter by|edit) assignee",
-  "alternatives" : null
+  "alternatives" : [ "milestone set" ]
 }, {
   "fileName" : "apps/web/github.talon",
   "action" : "key(r)",
@@ -10003,20 +9457,6 @@
   "alternatives" : null
 }, {
   "fileName" : "apps/web/github.talon",
-  "action" : "key(o)",
-  "context" : "github",
-  "appName" : "talon",
-  "defaultName" : "other parent commit",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/github.talon",
-  "action" : "key(y)",
-  "context" : "github",
-  "appName" : "talon",
-  "defaultName" : "mark as read",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/github.talon",
   "action" : "key(shift-m)",
   "context" : "github",
   "appName" : "talon",
@@ -10024,45 +9464,10 @@
   "alternatives" : null
 }, {
   "fileName" : "apps/web/github.talon",
-  "action" : "key(o)",
-  "context" : "github",
-  "appName" : "talon",
-  "defaultName" : "(issue open | open issue)",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/github.talon",
-  "action" : "key(c)",
-  "context" : "github",
-  "appName" : "talon",
-  "defaultName" : "(issue create | create issue)",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/github.talon",
   "action" : "key(q)",
   "context" : "github",
   "appName" : "talon",
   "defaultName" : "reviewer request",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/github.talon",
-  "action" : "key(m)",
-  "context" : "github",
-  "appName" : "talon",
-  "defaultName" : "milestone set",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/github.talon",
-  "action" : "key(a)",
-  "context" : "github",
-  "appName" : "talon",
-  "defaultName" : "assignee set",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/github.talon",
-  "action" : "key(l)",
-  "context" : "github",
-  "appName" : "talon",
-  "defaultName" : "label set",
   "alternatives" : null
 }, {
   "fileName" : "apps/web/github.talon",
@@ -10343,7 +9748,7 @@
   "context" : "outlook",
   "appName" : "talon",
   "defaultName" : "discard [draft]",
-  "alternatives" : null
+  "alternatives" : [ "close [this] message", "clear all [messages]" ]
 }, {
   "fileName" : "apps/web/outlook.talon",
   "action" : "key(ctrl-k)",
@@ -10364,13 +9769,6 @@
   "context" : "outlook",
   "appName" : "talon",
   "defaultName" : "select all [messages]",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/outlook.talon",
-  "action" : "key(esc)",
-  "context" : "outlook",
-  "appName" : "talon",
-  "defaultName" : "clear all [messages]",
   "alternatives" : null
 }, {
   "fileName" : "apps/web/outlook.talon",
@@ -10399,13 +9797,6 @@
   "context" : "outlook",
   "appName" : "talon",
   "defaultName" : "open [this] message [in] [a] new window",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/outlook.talon",
-  "action" : "key(esc)",
-  "context" : "outlook",
-  "appName" : "talon",
-  "defaultName" : "close [this] message",
   "alternatives" : null
 }, {
   "fileName" : "apps/web/outlook.talon",
@@ -10602,14 +9993,14 @@
   "context" : "protonmail",
   "appName" : "talon",
   "defaultName" : "confirm active",
-  "alternatives" : null
+  "alternatives" : [ "open message" ]
 }, {
   "fileName" : "apps/web/protonmail.talon",
   "action" : "key(escape)",
   "context" : "protonmail",
   "appName" : "talon",
   "defaultName" : "close active",
-  "alternatives" : null
+  "alternatives" : [ "go back" ]
 }, {
   "fileName" : "apps/web/protonmail.talon",
   "action" : "key(shift-space)",
@@ -10637,7 +10028,7 @@
   "context" : "protonmail",
   "appName" : "talon",
   "defaultName" : "save message",
-  "alternatives" : null
+  "alternatives" : [ "save contact" ]
 }, {
   "fileName" : "apps/web/protonmail.talon",
   "action" : "key(g)\nkey(i)",
@@ -10693,28 +10084,28 @@
   "context" : "protonmail",
   "appName" : "talon",
   "defaultName" : "(prev|previous) message",
-  "alternatives" : null
+  "alternatives" : [ "(prev|previous) contact" ]
 }, {
   "fileName" : "apps/web/protonmail.talon",
   "action" : "key(down)",
   "context" : "protonmail",
   "appName" : "talon",
   "defaultName" : "next message",
-  "alternatives" : null
+  "alternatives" : [ "next contact" ]
 }, {
   "fileName" : "apps/web/protonmail.talon",
   "action" : "key(left)",
   "context" : "protonmail",
   "appName" : "talon",
   "defaultName" : "exit message",
-  "alternatives" : null
+  "alternatives" : [ "exit contact" ]
 }, {
   "fileName" : "apps/web/protonmail.talon",
   "action" : "key(right)",
   "context" : "protonmail",
   "appName" : "talon",
   "defaultName" : "enter message",
-  "alternatives" : null
+  "alternatives" : [ "enter contact" ]
 }, {
   "fileName" : "apps/web/protonmail.talon",
   "action" : "key(k)",
@@ -10728,20 +10119,6 @@
   "context" : "protonmail",
   "appName" : "talon",
   "defaultName" : "(show|display) older [message]",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/protonmail.talon",
-  "action" : "key(enter)",
-  "context" : "protonmail",
-  "appName" : "talon",
-  "defaultName" : "open message",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/protonmail.talon",
-  "action" : "key(escape)",
-  "context" : "protonmail",
-  "appName" : "talon",
-  "defaultName" : "go back",
   "alternatives" : null
 }, {
   "fileName" : "apps/web/protonmail.talon",
@@ -10798,7 +10175,7 @@
   "context" : "protonmail",
   "appName" : "talon",
   "defaultName" : "move to trash",
-  "alternatives" : null
+  "alternatives" : [ "delete contact" ]
 }, {
   "fileName" : "apps/web/protonmail.talon",
   "action" : "key(a)",
@@ -10833,48 +10210,6 @@
   "context" : "protonmail",
   "appName" : "talon",
   "defaultName" : "forward (message|conversation)",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/protonmail.talon",
-  "action" : "key(up)",
-  "context" : "protonmail",
-  "appName" : "talon",
-  "defaultName" : "(prev|previous) contact",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/protonmail.talon",
-  "action" : "key(down)",
-  "context" : "protonmail",
-  "appName" : "talon",
-  "defaultName" : "next contact",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/protonmail.talon",
-  "action" : "key(right)",
-  "context" : "protonmail",
-  "appName" : "talon",
-  "defaultName" : "enter contact",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/protonmail.talon",
-  "action" : "key(t)",
-  "context" : "protonmail",
-  "appName" : "talon",
-  "defaultName" : "delete contact",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/protonmail.talon",
-  "action" : "key(left)",
-  "context" : "protonmail",
-  "appName" : "talon",
-  "defaultName" : "exit contact",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/protonmail.talon",
-  "action" : "key(ctrl-s)",
-  "context" : "protonmail",
-  "appName" : "talon",
-  "defaultName" : "save contact",
   "alternatives" : null
 }, {
   "fileName" : "apps/web/gitlab.talon",
@@ -10952,7 +10287,7 @@
   "context" : "gitlab",
   "appName" : "talon",
   "defaultName" : "(show|hide) performance bar",
-  "alternatives" : null
+  "alternatives" : [ "previous [unresolved] discussion" ]
 }, {
   "fileName" : "apps/web/gitlab.talon",
   "action" : "key(1)",
@@ -11099,7 +10434,7 @@
   "context" : "gitlab",
   "appName" : "talon",
   "defaultName" : "edit description",
-  "alternatives" : null
+  "alternatives" : [ "edit page" ]
 }, {
   "fileName" : "apps/web/gitlab.talon",
   "action" : "key(a)",
@@ -11137,13 +10472,6 @@
   "alternatives" : null
 }, {
   "fileName" : "apps/web/gitlab.talon",
-  "action" : "key(p)",
-  "context" : "gitlab",
-  "appName" : "talon",
-  "defaultName" : "previous [unresolved] discussion",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/gitlab.talon",
   "action" : "key(])",
   "context" : "gitlab",
   "appName" : "talon",
@@ -11169,13 +10497,6 @@
   "context" : "gitlab",
   "appName" : "talon",
   "defaultName" : "open permalink",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/web/gitlab.talon",
-  "action" : "key(e)",
-  "context" : "gitlab",
-  "appName" : "talon",
-  "defaultName" : "edit page",
   "alternatives" : null
 }, {
   "fileName" : "apps/generic_debugger.talon",
@@ -11736,20 +11057,13 @@
   "context" : "i3wm",
   "appName" : "talon",
   "defaultName" : "launch",
-  "alternatives" : null
+  "alternatives" : [ "lock screen" ]
 }, {
   "fileName" : "apps/i3wm/i3wm.talon",
   "action" : "user.i3wm_launch()\nsleep(100ms)\ninsert(\"{text}\")",
   "context" : "i3wm",
   "appName" : "talon",
   "defaultName" : "launch <user.text>",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/i3wm/i3wm.talon",
-  "action" : "user.i3wm_launch()",
-  "context" : "i3wm",
-  "appName" : "talon",
-  "defaultName" : "lock screen",
   "alternatives" : null
 }, {
   "fileName" : "apps/i3wm/i3wm.talon",
@@ -12464,14 +11778,7 @@
   "context" : "jetbrains",
   "appName" : "talon",
   "defaultName" : "git commit",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/jetbrains/jetbrains.talon",
-  "action" : "user.idea(\"action CheckinProject\")",
-  "context" : "jetbrains",
-  "appName" : "talon",
-  "defaultName" : "git push",
-  "alternatives" : null
+  "alternatives" : [ "git push" ]
 }, {
   "fileName" : "apps/jetbrains/jetbrains.talon",
   "action" : "user.idea(\"action Vcs.ShowTabbedFileHistory\")",
@@ -13178,21 +12485,14 @@
   "context" : "teams mac",
   "appName" : "talon",
   "defaultName" : "open history",
-  "alternatives" : null
+  "alternatives" : [ "leave team meeting" ]
 }, {
   "fileName" : "apps/teams/teams_mac.talon",
   "action" : "key(super-.)",
   "context" : "teams mac",
   "appName" : "talon",
   "defaultName" : "view shortcuts",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/teams/teams_mac.talon",
-  "action" : "key(super-.)",
-  "context" : "teams mac",
-  "appName" : "talon",
-  "defaultName" : "show shortcuts",
-  "alternatives" : null
+  "alternatives" : [ "show shortcuts" ]
 }, {
   "fileName" : "apps/teams/teams_mac.talon",
   "action" : "key(super-e)",
@@ -13409,7 +12709,7 @@
   "context" : "teams mac",
   "appName" : "talon",
   "defaultName" : "accept video call",
-  "alternatives" : null
+  "alternatives" : [ "accept screen share" ]
 }, {
   "fileName" : "apps/teams/teams_mac.talon",
   "action" : "key(super-shift-s)",
@@ -13423,7 +12723,7 @@
   "context" : "teams mac",
   "appName" : "talon",
   "defaultName" : "decline call",
-  "alternatives" : null
+  "alternatives" : [ "decline screen share" ]
 }, {
   "fileName" : "apps/teams/teams_mac.talon",
   "action" : "key(super-shift-c)",
@@ -13465,20 +12765,6 @@
   "context" : "teams mac",
   "appName" : "talon",
   "defaultName" : "[go] [to] sharing toolbar",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/teams/teams_mac.talon",
-  "action" : "key(super-shift-d)",
-  "context" : "teams mac",
-  "appName" : "talon",
-  "defaultName" : "decline screen share",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/teams/teams_mac.talon",
-  "action" : "key(super-shift-a)",
-  "context" : "teams mac",
-  "appName" : "talon",
-  "defaultName" : "accept screen share",
   "alternatives" : null
 }, {
   "fileName" : "apps/teams/teams_mac.talon",
@@ -13556,13 +12842,6 @@
   "context" : "teams mac",
   "appName" : "talon",
   "defaultName" : "(raise|lower) hand",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/teams/teams_mac.talon",
-  "action" : "key(super-shift-h)",
-  "context" : "teams mac",
-  "appName" : "talon",
-  "defaultName" : "leave team meeting",
   "alternatives" : null
 }, {
   "fileName" : "apps/teams/teams.talon",
@@ -13773,7 +13052,7 @@
   "context" : "teams",
   "appName" : "talon",
   "defaultName" : "accept video call",
-  "alternatives" : null
+  "alternatives" : [ "accept screen share" ]
 }, {
   "fileName" : "apps/teams/teams.talon",
   "action" : "key(ctrl-shift-s)",
@@ -13787,7 +13066,7 @@
   "context" : "teams",
   "appName" : "talon",
   "defaultName" : "decline call",
-  "alternatives" : null
+  "alternatives" : [ "decline screen share" ]
 }, {
   "fileName" : "apps/teams/teams.talon",
   "action" : "key(ctrl-shift-c)",
@@ -13829,20 +13108,6 @@
   "context" : "teams",
   "appName" : "talon",
   "defaultName" : "[go] [to] sharing toolbar",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/teams/teams.talon",
-  "action" : "key(ctrl-shift-d)",
-  "context" : "teams",
-  "appName" : "talon",
-  "defaultName" : "decline screen share",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/teams/teams.talon",
-  "action" : "key(ctrl-shift-a)",
-  "context" : "teams",
-  "appName" : "talon",
-  "defaultName" : "accept screen share",
   "alternatives" : null
 }, {
   "fileName" : "apps/teams/teams.talon",
@@ -14795,14 +14060,7 @@
   "context" : "file manager",
   "appName" : "talon",
   "defaultName" : "file {user.file_manager_files}",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/file_manager.talon",
-  "action" : "user.file_manager_select_file(file_manager_files)",
-  "context" : "file manager",
-  "appName" : "talon",
-  "defaultName" : "(select|cell) file {user.file_manager_files}",
-  "alternatives" : null
+  "alternatives" : [ "(select|cell) file {user.file_manager_files}" ]
 }, {
   "fileName" : "apps/file_manager.talon",
   "action" : "user.file_manager_new_folder(text)",
@@ -15348,7 +14606,7 @@
   "context" : "vscode",
   "appName" : "talon",
   "defaultName" : "fullscreen switch",
-  "alternatives" : null
+  "alternatives" : [ "full screen" ]
 }, {
   "fileName" : "apps/vscode/vscode.talon",
   "action" : "user.vscode(\"workbench.action.selectTheme\")",
@@ -15453,7 +14711,7 @@
   "context" : "vscode",
   "appName" : "talon",
   "defaultName" : "definition show",
-  "alternatives" : null
+  "alternatives" : [ "(go declaration | follow)" ]
 }, {
   "fileName" : "apps/vscode/vscode.talon",
   "action" : "user.vscode(\"editor.action.peekDefinition\")",
@@ -15481,7 +14739,7 @@
   "context" : "vscode",
   "appName" : "talon",
   "defaultName" : "references find",
-  "alternatives" : null
+  "alternatives" : [ "go usage" ]
 }, {
   "fileName" : "apps/vscode/vscode.talon",
   "action" : "user.vscode(\"editor.action.formatDocument\")",
@@ -15530,14 +14788,14 @@
   "context" : "vscode",
   "appName" : "talon",
   "defaultName" : "rename that",
-  "alternatives" : null
+  "alternatives" : [ "refactor rename" ]
 }, {
   "fileName" : "apps/vscode/vscode.talon",
   "action" : "user.vscode(\"editor.action.refactor\")",
   "context" : "vscode",
   "appName" : "talon",
   "defaultName" : "refactor that",
-  "alternatives" : null
+  "alternatives" : [ "refactor this" ]
 }, {
   "fileName" : "apps/vscode/vscode.talon",
   "action" : "user.vscode(\"editor.action.trimTrailingWhitespace\")",
@@ -15551,27 +14809,6 @@
   "context" : "vscode",
   "appName" : "talon",
   "defaultName" : "language switch",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/vscode/vscode.talon",
-  "action" : "user.vscode(\"editor.action.rename\")",
-  "context" : "vscode",
-  "appName" : "talon",
-  "defaultName" : "refactor rename",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/vscode/vscode.talon",
-  "action" : "user.vscode(\"editor.action.refactor\")",
-  "context" : "vscode",
-  "appName" : "talon",
-  "defaultName" : "refactor this",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/vscode/vscode.talon",
-  "action" : "user.vscode(\"editor.action.revealDefinition\")",
-  "context" : "vscode",
-  "appName" : "talon",
-  "defaultName" : "(go declaration | follow)",
   "alternatives" : null
 }, {
   "fileName" : "apps/vscode/vscode.talon",
@@ -15600,13 +14837,6 @@
   "context" : "vscode",
   "appName" : "talon",
   "defaultName" : "go type",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/vscode/vscode.talon",
-  "action" : "user.vscode(\"references-view.find\")",
-  "context" : "vscode",
-  "appName" : "talon",
-  "defaultName" : "go usage",
   "alternatives" : null
 }, {
   "fileName" : "apps/vscode/vscode.talon",
@@ -16093,13 +15323,6 @@
   "alternatives" : null
 }, {
   "fileName" : "apps/vscode/vscode.talon",
-  "action" : "user.vscode(\"workbench.action.toggleFullScreen\")",
-  "context" : "vscode",
-  "appName" : "talon",
-  "defaultName" : "full screen",
-  "alternatives" : null
-}, {
-  "fileName" : "apps/vscode/vscode.talon",
   "action" : "user.vscode(\"cursorUndo\")",
   "context" : "vscode",
   "appName" : "talon",
@@ -16286,14 +15509,7 @@
   "context" : "draft window",
   "appName" : "talon",
   "defaultName" : "cursor <user.draft_anchor>",
-  "alternatives" : null
-}, {
-  "fileName" : "talon_draft_window/draft_window.talon",
-  "action" : "user.draft_position_caret(\"{draft_anchor}\")",
-  "context" : "draft window",
-  "appName" : "talon",
-  "defaultName" : "cursor before <user.draft_anchor>",
-  "alternatives" : null
+  "alternatives" : [ "cursor before <user.draft_anchor>" ]
 }, {
   "fileName" : "talon_draft_window/draft_window.talon",
   "action" : "user.draft_position_caret(\"{draft_anchor}\", 1)",
@@ -17294,7 +16510,7 @@
   "context" : "generic editor",
   "appName" : "talon",
   "defaultName" : "go line end",
-  "alternatives" : null
+  "alternatives" : [ "go way right" ]
 }, {
   "fileName" : "text/generic_editor.talon",
   "action" : "edit.line_start()\nedit.line_start()",
@@ -17304,39 +16520,18 @@
   "alternatives" : null
 }, {
   "fileName" : "text/generic_editor.talon",
-  "action" : "edit.line_end()",
-  "context" : "generic editor",
-  "appName" : "talon",
-  "defaultName" : "go way right",
-  "alternatives" : null
-}, {
-  "fileName" : "text/generic_editor.talon",
   "action" : "edit.file_end()",
   "context" : "generic editor",
   "appName" : "talon",
   "defaultName" : "go way down",
-  "alternatives" : null
+  "alternatives" : [ "go bottom" ]
 }, {
   "fileName" : "text/generic_editor.talon",
   "action" : "edit.file_start()",
   "context" : "generic editor",
   "appName" : "talon",
   "defaultName" : "go way up",
-  "alternatives" : null
-}, {
-  "fileName" : "text/generic_editor.talon",
-  "action" : "edit.file_end()",
-  "context" : "generic editor",
-  "appName" : "talon",
-  "defaultName" : "go bottom",
-  "alternatives" : null
-}, {
-  "fileName" : "text/generic_editor.talon",
-  "action" : "edit.file_start()",
-  "context" : "generic editor",
-  "appName" : "talon",
-  "defaultName" : "go top",
-  "alternatives" : null
+  "alternatives" : [ "go top" ]
 }, {
   "fileName" : "text/generic_editor.talon",
   "action" : "edit.page_down()",

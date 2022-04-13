@@ -1,6 +1,7 @@
 package com.stolensugar.web.model;
 
-import java.util.List;
+import java.util.Set;
+
 import lombok.*;
 
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
@@ -14,5 +15,5 @@ public class SpokenForm {
     @Getter @Setter private String context;
     @Getter @Setter private String appName;
     @Getter @Setter private String defaultName;
-    @Getter @Setter private List<String> alternatives;
+    @Getter @Setter private Set<String> alternatives;
 }

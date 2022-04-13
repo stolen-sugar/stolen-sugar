@@ -439,6 +439,39 @@
   "file" : "code/keys.py",
   "choice" : "dot"
 }, {
+  "action" : ";",
+  "fullName" : "code/keys.py::s::5840057",
+  "lastUpdated" : "2022-04-07T11:28:18.990824",
+  "app" : "talon",
+  "repo" : "472432551",
+  "branch" : "zmcgohan",
+  "userId" : "5840057",
+  "context" : "user.punctuation",
+  "file" : "code/keys.py",
+  "choice" : "semi"
+}, {
+  "action" : "?",
+  "fullName" : "code/keys.py::s::5840057",
+  "lastUpdated" : "2022-04-07T11:28:18.990824",
+  "app" : "talon",
+  "repo" : "472432551",
+  "branch" : "zmcgohan",
+  "userId" : "5840057",
+  "context" : "user.punctuation",
+  "file" : "code/keys.py",
+  "choice" : "queue mark"
+}, {
+  "action" : "!",
+  "fullName" : "code/keys.py::s::5840057",
+  "lastUpdated" : "2022-04-07T11:28:18.990824",
+  "app" : "talon",
+  "repo" : "472432551",
+  "branch" : "zmcgohan",
+  "userId" : "5840057",
+  "context" : "user.punctuation",
+  "file" : "code/keys.py",
+  "choice" : "exclaim"
+}, {
   "action" : "*",
   "fullName" : "code/keys.py::s::5840057",
   "lastUpdated" : "2022-04-07T11:28:18.990824",
@@ -460,6 +493,17 @@
   "context" : "user.punctuation",
   "file" : "code/keys.py",
   "choice" : "hash"
+}, {
+  "action" : "@",
+  "fullName" : "code/keys.py::s::5840057",
+  "lastUpdated" : "2022-04-07T11:28:18.990824",
+  "app" : "talon",
+  "repo" : "472432551",
+  "branch" : "zmcgohan",
+  "userId" : "5840057",
+  "context" : "user.punctuation",
+  "file" : "code/keys.py",
+  "choice" : "at"
 }, {
   "action" : "$",
   "fullName" : "code/keys.py::s::5840057",
@@ -857,6 +901,17 @@
   "file" : "code/keys.py",
   "choice" : "speechmark"
 }, {
+  "action" : "\"",
+  "fullName" : "code/keys.py::s::100534119",
+  "lastUpdated" : "2022-04-07T11:28:51.124284",
+  "app" : "talon",
+  "repo" : "464229346",
+  "branch" : "ryan_personal",
+  "userId" : "100534119",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "double quo"
+}, {
   "action" : "user.mouse_scroll_up()",
   "fullName" : "misc/mouse.talon::s::100534119",
   "lastUpdated" : "2022-04-07T11:28:51.124284",
@@ -1164,6 +1219,17 @@
   "context" : "user.symbol_key",
   "file" : "code/keys.py",
   "choice" : "leap"
+}, {
+  "action" : "(",
+  "fullName" : "code/keys.py::s::3068446",
+  "lastUpdated" : "2022-04-07T11:32:34.852659",
+  "app" : "talon",
+  "repo" : "455381897",
+  "branch" : "twiebelt",
+  "userId" : "3068446",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "weep"
 }, {
   "action" : ")",
   "fullName" : "code/keys.py::s::3068446",
@@ -1561,6 +1627,17 @@
   "file" : "code/keys.py",
   "choice" : "full colon"
 }, {
+  "action" : ":",
+  "fullName" : "code/keys.py::s::63201480",
+  "lastUpdated" : "2022-04-07T11:35:13.261570",
+  "app" : "talon",
+  "repo" : "445816388",
+  "branch" : "CameronScottBell",
+  "userId" : "63201480",
+  "context" : "user.punctuation",
+  "file" : "code/keys.py",
+  "choice" : "full colon"
+}, {
   "action" : "edit.paste()",
   "fullName" : "misc/standard.talon::s::63201480",
   "lastUpdated" : "2022-04-07T11:35:13.261570",
@@ -1836,6 +1913,17 @@
   "file" : "apps/web/github.talon",
   "choice" : "mute thread"
 }, {
+  "action" : "key(o)",
+  "fullName" : "apps/web/github.talon::s::63201480",
+  "lastUpdated" : "2022-04-07T11:35:13.261570",
+  "app" : "talon",
+  "repo" : "445816388",
+  "branch" : "CameronScottBell",
+  "userId" : "63201480",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "open issue"
+}, {
   "action" : "\"kubectl rolling-update \"",
   "fullName" : "apps/kubectl/kubectl.talon::s::63201480",
   "lastUpdated" : "2022-04-07T11:35:13.261570",
@@ -1978,6 +2066,17 @@
   "context" : "user.special_key",
   "file" : "code/keys.py",
   "choice" : "chuck"
+}, {
+  "action" : "backspace",
+  "fullName" : "code/keys.py::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "user.special_key",
+  "file" : "code/keys.py",
+  "choice" : "scratch"
 }, {
   "action" : "escape",
   "fullName" : "code/keys.py::s::21286812",
@@ -2463,6 +2562,28 @@
   "file" : "misc/formatters.talon",
   "choice" : "<user.format_text>"
 }, {
+  "action" : "user.insert_many(format_text_list)",
+  "fullName" : "misc/formatters.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "formatters",
+  "file" : "misc/formatters.talon",
+  "choice" : "<user.format_text> halt"
+}, {
+  "action" : "user.insert_many(format_text_list)",
+  "fullName" : "misc/formatters.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "formatters",
+  "file" : "misc/formatters.talon",
+  "choice" : "strict <user.format_text>"
+}, {
   "action" : "user.search_with_search_engine(search_engine, user.text)",
   "fullName" : "misc/websites_and_search_engines.talon::s::21286812",
   "lastUpdated" : "2022-04-07T11:35:45.119470",
@@ -2628,6 +2749,17 @@
   "file" : "misc/mouse.talon",
   "choice" : "(scroll | school) up"
 }, {
+  "action" : "user.mouse_scroll_up()",
+  "fullName" : "misc/mouse.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "mouse",
+  "file" : "misc/mouse.talon",
+  "choice" : "(scroll | school) up here"
+}, {
   "action" : "user.mouse_scroll_up_continuous()",
   "fullName" : "misc/mouse.talon::s::21286812",
   "lastUpdated" : "2022-04-07T11:35:45.119470",
@@ -2693,6 +2825,314 @@
   "context" : "mouse",
   "file" : "misc/mouse.talon",
   "choice" : "(scroll | school) stop here"
+}, {
+  "action" : "\"// \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> comment"
+}, {
+  "action" : "\"func \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> (funk | func | fun)"
+}, {
+  "action" : "\"var \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> var"
+}, {
+  "action" : "\"break\"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> break"
+}, {
+  "action" : "\" chan \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> (chan | channel)"
+}, {
+  "action" : "\"go \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> go"
+}, {
+  "action" : "\"if \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> if"
+}, {
+  "action" : "\" else if \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> else if"
+}, {
+  "action" : "\" else \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> else"
+}, {
+  "action" : "\"while \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> while"
+}, {
+  "action" : "\"for \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> for"
+}, {
+  "action" : "\"forr \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> for range"
+}, {
+  "action" : "\"fmt\"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> format"
+}, {
+  "action" : "\"switch \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> switch"
+}, {
+  "action" : "\"select \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> select"
+}, {
+  "action" : "\" const \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> (const | constant)"
+}, {
+  "action" : "\" case \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> case"
+}, {
+  "action" : "\" default:\"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> default"
+}, {
+  "action" : "\" type \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> type"
+}, {
+  "action" : "\" true \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> true"
+}, {
+  "action" : "\" false \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> false"
+}, {
+  "action" : "insert(\" struct {\")\nkey(\"enter\")",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> (start | struct | struck)"
+}, {
+  "action" : "insert(\" interface {\")\nkey(\"enter\")",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> interface"
+}, {
+  "action" : "\" string \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> string"
+}, {
+  "action" : "\" []\"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> slice"
+}, {
+  "action" : "\" int64 \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> (int | integer | ant) 64"
+}, {
+  "action" : "\" return \"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> return"
+}, {
+  "action" : "\"err\"",
+  "fullName" : "lang/go.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> (air | err)"
 }, {
   "action" : "\"command! \"",
   "fullName" : "lang/vimscript/vimscript.talon::s::21286812",
@@ -3177,6 +3617,17 @@
   "context" : "symbols",
   "file" : "text/symbols.talon",
   "choice" : "(double | quad) that"
+}, {
+  "action" : "text = edit.selected_text()\nuser.paste(\"'{text}'\")",
+  "fullName" : "text/symbols.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "symbols",
+  "file" : "text/symbols.talon",
+  "choice" : "(single | twin) that"
 }, {
   "action" : "\"{number_string}\"",
   "fullName" : "text/numbers.talon::s::21286812",
@@ -3727,6 +4178,17 @@
   "context" : "github",
   "file" : "apps/web/github.talon",
   "choice" : "mute thread"
+}, {
+  "action" : "key(o)",
+  "fullName" : "apps/web/github.talon::s::21286812",
+  "lastUpdated" : "2022-04-07T11:35:45.119470",
+  "app" : "talon",
+  "repo" : "443978995",
+  "branch" : "main",
+  "userId" : "21286812",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "open issue"
 }, {
   "action" : "b",
   "fullName" : "code/keys.py::s::25511262",
@@ -4289,6 +4751,17 @@
   "file" : "code/keys.py",
   "choice" : "coun"
 }, {
+  "action" : "ctrl",
+  "fullName" : "code/keys.py::s::15986712",
+  "lastUpdated" : "2022-04-07T11:36:48.274387",
+  "app" : "talon",
+  "repo" : "441560011",
+  "branch" : "David_customization",
+  "userId" : "15986712",
+  "context" : "user.modifier_key",
+  "file" : "code/keys.py",
+  "choice" : "con"
+}, {
   "action" : "enter",
   "fullName" : "code/keys.py::s::15986712",
   "lastUpdated" : "2022-04-07T11:36:48.274387",
@@ -4454,6 +4927,17 @@
   "file" : "code/keys.py",
   "choice" : "hashkey"
 }, {
+  "action" : "#",
+  "fullName" : "code/keys.py::s::15986712",
+  "lastUpdated" : "2022-04-07T11:36:48.274387",
+  "app" : "talon",
+  "repo" : "441560011",
+  "branch" : "David_customization",
+  "userId" : "15986712",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "hash key"
+}, {
   "action" : "%",
   "fullName" : "code/keys.py::s::15986712",
   "lastUpdated" : "2022-04-07T11:36:48.274387",
@@ -4475,6 +4959,17 @@
   "context" : "user.symbol_key",
   "file" : "code/keys.py",
   "choice" : "hat key"
+}, {
+  "action" : "^",
+  "fullName" : "code/keys.py::s::15986712",
+  "lastUpdated" : "2022-04-07T11:36:48.274387",
+  "app" : "talon",
+  "repo" : "441560011",
+  "branch" : "David_customization",
+  "userId" : "15986712",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "hatkey"
 }, {
   "action" : "\"",
   "fullName" : "code/keys.py::s::15986712",
@@ -4509,6 +5004,17 @@
   "file" : "code/keys.py",
   "choice" : "colony"
 }, {
+  "action" : "*",
+  "fullName" : "code/keys.py::s::15986712",
+  "lastUpdated" : "2022-04-07T11:36:48.274387",
+  "app" : "talon",
+  "repo" : "441560011",
+  "branch" : "David_customization",
+  "userId" : "15986712",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "sterisk"
+}, {
   "action" : "@",
   "fullName" : "code/keys.py::s::15986712",
   "lastUpdated" : "2022-04-07T11:36:48.274387",
@@ -4520,6 +5026,17 @@
   "file" : "code/keys.py",
   "choice" : "at key"
 }, {
+  "action" : "`",
+  "fullName" : "code/keys.py::s::15986712",
+  "lastUpdated" : "2022-04-07T11:36:48.274387",
+  "app" : "talon",
+  "repo" : "441560011",
+  "branch" : "David_customization",
+  "userId" : "15986712",
+  "context" : "user.punctuation",
+  "file" : "code/keys.py",
+  "choice" : "grave accent"
+}, {
   "action" : ".",
   "fullName" : "code/keys.py::s::15986712",
   "lastUpdated" : "2022-04-07T11:36:48.274387",
@@ -4530,6 +5047,50 @@
   "context" : "user.punctuation",
   "file" : "code/keys.py",
   "choice" : "point"
+}, {
+  "action" : ":",
+  "fullName" : "code/keys.py::s::15986712",
+  "lastUpdated" : "2022-04-07T11:36:48.274387",
+  "app" : "talon",
+  "repo" : "441560011",
+  "branch" : "David_customization",
+  "userId" : "15986712",
+  "context" : "user.punctuation",
+  "file" : "code/keys.py",
+  "choice" : "colony"
+}, {
+  "action" : "*",
+  "fullName" : "code/keys.py::s::15986712",
+  "lastUpdated" : "2022-04-07T11:36:48.274387",
+  "app" : "talon",
+  "repo" : "441560011",
+  "branch" : "David_customization",
+  "userId" : "15986712",
+  "context" : "user.punctuation",
+  "file" : "code/keys.py",
+  "choice" : "sterisk"
+}, {
+  "action" : "#",
+  "fullName" : "code/keys.py::s::15986712",
+  "lastUpdated" : "2022-04-07T11:36:48.274387",
+  "app" : "talon",
+  "repo" : "441560011",
+  "branch" : "David_customization",
+  "userId" : "15986712",
+  "context" : "user.punctuation",
+  "file" : "code/keys.py",
+  "choice" : "hash key"
+}, {
+  "action" : "@",
+  "fullName" : "code/keys.py::s::15986712",
+  "lastUpdated" : "2022-04-07T11:36:48.274387",
+  "app" : "talon",
+  "repo" : "441560011",
+  "branch" : "David_customization",
+  "userId" : "15986712",
+  "context" : "user.punctuation",
+  "file" : "code/keys.py",
+  "choice" : "at key"
 }, {
   "action" : "f1",
   "fullName" : "code/keys.py::s::15986712",
@@ -4729,6 +5290,17 @@
   "file" : "misc/standard.talon",
   "choice" : "copy it"
 }, {
+  "action" : "edit.copy()",
+  "fullName" : "misc/standard.talon::s::15986712",
+  "lastUpdated" : "2022-04-07T11:36:48.274387",
+  "app" : "talon",
+  "repo" : "441560011",
+  "branch" : "David_customization",
+  "userId" : "15986712",
+  "context" : "standard",
+  "file" : "misc/standard.talon",
+  "choice" : "copyit"
+}, {
   "action" : "edit.cut()",
   "fullName" : "misc/standard.talon::s::15986712",
   "lastUpdated" : "2022-04-07T11:36:48.274387",
@@ -4750,6 +5322,17 @@
   "context" : "standard",
   "file" : "misc/standard.talon",
   "choice" : "paste it"
+}, {
+  "action" : "edit.paste()",
+  "fullName" : "misc/standard.talon::s::15986712",
+  "lastUpdated" : "2022-04-07T11:36:48.274387",
+  "app" : "talon",
+  "repo" : "441560011",
+  "branch" : "David_customization",
+  "userId" : "15986712",
+  "context" : "standard",
+  "file" : "misc/standard.talon",
+  "choice" : "pastit"
 }, {
   "action" : "edit.undo()",
   "fullName" : "misc/standard.talon::s::15986712",
@@ -4860,6 +5443,17 @@
   "context" : "repeater",
   "file" : "misc/repeater.talon",
   "choice" : "twice"
+}, {
+  "action" : "core.repeat_command(1)",
+  "fullName" : "misc/repeater.talon::s::15986712",
+  "lastUpdated" : "2022-04-07T11:36:48.274387",
+  "app" : "talon",
+  "repo" : "441560011",
+  "branch" : "David_customization",
+  "userId" : "15986712",
+  "context" : "repeater",
+  "file" : "misc/repeater.talon",
+  "choice" : "onetime|one time"
 }, {
   "action" : "skip()",
   "fullName" : "misc/cancel.talon::s::15986712",
@@ -5114,6 +5708,28 @@
   "file" : "misc/mouse.talon",
   "choice" : "mouse down"
 }, {
+  "action" : "user.mouse_scroll_down()",
+  "fullName" : "misc/mouse.talon::s::15986712",
+  "lastUpdated" : "2022-04-07T11:36:48.274387",
+  "app" : "talon",
+  "repo" : "441560011",
+  "branch" : "David_customization",
+  "userId" : "15986712",
+  "context" : "mouse",
+  "file" : "misc/mouse.talon",
+  "choice" : "mousedown"
+}, {
+  "action" : "user.mouse_scroll_down()",
+  "fullName" : "misc/mouse.talon::s::15986712",
+  "lastUpdated" : "2022-04-07T11:36:48.274387",
+  "app" : "talon",
+  "repo" : "441560011",
+  "branch" : "David_customization",
+  "userId" : "15986712",
+  "context" : "mouse",
+  "file" : "misc/mouse.talon",
+  "choice" : "mousdown"
+}, {
   "action" : "user.mouse_scroll_up()",
   "fullName" : "misc/mouse.talon::s::15986712",
   "lastUpdated" : "2022-04-07T11:36:48.274387",
@@ -5124,6 +5740,28 @@
   "context" : "mouse",
   "file" : "misc/mouse.talon",
   "choice" : "mouse up"
+}, {
+  "action" : "user.mouse_scroll_up()",
+  "fullName" : "misc/mouse.talon::s::15986712",
+  "lastUpdated" : "2022-04-07T11:36:48.274387",
+  "app" : "talon",
+  "repo" : "441560011",
+  "branch" : "David_customization",
+  "userId" : "15986712",
+  "context" : "mouse",
+  "file" : "misc/mouse.talon",
+  "choice" : "mouseup"
+}, {
+  "action" : "user.mouse_scroll_up()",
+  "fullName" : "misc/mouse.talon::s::15986712",
+  "lastUpdated" : "2022-04-07T11:36:48.274387",
+  "app" : "talon",
+  "repo" : "441560011",
+  "branch" : "David_customization",
+  "userId" : "15986712",
+  "context" : "mouse",
+  "file" : "misc/mouse.talon",
+  "choice" : "mousup"
 }, {
   "action" : "user.mouse_scroll_up_continuous()",
   "fullName" : "misc/mouse.talon::s::15986712",
@@ -6170,6 +6808,17 @@
   "file" : "code/keys.py",
   "choice" : "wipe"
 }, {
+  "action" : "backspace",
+  "fullName" : "code/keys.py::s::848589",
+  "lastUpdated" : "2022-04-07T11:37:51.710488",
+  "app" : "talon",
+  "repo" : "429930875",
+  "branch" : "user/dyancat",
+  "userId" : "848589",
+  "context" : "user.special_key",
+  "file" : "code/keys.py",
+  "choice" : "junk"
+}, {
   "action" : "tab",
   "fullName" : "code/keys.py::s::848589",
   "lastUpdated" : "2022-04-07T11:37:51.710488",
@@ -6192,6 +6841,17 @@
   "file" : "code/keys.py",
   "choice" : "brack"
 }, {
+  "action" : "{",
+  "fullName" : "code/keys.py::s::848589",
+  "lastUpdated" : "2022-04-07T11:37:51.710488",
+  "app" : "talon",
+  "repo" : "429930875",
+  "branch" : "user/dyancat",
+  "userId" : "848589",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "left brack"
+}, {
   "action" : "}",
   "fullName" : "code/keys.py::s::848589",
   "lastUpdated" : "2022-04-07T11:37:51.710488",
@@ -6202,6 +6862,17 @@
   "context" : "user.symbol_key",
   "file" : "code/keys.py",
   "choice" : "R brack"
+}, {
+  "action" : "}",
+  "fullName" : "code/keys.py::s::848589",
+  "lastUpdated" : "2022-04-07T11:37:51.710488",
+  "app" : "talon",
+  "repo" : "429930875",
+  "branch" : "user/dyancat",
+  "userId" : "848589",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "right brack"
 }, {
   "action" : "f1",
   "fullName" : "code/keys.py::s::848589",
@@ -6761,6 +7432,39 @@
   "branch" : "my-stuff",
   "userId" : "3219671",
   "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "question"
+}, {
+  "action" : "_",
+  "fullName" : "code/keys.py::s::3219671",
+  "lastUpdated" : "2022-04-07T11:38:23.442423",
+  "app" : "talon",
+  "repo" : "425184629",
+  "branch" : "my-stuff",
+  "userId" : "3219671",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "score"
+}, {
+  "action" : ";",
+  "fullName" : "code/keys.py::s::3219671",
+  "lastUpdated" : "2022-04-07T11:38:23.442423",
+  "app" : "talon",
+  "repo" : "425184629",
+  "branch" : "my-stuff",
+  "userId" : "3219671",
+  "context" : "user.punctuation",
+  "file" : "code/keys.py",
+  "choice" : "wink"
+}, {
+  "action" : "?",
+  "fullName" : "code/keys.py::s::3219671",
+  "lastUpdated" : "2022-04-07T11:38:23.442423",
+  "app" : "talon",
+  "repo" : "425184629",
+  "branch" : "my-stuff",
+  "userId" : "3219671",
+  "context" : "user.punctuation",
   "file" : "code/keys.py",
   "choice" : "question"
 }, {
@@ -9657,6 +10361,17 @@
   "file" : "modes/wake_up.talon",
   "choice" : "hey (grant | michele)"
 }, {
+  "action" : "speech.disable()",
+  "fullName" : "modes/wake_up.talon::s::71795669",
+  "lastUpdated" : "2022-04-07T11:50:18.212214",
+  "app" : "talon",
+  "repo" : "419531730",
+  "branch" : "grant",
+  "userId" : "71795669",
+  "context" : "wake up",
+  "file" : "modes/wake_up.talon",
+  "choice" : "stop listening"
+}, {
   "action" : "user.code_insert_null()",
   "fullName" : "lang/tags/data_null.talon::s::71795669",
   "lastUpdated" : "2022-04-07T11:50:18.212214",
@@ -9844,6 +10559,17 @@
   "file" : "apps/web/github.talon",
   "choice" : "mute thread"
 }, {
+  "action" : "key(o)",
+  "fullName" : "apps/web/github.talon::s::5217684",
+  "lastUpdated" : "2022-04-07T11:50:50.425620",
+  "app" : "talon",
+  "repo" : "413320713",
+  "branch" : "bn",
+  "userId" : "5217684",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "open issue"
+}, {
   "action" : "browser.focus_address()",
   "fullName" : "apps/generic_browser.talon::s::21588",
   "lastUpdated" : "2022-04-07T11:51:22.913008",
@@ -10019,6 +10745,17 @@
   "context" : "github",
   "file" : "apps/web/github.talon",
   "choice" : "mute thread"
+}, {
+  "action" : "key(o)",
+  "fullName" : "apps/web/github.talon::s::21588",
+  "lastUpdated" : "2022-04-07T11:51:22.913008",
+  "app" : "talon",
+  "repo" : "410395641",
+  "branch" : "gh-trimmed",
+  "userId" : "21588",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "open issue"
 }, {
   "action" : "i",
   "fullName" : "code/keys.py::s::21588",
@@ -10405,6 +11142,17 @@
   "file" : "code/keys.py",
   "choice" : "out"
 }, {
+  "action" : ":",
+  "fullName" : "code/keys.py::s::51184",
+  "lastUpdated" : "2022-04-07T11:52:25.662197",
+  "app" : "talon",
+  "repo" : "403757096",
+  "branch" : "pavel",
+  "userId" : "51184",
+  "context" : "user.punctuation",
+  "file" : "code/keys.py",
+  "choice" : "dudot"
+}, {
   "action" : "f8",
   "fullName" : "code/keys.py::s::51184",
   "lastUpdated" : "2022-04-07T11:52:25.662197",
@@ -10724,6 +11472,17 @@
   "file" : "apps/web/github.talon",
   "choice" : "mute thread"
 }, {
+  "action" : "key(o)",
+  "fullName" : "apps/web/github.talon::s::38996442",
+  "lastUpdated" : "2022-04-07T11:52:57.324045",
+  "app" : "talon",
+  "repo" : "403741487",
+  "branch" : "ajy",
+  "userId" : "38996442",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "open issue"
+}, {
   "action" : "space",
   "fullName" : "code/keys.py::s::38996442",
   "lastUpdated" : "2022-04-07T11:53:27.454772",
@@ -10734,6 +11493,17 @@
   "context" : "user.special_key",
   "file" : "code/keys.py",
   "choice" : "void"
+}, {
+  "action" : "space",
+  "fullName" : "code/keys.py::s::38996442",
+  "lastUpdated" : "2022-04-07T11:53:27.454772",
+  "app" : "talon",
+  "repo" : "403741487",
+  "branch" : "ajy2",
+  "userId" : "38996442",
+  "context" : "user.special_key",
+  "file" : "code/keys.py",
+  "choice" : "pace"
 }, {
   "action" : "edit.copy()",
   "fullName" : "misc/standard.talon::s::38996442",
@@ -11285,6 +12055,17 @@
   "file" : "apps/web/github.talon",
   "choice" : "mute thread"
 }, {
+  "action" : "key(o)",
+  "fullName" : "apps/web/github.talon::s::4630670",
+  "lastUpdated" : "2022-04-07T12:33:40.196271",
+  "app" : "talon",
+  "repo" : "326731774",
+  "branch" : "custom",
+  "userId" : "4630670",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "open issue"
+}, {
   "action" : "user.file_manager_open_parent()",
   "fullName" : "apps/file_manager.talon::s::4630670",
   "lastUpdated" : "2022-04-07T12:33:40.196271",
@@ -11372,6 +12153,17 @@
   "context" : "line commands",
   "file" : "text/line_commands.talon",
   "choice" : "paste <number> until <number>"
+}, {
+  "action" : "user.select_range(number_1, number_2)\nedit.paste()",
+  "fullName" : "text/line_commands.talon::s::4630670",
+  "lastUpdated" : "2022-04-07T12:33:40.196271",
+  "app" : "talon",
+  "repo" : "326731774",
+  "branch" : "custom",
+  "userId" : "4630670",
+  "context" : "line commands",
+  "file" : "text/line_commands.talon",
+  "choice" : "replace <number> until <number>"
 }, {
   "action" : "key(mute)",
   "fullName" : "misc/media.talon::s::1474758",
@@ -11625,6 +12417,17 @@
   "context" : "github",
   "file" : "apps/web/github.talon",
   "choice" : "mute thread"
+}, {
+  "action" : "key(o)",
+  "fullName" : "apps/web/github.talon::s::1390086",
+  "lastUpdated" : "2022-04-07T12:39:40.724027",
+  "app" : "talon",
+  "repo" : "325623187",
+  "branch" : "mine",
+  "userId" : "1390086",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "open issue"
 }, {
   "action" : "user.file_manager_open_parent()",
   "fullName" : "apps/file_manager.talon::s::1390086",
@@ -11967,6 +12770,17 @@
   "file" : "text/line_commands.talon",
   "choice" : "paste <number> until <number>"
 }, {
+  "action" : "user.select_range(number_1, number_2)\nedit.paste()",
+  "fullName" : "text/line_commands.talon::s::1390086",
+  "lastUpdated" : "2022-04-07T12:39:40.724027",
+  "app" : "talon",
+  "repo" : "325623187",
+  "branch" : "mine",
+  "userId" : "1390086",
+  "context" : "line commands",
+  "file" : "text/line_commands.talon",
+  "choice" : "replace <number> until <number>"
+}, {
   "action" : "i",
   "fullName" : "code/keys.py::s::755842",
   "lastUpdated" : "2022-04-07T12:46:07.278947",
@@ -12120,6 +12934,17 @@
   "context" : "user.special_key",
   "file" : "code/keys.py",
   "choice" : "chuck"
+}, {
+  "action" : "backspace",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:07.278947",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "main",
+  "userId" : "755842",
+  "context" : "user.special_key",
+  "file" : "code/keys.py",
+  "choice" : "scratch"
 }, {
   "action" : "escape",
   "fullName" : "code/keys.py::s::755842",
@@ -12561,6 +13386,589 @@
   "file" : "apps/generic_browser.talon",
   "choice" : "dev tools"
 }, {
+  "action" : "i",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.letter",
+  "file" : "code/keys.py",
+  "choice" : "ink"
+}, {
+  "action" : "j",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.letter",
+  "file" : "code/keys.py",
+  "choice" : "jane"
+}, {
+  "action" : "k",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.letter",
+  "file" : "code/keys.py",
+  "choice" : "kick"
+}, {
+  "action" : "o",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.letter",
+  "file" : "code/keys.py",
+  "choice" : "ox"
+}, {
+  "action" : "r",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.letter",
+  "file" : "code/keys.py",
+  "choice" : "risk"
+}, {
+  "action" : "s",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.letter",
+  "file" : "code/keys.py",
+  "choice" : "spun"
+}, {
+  "action" : "cmd",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.modifier_key",
+  "file" : "code/keys.py",
+  "choice" : "many"
+}, {
+  "action" : "ctrl",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.modifier_key",
+  "file" : "code/keys.py",
+  "choice" : "troll"
+}, {
+  "action" : "shift",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.modifier_key",
+  "file" : "code/keys.py",
+  "choice" : "ship"
+}, {
+  "action" : "enter",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.special_key",
+  "file" : "code/keys.py",
+  "choice" : "clap"
+}, {
+  "action" : "delete",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.special_key",
+  "file" : "code/keys.py",
+  "choice" : "drill"
+}, {
+  "action" : "backspace",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.special_key",
+  "file" : "code/keys.py",
+  "choice" : "chuck"
+}, {
+  "action" : "backspace",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.special_key",
+  "file" : "code/keys.py",
+  "choice" : "scratch"
+}, {
+  "action" : "escape",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.special_key",
+  "file" : "code/keys.py",
+  "choice" : "scrape"
+}, {
+  "action" : "space",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.special_key",
+  "file" : "code/keys.py",
+  "choice" : "void"
+}, {
+  "action" : "`",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "brick"
+}, {
+  "action" : "/",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "stroke"
+}, {
+  "action" : "\\",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "backstroke"
+}, {
+  "action" : "=",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "equal"
+}, {
+  "action" : "_",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "score"
+}, {
+  "action" : "?",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "quest"
+}, {
+  "action" : "'",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "single"
+}, {
+  "action" : "\"",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "double"
+}, {
+  "action" : "(",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "leper"
+}, {
+  "action" : ")",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "repper"
+}, {
+  "action" : "[",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "lack"
+}, {
+  "action" : "]",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "rack"
+}, {
+  "action" : "{",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "lace"
+}, {
+  "action" : "}",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "race"
+}, {
+  "action" : "<",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "langle"
+}, {
+  "action" : ">",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "wrangle"
+}, {
+  "action" : "*",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "snow"
+}, {
+  "action" : "%",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "percy"
+}, {
+  "action" : "^",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "tangle"
+}, {
+  "action" : ";",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "semi"
+}, {
+  "action" : ":",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "stack"
+}, {
+  "action" : ",",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.symbol_key",
+  "file" : "code/keys.py",
+  "choice" : "drip"
+}, {
+  "action" : "f1",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.function_key",
+  "file" : "code/keys.py",
+  "choice" : "fun one"
+}, {
+  "action" : "f2",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.function_key",
+  "file" : "code/keys.py",
+  "choice" : "fun two"
+}, {
+  "action" : "f3",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.function_key",
+  "file" : "code/keys.py",
+  "choice" : "fun three"
+}, {
+  "action" : "f4",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.function_key",
+  "file" : "code/keys.py",
+  "choice" : "fun four"
+}, {
+  "action" : "f5",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.function_key",
+  "file" : "code/keys.py",
+  "choice" : "fun five"
+}, {
+  "action" : "f6",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.function_key",
+  "file" : "code/keys.py",
+  "choice" : "fun six"
+}, {
+  "action" : "f7",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.function_key",
+  "file" : "code/keys.py",
+  "choice" : "fun seven"
+}, {
+  "action" : "f8",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.function_key",
+  "file" : "code/keys.py",
+  "choice" : "fun eight"
+}, {
+  "action" : "f9",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.function_key",
+  "file" : "code/keys.py",
+  "choice" : "fun nine"
+}, {
+  "action" : "f10",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.function_key",
+  "file" : "code/keys.py",
+  "choice" : "fun ten"
+}, {
+  "action" : "f11",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.function_key",
+  "file" : "code/keys.py",
+  "choice" : "fun eleven"
+}, {
+  "action" : "f12",
+  "fullName" : "code/keys.py::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "user.function_key",
+  "file" : "code/keys.py",
+  "choice" : "fun twelve"
+}, {
+  "action" : "browser.focus_address()",
+  "fullName" : "apps/generic_browser.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "generic browser",
+  "file" : "apps/generic_browser.talon",
+  "choice" : "(address bar | go address | go url)"
+}, {
+  "action" : "browser.focus_address()\nsleep(50ms)\nedit.copy()",
+  "fullName" : "apps/generic_browser.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "generic browser",
+  "file" : "apps/generic_browser.talon",
+  "choice" : "(address copy | url copy | copy address | copy url)"
+}, {
+  "action" : "browser.bookmarks_bar()",
+  "fullName" : "apps/generic_browser.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "generic browser",
+  "file" : "apps/generic_browser.talon",
+  "choice" : "bookmark bar"
+}, {
+  "action" : "browser.toggle_dev_tools()",
+  "fullName" : "apps/generic_browser.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "generic browser",
+  "file" : "apps/generic_browser.talon",
+  "choice" : "dev tools"
+}, {
   "action" : "key(?)",
   "fullName" : "apps/web/github.talon::s::755842",
   "lastUpdated" : "2022-04-07T12:46:37.350957",
@@ -12715,6 +14123,17 @@
   "file" : "apps/web/github.talon",
   "choice" : "mute thread"
 }, {
+  "action" : "key(o)",
+  "fullName" : "apps/web/github.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "open issue"
+}, {
   "action" : "user.vscode(\"workbench.action.toggleSidebarVisibility\")",
   "fullName" : "apps/vscode/vscode.talon::s::755842",
   "lastUpdated" : "2022-04-07T12:46:37.350957",
@@ -12814,6 +14233,17 @@
   "file" : "apps/vscode/vscode.talon",
   "choice" : "ref show"
 }, {
+  "action" : "user.vscode(\"editor.action.revealDefinition\")",
+  "fullName" : "apps/vscode/vscode.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "vscode",
+  "file" : "apps/vscode/vscode.talon",
+  "choice" : "(<user.teleport> declaration | follow)"
+}, {
   "action" : "user.vscode(\"workbench.action.navigateBack\")",
   "fullName" : "apps/vscode/vscode.talon::s::755842",
   "lastUpdated" : "2022-04-07T12:46:37.350957",
@@ -12857,6 +14287,17 @@
   "context" : "vscode",
   "file" : "apps/vscode/vscode.talon",
   "choice" : "<user.teleport> type"
+}, {
+  "action" : "user.vscode(\"references-view.find\")",
+  "fullName" : "apps/vscode/vscode.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "vscode",
+  "file" : "apps/vscode/vscode.talon",
+  "choice" : "<user.teleport> usage"
 }, {
   "action" : "user.vscode(\"workbench.view.extension.bookmarks\")",
   "fullName" : "apps/vscode/vscode.talon::s::755842",
@@ -13210,6 +14651,28 @@
   "file" : "misc/formatters.talon",
   "choice" : "<user.format_text>"
 }, {
+  "action" : "user.insert_many(format_text_list)",
+  "fullName" : "misc/formatters.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "formatters",
+  "file" : "misc/formatters.talon",
+  "choice" : "<user.format_text> halt"
+}, {
+  "action" : "user.insert_many(format_text_list)",
+  "fullName" : "misc/formatters.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "formatters",
+  "file" : "misc/formatters.talon",
+  "choice" : "strict <user.format_text>"
+}, {
   "action" : "core.repeat_command(1)",
   "fullName" : "misc/repeater.talon::s::755842",
   "lastUpdated" : "2022-04-07T12:46:37.350957",
@@ -13364,6 +14827,17 @@
   "file" : "misc/mouse.talon",
   "choice" : "(scroll | school) up"
 }, {
+  "action" : "user.mouse_scroll_up()",
+  "fullName" : "misc/mouse.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "mouse",
+  "file" : "misc/mouse.talon",
+  "choice" : "(scroll | school) up here"
+}, {
   "action" : "user.mouse_scroll_up_continuous()",
   "fullName" : "misc/mouse.talon::s::755842",
   "lastUpdated" : "2022-04-07T12:46:37.350957",
@@ -13429,6 +14903,314 @@
   "context" : "mouse",
   "file" : "misc/mouse.talon",
   "choice" : "(scroll | school) stop here"
+}, {
+  "action" : "\"// \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> comment"
+}, {
+  "action" : "\"func \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> (funk | func | fun)"
+}, {
+  "action" : "\"var \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> var"
+}, {
+  "action" : "\"break\"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> break"
+}, {
+  "action" : "\" chan \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> (chan | channel)"
+}, {
+  "action" : "\"go \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> go"
+}, {
+  "action" : "\"if \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> if"
+}, {
+  "action" : "\" else if \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> else if"
+}, {
+  "action" : "\" else \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> else"
+}, {
+  "action" : "\"while \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> while"
+}, {
+  "action" : "\"for \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> for"
+}, {
+  "action" : "\"forr \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> for range"
+}, {
+  "action" : "\"fmt\"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> format"
+}, {
+  "action" : "\"switch \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> switch"
+}, {
+  "action" : "\"select \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> select"
+}, {
+  "action" : "\" const \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> (const | constant)"
+}, {
+  "action" : "\" case \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> case"
+}, {
+  "action" : "\" default:\"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> default"
+}, {
+  "action" : "\" type \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> type"
+}, {
+  "action" : "\" true \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> true"
+}, {
+  "action" : "\" false \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> false"
+}, {
+  "action" : "insert(\" struct {\")\nkey(\"enter\")",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> (start | struct | struck)"
+}, {
+  "action" : "insert(\" interface {\")\nkey(\"enter\")",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> interface"
+}, {
+  "action" : "\" string \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> string"
+}, {
+  "action" : "\" []\"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> slice"
+}, {
+  "action" : "\" int64 \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> (int | integer | ant) 64"
+}, {
+  "action" : "\" return \"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> return"
+}, {
+  "action" : "\"err\"",
+  "fullName" : "lang/go.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "go",
+  "file" : "lang/go.talon",
+  "choice" : "<user.operator> (air | err)"
 }, {
   "action" : "\"command! \"",
   "fullName" : "lang/vimscript/vimscript.talon::s::755842",
@@ -13914,6 +15696,17 @@
   "file" : "text/symbols.talon",
   "choice" : "(double | quad) that"
 }, {
+  "action" : "text = edit.selected_text()\nuser.paste(\"'{text}'\")",
+  "fullName" : "text/symbols.talon::s::755842",
+  "lastUpdated" : "2022-04-07T12:46:37.350957",
+  "app" : "talon",
+  "repo" : "325363921",
+  "branch" : "paul-jones",
+  "userId" : "755842",
+  "context" : "symbols",
+  "file" : "text/symbols.talon",
+  "choice" : "(single | twin) that"
+}, {
   "action" : "\"{number_string}\"",
   "fullName" : "text/numbers.talon::s::755842",
   "lastUpdated" : "2022-04-07T12:46:37.350957",
@@ -14255,6 +16048,17 @@
   "file" : "apps/web/github.talon",
   "choice" : "mute thread"
 }, {
+  "action" : "key(o)",
+  "fullName" : "apps/web/github.talon::s::540820",
+  "lastUpdated" : "2022-04-07T12:49:12.989986",
+  "app" : "talon",
+  "repo" : "315437621",
+  "branch" : "mine",
+  "userId" : "540820",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "open issue"
+}, {
   "action" : "user.file_manager_open_parent()",
   "fullName" : "apps/file_manager.talon::s::540820",
   "lastUpdated" : "2022-04-07T12:49:12.989986",
@@ -14485,6 +16289,17 @@
   "context" : "github",
   "file" : "apps/web/github.talon",
   "choice" : "mute thread"
+}, {
+  "action" : "key(o)",
+  "fullName" : "apps/web/github.talon::s::35661160",
+  "lastUpdated" : "2022-04-07T12:49:44.136269",
+  "app" : "talon",
+  "repo" : "314792396",
+  "branch" : "geeogi",
+  "userId" : "35661160",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "open issue"
 }, {
   "action" : "user.file_manager_open_parent()",
   "fullName" : "apps/file_manager.talon::s::35661160",
@@ -15201,6 +17016,17 @@
   "file" : "lang/talon/talon.talon",
   "choice" : "lunix require"
 }, {
+  "action" : "\" <- \"",
+  "fullName" : "lang/scala.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:07.527549",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config",
+  "userId" : "14012083",
+  "context" : "scala",
+  "file" : "lang/scala.talon",
+  "choice" : "drawn from"
+}, {
   "action" : "insert(\"[]\")\nkey(left)",
   "fullName" : "text/symbols.talon::s::14012083",
   "lastUpdated" : "2022-04-07T13:00:07.527549",
@@ -15321,6 +17147,17 @@
   "context" : "line commands",
   "file" : "text/line_commands.talon",
   "choice" : "paste <number> until <number>"
+}, {
+  "action" : "user.select_range(number_1, number_2)\nedit.paste()",
+  "fullName" : "text/line_commands.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:07.527549",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config",
+  "userId" : "14012083",
+  "context" : "line commands",
+  "file" : "text/line_commands.talon",
+  "choice" : "replace <number> until <number>"
 }, {
   "action" : "edit.select_all()\nedit.cut()",
   "fullName" : "text/generic_editor.talon::s::14012083",
@@ -15542,6 +17379,17 @@
   "file" : "apps/web/github.talon",
   "choice" : "mute thread"
 }, {
+  "action" : "key(o)",
+  "fullName" : "apps/web/github.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:07.527549",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config",
+  "userId" : "14012083",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "open issue"
+}, {
   "action" : "user.file_manager_open_parent()",
   "fullName" : "apps/file_manager.talon::s::14012083",
   "lastUpdated" : "2022-04-07T13:00:07.527549",
@@ -15575,6 +17423,270 @@
   "file" : "code/keys.py",
   "choice" : "arch"
 }, {
+  "action" : "result = user.homophones_select(number_small)\ninsert(result)\nuser.homophones_hide()",
+  "fullName" : "text/homophones_open.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "homophones open",
+  "file" : "text/homophones_open.talon",
+  "choice" : "pick <number_small>"
+}, {
+  "action" : "result = user.homophones_select(number_small)\ninsert(user.formatted_text(result, formatters))\nuser.homophones_hide()",
+  "fullName" : "text/homophones_open.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "homophones open",
+  "file" : "text/homophones_open.talon",
+  "choice" : "pick <user.formatters> <number_small>"
+}, {
+  "action" : "user.select_range(number_1, number_2)\nedit.paste()",
+  "fullName" : "text/line_commands.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "line commands",
+  "file" : "text/line_commands.talon",
+  "choice" : "paste <number> until <number>"
+}, {
+  "action" : "user.select_range(number_1, number_2)\nedit.paste()",
+  "fullName" : "text/line_commands.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "line commands",
+  "file" : "text/line_commands.talon",
+  "choice" : "replace <number> until <number>"
+}, {
+  "action" : "browser.focus_address()",
+  "fullName" : "apps/generic_browser.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "generic browser",
+  "file" : "apps/generic_browser.talon",
+  "choice" : "(address bar | go address | go url)"
+}, {
+  "action" : "browser.go_forward()",
+  "fullName" : "apps/generic_browser.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "generic browser",
+  "file" : "apps/generic_browser.talon",
+  "choice" : "forward"
+}, {
+  "action" : "browser.go_back()",
+  "fullName" : "apps/generic_browser.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "generic browser",
+  "file" : "apps/generic_browser.talon",
+  "choice" : "go back[ward]"
+}, {
+  "action" : "browser.bookmarks_bar()",
+  "fullName" : "apps/generic_browser.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "generic browser",
+  "file" : "apps/generic_browser.talon",
+  "choice" : "bookmark bar"
+}, {
+  "action" : "browser.toggle_dev_tools()",
+  "fullName" : "apps/generic_browser.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "generic browser",
+  "file" : "apps/generic_browser.talon",
+  "choice" : "dev tools"
+}, {
+  "action" : "key(?)",
+  "fullName" : "apps/web/github.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "show keyboard shortcuts"
+}, {
+  "action" : "key(j)",
+  "fullName" : "apps/web/github.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "move selection down"
+}, {
+  "action" : "key(k)",
+  "fullName" : "apps/web/github.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "move selection up"
+}, {
+  "action" : "key(x)",
+  "fullName" : "apps/web/github.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "toggle selection"
+}, {
+  "action" : "key(o)",
+  "fullName" : "apps/web/github.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "open selection"
+}, {
+  "action" : "key(t)",
+  "fullName" : "apps/web/github.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "find file"
+}, {
+  "action" : "key(w)",
+  "fullName" : "apps/web/github.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "switch (branch|tag)"
+}, {
+  "action" : "key(y)",
+  "fullName" : "apps/web/github.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "expand url"
+}, {
+  "action" : "key(i)",
+  "fullName" : "apps/web/github.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "(show|hide) [all] in line notes"
+}, {
+  "action" : "key(c)",
+  "fullName" : "apps/web/github.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "create [an] issue"
+}, {
+  "action" : "key(ctrl-enter)",
+  "fullName" : "apps/web/github.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "submit comment"
+}, {
+  "action" : "key(ctrl-shift-p)",
+  "fullName" : "apps/web/github.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "preview comment"
+}, {
+  "action" : "key(escape)",
+  "fullName" : "apps/web/github.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "close form"
+}, {
+  "action" : "key(shift-m)",
+  "fullName" : "apps/web/github.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "mute thread"
+}, {
+  "action" : "key(o)",
+  "fullName" : "apps/web/github.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "open issue"
+}, {
   "action" : "user.vscode(\"git.commitStagedAmend\")",
   "fullName" : "apps/vscode/vscode.talon::s::14012083",
   "lastUpdated" : "2022-04-07T13:00:37.654237",
@@ -15585,6 +17697,72 @@
   "context" : "vscode",
   "file" : "apps/vscode/vscode.talon",
   "choice" : "git commit ammend"
+}, {
+  "action" : "user.file_manager_open_parent()",
+  "fullName" : "apps/file_manager.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "file manager",
+  "file" : "apps/file_manager.talon",
+  "choice" : "daddy"
+}, {
+  "action" : "\"kubectl rolling-update \"",
+  "fullName" : "apps/kubectl/kubectl.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "kubectl",
+  "file" : "apps/kubectl/kubectl.talon",
+  "choice" : "cube rolling-update"
+}, {
+  "action" : "\" <- \"",
+  "fullName" : "lang/scala.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "scala",
+  "file" : "lang/scala.talon",
+  "choice" : "drawn from"
+}, {
+  "action" : "insert(\"os: linux\\n\")",
+  "fullName" : "lang/talon/talon.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "talon",
+  "file" : "lang/talon/talon.talon",
+  "choice" : "lunix require"
+}, {
+  "action" : "app.tab_previous()",
+  "fullName" : "misc/tabs.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "tabs",
+  "file" : "misc/tabs.talon",
+  "choice" : "tab last"
+}, {
+  "action" : "app.tab_reopen()",
+  "fullName" : "misc/tabs.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "tabs",
+  "file" : "misc/tabs.talon",
+  "choice" : "tab reopen"
 }, {
   "action" : "key(mute)",
   "fullName" : "misc/media.talon::s::14012083",
@@ -15618,6 +17796,160 @@
   "context" : "media",
   "file" : "misc/media.talon",
   "choice" : "play previous"
+}, {
+  "action" : "edit.up()\nrepeat(number_small - 1)",
+  "fullName" : "modes/dictation_mode.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "dictation mode",
+  "file" : "modes/dictation_mode.talon",
+  "choice" : "go up <number_small> lines"
+}, {
+  "action" : "edit.down()\nrepeat(number_small - 1)",
+  "fullName" : "modes/dictation_mode.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "dictation mode",
+  "file" : "modes/dictation_mode.talon",
+  "choice" : "go down <number_small> lines"
+}, {
+  "action" : "edit.word_left()\nrepeat(number_small - 1)",
+  "fullName" : "modes/dictation_mode.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "dictation mode",
+  "file" : "modes/dictation_mode.talon",
+  "choice" : "go left <number_small> words"
+}, {
+  "action" : "edit.word_right()\nrepeat(number_small - 1)",
+  "fullName" : "modes/dictation_mode.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "dictation mode",
+  "file" : "modes/dictation_mode.talon",
+  "choice" : "go right <number_small> words"
+}, {
+  "action" : "edit.extend_word_left()\nrepeat(number_small - 1)",
+  "fullName" : "modes/dictation_mode.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "dictation mode",
+  "file" : "modes/dictation_mode.talon",
+  "choice" : "select left <number_small> words"
+}, {
+  "action" : "edit.extend_word_right()\nrepeat(number_small - 1)",
+  "fullName" : "modes/dictation_mode.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "dictation mode",
+  "file" : "modes/dictation_mode.talon",
+  "choice" : "select right <number_small> words"
+}, {
+  "action" : "edit.extend_left()\nrepeat(number_small - 1)",
+  "fullName" : "modes/dictation_mode.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "dictation mode",
+  "file" : "modes/dictation_mode.talon",
+  "choice" : "select left <number_small> characters"
+}, {
+  "action" : "edit.extend_right()\nrepeat(number_small - 1)",
+  "fullName" : "modes/dictation_mode.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "dictation mode",
+  "file" : "modes/dictation_mode.talon",
+  "choice" : "select right <number_small> characters"
+}, {
+  "action" : "edit.extend_word_left()\nrepeat(number_small - 1)\nedit.delete()",
+  "fullName" : "modes/dictation_mode.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "dictation mode",
+  "file" : "modes/dictation_mode.talon",
+  "choice" : "clear left <number_small> words"
+}, {
+  "action" : "edit.extend_word_right()\nrepeat(number_small - 1)\nedit.delete()",
+  "fullName" : "modes/dictation_mode.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "dictation mode",
+  "file" : "modes/dictation_mode.talon",
+  "choice" : "clear right <number_small> words"
+}, {
+  "action" : "edit.extend_left()\nrepeat(number_small - 1)\nedit.delete()",
+  "fullName" : "modes/dictation_mode.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "dictation mode",
+  "file" : "modes/dictation_mode.talon",
+  "choice" : "clear left <number_small> characters"
+}, {
+  "action" : "edit.extend_right()\nrepeat(number_small - 1)\nedit.delete()",
+  "fullName" : "modes/dictation_mode.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "dictation mode",
+  "file" : "modes/dictation_mode.talon",
+  "choice" : "clear right <number_small> characters"
+}, {
+  "action" : "insert(\"[]\")\nkey(left)",
+  "fullName" : "text/symbols.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "symbols",
+  "file" : "text/symbols.talon",
+  "choice" : "inside (squares | list)"
+}, {
+  "action" : "insert('\"\"')\nkey(left)",
+  "fullName" : "text/symbols.talon::s::14012083",
+  "lastUpdated" : "2022-04-07T13:00:37.654237",
+  "app" : "talon",
+  "repo" : "272562044",
+  "branch" : "my-config2",
+  "userId" : "14012083",
+  "context" : "symbols",
+  "file" : "text/symbols.talon",
+  "choice" : "inside quotes"
 }, {
   "action" : "browser.focus_address()",
   "fullName" : "apps/generic_browser.talon::s::44053",
@@ -16168,6 +18500,17 @@
   "context" : "github",
   "file" : "apps/web/github.talon",
   "choice" : "mute thread"
+}, {
+  "action" : "key(o)",
+  "fullName" : "apps/web/github.talon::s::5120858",
+  "lastUpdated" : "2022-04-07T13:01:40.207908",
+  "app" : "talon",
+  "repo" : "268076627",
+  "branch" : "personal2",
+  "userId" : "5120858",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "open issue"
 }, {
   "action" : "user.file_manager_open_parent()",
   "fullName" : "apps/file_manager.talon::s::5120858",
@@ -16741,6 +19084,61 @@
   "file" : "lang/talon/talon.talon",
   "choice" : "lunix require"
 }, {
+  "action" : "\"# \"",
+  "fullName" : "lang/markdown.talon::s::6349369",
+  "lastUpdated" : "2022-04-07T13:03:45.857213",
+  "app" : "talon",
+  "repo" : "259113388",
+  "branch" : "main",
+  "userId" : "6349369",
+  "context" : "markdown",
+  "file" : "lang/markdown.talon",
+  "choice" : "header one"
+}, {
+  "action" : "\"## \"",
+  "fullName" : "lang/markdown.talon::s::6349369",
+  "lastUpdated" : "2022-04-07T13:03:45.857213",
+  "app" : "talon",
+  "repo" : "259113388",
+  "branch" : "main",
+  "userId" : "6349369",
+  "context" : "markdown",
+  "file" : "lang/markdown.talon",
+  "choice" : "header to"
+}, {
+  "action" : "\"### \"",
+  "fullName" : "lang/markdown.talon::s::6349369",
+  "lastUpdated" : "2022-04-07T13:03:45.857213",
+  "app" : "talon",
+  "repo" : "259113388",
+  "branch" : "main",
+  "userId" : "6349369",
+  "context" : "markdown",
+  "file" : "lang/markdown.talon",
+  "choice" : "header three"
+}, {
+  "action" : "\"#### \"",
+  "fullName" : "lang/markdown.talon::s::6349369",
+  "lastUpdated" : "2022-04-07T13:03:45.857213",
+  "app" : "talon",
+  "repo" : "259113388",
+  "branch" : "main",
+  "userId" : "6349369",
+  "context" : "markdown",
+  "file" : "lang/markdown.talon",
+  "choice" : "header for"
+}, {
+  "action" : "\"##### \"",
+  "fullName" : "lang/markdown.talon::s::6349369",
+  "lastUpdated" : "2022-04-07T13:03:45.857213",
+  "app" : "talon",
+  "repo" : "259113388",
+  "branch" : "main",
+  "userId" : "6349369",
+  "context" : "markdown",
+  "file" : "lang/markdown.talon",
+  "choice" : "header five"
+}, {
   "action" : "\", \"",
   "fullName" : "text/symbols.talon::s::6349369",
   "lastUpdated" : "2022-04-07T13:03:45.857213",
@@ -16806,6 +19204,17 @@
   "context" : "line commands",
   "file" : "text/line_commands.talon",
   "choice" : "paste <number> until <number>"
+}, {
+  "action" : "user.select_range(number_1, number_2)\nedit.paste()",
+  "fullName" : "text/line_commands.talon::s::6349369",
+  "lastUpdated" : "2022-04-07T13:03:45.857213",
+  "app" : "talon",
+  "repo" : "259113388",
+  "branch" : "main",
+  "userId" : "6349369",
+  "context" : "line commands",
+  "file" : "text/line_commands.talon",
+  "choice" : "replace <number> until <number>"
 }, {
   "action" : "edit.word_left()",
   "fullName" : "text/generic_editor.talon::s::6349369",
@@ -17268,6 +19677,17 @@
   "context" : "github",
   "file" : "apps/web/github.talon",
   "choice" : "mute thread"
+}, {
+  "action" : "key(o)",
+  "fullName" : "apps/web/github.talon::s::6349369",
+  "lastUpdated" : "2022-04-07T13:03:45.857213",
+  "app" : "talon",
+  "repo" : "259113388",
+  "branch" : "main",
+  "userId" : "6349369",
+  "context" : "github",
+  "file" : "apps/web/github.talon",
+  "choice" : "open issue"
 }, {
   "action" : "user.file_manager_open_parent()",
   "fullName" : "apps/file_manager.talon::s::6349369",

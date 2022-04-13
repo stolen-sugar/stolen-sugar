@@ -5,7 +5,6 @@ import com.stolensugar.web.dao.UserDao;
 import com.stolensugar.web.dynamodb.models.UserModel;
 import com.stolensugar.web.model.User;
 import com.stolensugar.web.model.requests.CreateUserRequest;
-import com.stolensugar.web.model.response.CreateSpokenFormResponse;
 import com.stolensugar.web.model.response.CreateUserResponse;
 
 import javax.inject.Inject;
