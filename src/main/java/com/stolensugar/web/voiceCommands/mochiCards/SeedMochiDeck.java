@@ -3,12 +3,20 @@ import java.io.*;
 import java.util.*;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import com.google.gson.Gson;
+import org.json.simple.JSONObject;
+import okhttp3.*;
 import com.stolensugar.web.dynamodb.models.SpokenFormModel;
-import org.apache.commons.lang3.RandomStringUtils;
 
 
 public class SeedMochiDeck {
-
+    private static final String templateId = "ftOIZq7E";
+    private static final String nameId = "name";
+    private static final String choiceId = "jvjwdOZ1";
+    private static final String contextId = "Spe228xW";
+    private static final String fileId = "nyZmZayN";
+    public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
     public static void main(String[] args) throws Exception {
         parseTalon();
@@ -17,32 +25,69 @@ public class SeedMochiDeck {
     public static void parseTalon() {
         SpokenFormModel[] spokenFormList;
         ObjectMapper mapper = new ObjectMapper();
+        OkHttpClient client = new OkHttpClient();
+
         try {
             File json = new File("src/main/java/com/stolensugar/web/voiceCommands/tempFiles/UserMappingsNew.json");
             spokenFormList = mapper.readValue(json, SpokenFormModel[].class);
-            Arrays.asList(spokenFormList).forEach(System.out::println);
-            SpokenFormModel spokenFormModel = spokenFormList[2];
-//            Request request = new Request.Builder()
-//                    .url("https://app.mochi.cards/api/cards")
-//                    .header("Authorization", "Basic NzEwMTJhZTJhOWM3NWYxOWU1OWFjZjUzOg==")
-//                    .bo
-            MochiMapper m1 = new MochiMapper();
-            Fields f1 = new Fields();
-            Name n1 = new Name();
-            Choice123 c1 = new Choice123();
+//            Arrays.asList(spokenFormList).forEach(System.out::println);
 
-            n1.setId("name");
-            n1.setValue(spokenFormModel.getAction());
-            c1.setId(RandomStringUtils.randomAlphanumeric(8));
-            c1.setValue(spokenFormModel.getDefaultName());
+            for (SpokenFormModel spokenFormModel : spokenFormList) {
+                MochiMapper m1 = new MochiMapper();
+                Fields f1 = new Fields();
+                FieldParams name = new FieldParams();
+                FieldParams choice = new FieldParams();
+                FieldParams context = new FieldParams();
+                FieldParams file = new FieldParams();
 
-            f1.setName(n1);
-            f1.setChoice123(c1);
-            m1.setFields(f1);
-            m1.setDeckId("33O2fyWT");
-            m1.setContent("Testing");
+                name.setId(nameId);
+                name.setValue(spokenFormModel.getAction());
 
-            mapper.writeValue(new File("src/main/java/com/stolensugar/web/voiceCommands/tempFiles/test.json"), m1);
+                choice.setId(choiceId);
+                choice.setValue(spokenFormModel.getDefaultName());
+
+                context.setId(contextId);
+                context.setValue(spokenFormModel.getContext());
+
+                file.setId(fileId);
+                file.setValue(spokenFormModel.getFileName());
+
+                f1.setName(name);
+                f1.setChoice(choice);
+                f1.setContext(context);
+                f1.setFile(file);
+
+                m1.setFields(f1);
+                m1.setDeckId("UHiXar0A");
+                m1.setContent("**What is talon the phrase for action below?**");
+                m1.setTemplateId(templateId);
+
+//                mapper.writeValue(new File("src/main/java/com/stolensugar/web/voiceCommands/tempFiles/test.json"), m1);
+//                File jsonNew = new File("src/main/java/com/stolensugar/web/voiceCommands/tempFiles/test.json");
+//                String mappedJson = mapper.readValue(jsonNew, String.class);
+//                System.out.println(mappedJson);
+               String jsonString  = mapper.writeValueAsString(m1);
+//               System.out.println(jsonString);
+//                MediaType JSON
+//                        = MediaType.parse("src/main/java/com/stolensugar/web/voiceCommands/tempFiles/test.json");
+//                RequestBody body = RequestBody.create(json, JSON);
+//                String jsonInString = new Gson().toJson(m1);
+//                JSONObject mJSONObject = new JSONObject(jsonInString);
+
+                RequestBody body = RequestBody.create(jsonString, JSON);
+
+                Request request = new Request.Builder()
+                    .url("https://app.mochi.cards/api/cards")
+                    .header("Authorization", "Basic NzEwMTJhZTJhOWM3NWYxOWU1OWFjZjUzOg==")
+                    .header("Content-Type", "application/json")
+                    .header("Accept", "application/json")
+                    .post(body)
+                    .build();
+                Response response = client.newCall(request).execute();
+                response.close();
+                Thread.sleep(3);
+                System.out.println(response);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

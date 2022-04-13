@@ -9,7 +9,7 @@ import lombok.*;
 @NoArgsConstructor(force = true, access = AccessLevel.PUBLIC)
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class Choice123 {
+public class FieldParams {
     private @Getter @Setter String id;
     private @Getter @Setter String value;
 }

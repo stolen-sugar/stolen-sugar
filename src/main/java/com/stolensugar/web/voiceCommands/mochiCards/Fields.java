@@ -18,8 +18,15 @@ import lombok.*;
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class Fields {
     @JsonProperty("name")
-    private @Getter @Setter Name name;
-    @JsonProperty("choice123")
     private @Getter @Setter
-    Choice123 choice123;
+    FieldParams name;
+    @JsonProperty("jvjwdOZ1")
+    private @Getter @Setter
+    FieldParams choice;
+    @JsonProperty("Spe228xW")
+    private @Getter @Setter
+    FieldParams context;
+    @JsonProperty("nyZmZayN")
+    private @Getter @Setter
+    FieldParams file;
 }

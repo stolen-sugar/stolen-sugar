@@ -24,8 +24,8 @@ public class MochiMapper {
     private @Getter @Setter String content;
     @JsonProperty("deck-id")
     private @Getter @Setter String deckId;
+    @JsonProperty("template-id")
+    private @Getter @Setter String templateId;
     @JsonProperty("fields")
     private @Getter @Setter Fields fields;
-    @JsonIgnore
-    private @Getter @Setter Map<String, Object> additionalProperties = new HashMap<>();
 }

@@ -73,6 +73,11 @@ dependencies {
 	// For API client
 	implementation('com.squareup.okhttp3:okhttp:4.9.3')
 
+	implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+	implementation 'com.google.code.gson:gson:2.9.0'
+
+
+
 }
 
 tasks.named('test') {
