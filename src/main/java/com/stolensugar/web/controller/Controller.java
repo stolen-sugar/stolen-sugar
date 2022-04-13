@@ -23,6 +23,7 @@ import com.stolensugar.web.model.requests.UpdateItemAlternativesRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,6 +35,9 @@ import javax.validation.Valid;
 
 import java.util.List;
 
+@CrossOrigin({"http://localhost:8081", "http://localhost:3000", "https://main" +
+        ".d2hyw43cfq45sa.amplifyapp.com", "https://stolensugar.com", "https" +
+        "://www.stolensugar.com"})
 @RestController
 public class Controller {
 
