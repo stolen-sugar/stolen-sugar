@@ -7,7 +7,7 @@
 
 ### About
 
-We steal spoken phrases from the various forks of knausj_talon and make them available to be searched by either the default spoken phrase or the file and context. Cursorless spoken phrases are less available on github, so please consider donating your repository so more people can benefit.
+We steal spoken phrases from the various forks of knausj_talon and make them available to be searched by file. Cursorless spoken phrases are less available on github, so please consider donating your repository so more people can benefit.
 
 Stolen Sugar was created by David Slater, Evan Pollak and Ron Walker.
 
