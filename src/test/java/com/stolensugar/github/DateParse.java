@@ -1,24 +1,27 @@
 package com.stolensugar.github;
 
 import com.stolensugar.web.dao.UserDao;
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+import org.joda.time.format.ISODateTimeFormat;
 
-import javax.inject.Inject;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DateParse {
 
     private UserDao userDao;
-    private SimpleDateFormat dateFormat;
+    DateTimeFormatter parser;
     private final String ID = "18250094";
 
     public DateParse(UserDao userDao) {
         this.userDao = userDao;
-        dateFormat = new SimpleDateFormat();
+        parser = ISODateTimeFormat.dateTimeNoMillis();
     }
 
-    public Date parseDate() throws ParseException {
-        return dateFormat.parse(userDao.getUser(ID).getTalonLastPush());
+    public Date parseDate() {
+        DateTime jodaDateTime = parser.parseDateTime(userDao.getUser(ID).getTalonLastPush());
+        return jodaDateTime.toDate();
     }
 }

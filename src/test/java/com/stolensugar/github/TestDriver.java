@@ -6,6 +6,12 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.stolensugar.web.dao.UserDao;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
+import org.joda.time.format.DateTimeFormatter;
+import org.joda.time.format.ISODateTimeFormat;
+
+import java.text.SimpleDateFormat;
 
 public class TestDriver {
     public static void main(String[] args) {
@@ -21,7 +27,10 @@ public class TestDriver {
 
 
         try {
-            System.out.println(dateParse.parseDate());
+            DateTimeFormatter parser = ISODateTimeFormat.dateTimeNoMillis();
+            DateTime jodaDateTime = parser.parseDateTime("2022-04-05T17:11:57Z");
+            System.out.println(parser.print(jodaDateTime.withZone(DateTimeZone.UTC)));
+//            System.out.println(dateParse.parseDate());
         } catch (Exception e) {
             e.printStackTrace();
         }
