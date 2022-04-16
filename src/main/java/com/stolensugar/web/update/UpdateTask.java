@@ -23,8 +23,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static com.stolensugar.web.FileProcessingKt.processFormatters;
-
 public class UpdateTask implements Runnable {
 
     private final GitHub github;
@@ -186,17 +184,23 @@ public class UpdateTask implements Runnable {
                 .filter(x -> !x.matches("[+-]\\s*#.*"))  // Removes comments
                 .collect(Collectors.toList());
 
-        String fileName = commitFile.getFileName();
-        if (fileName == "code/formatters.py") {
-            return processChanges(changedWords, FileProcessingKt.processFormatters(lines));
-        } else if (fileName == "code/keys.py") {
-            return processChanges(changedWords, FileProcessingKt.processKeys(lines));
+//        String fileName = commitFile.getFileName();
+//        if (fileName == "code/formatters.py") {
+//            return processChanges(changedWords, FileProcessingKt.processFormatters(lines));
+//        } else if (fileName == "code/keys.py") {
+//            return processChanges(changedWords, FileProcessingKt.processKeys(lines));
+//        } else {
+//            return new HashMap<>();
+//        }
+
+        Map<String, String> localChanges;
+        if (commitFile.getFileName() == "code/formatters.py") {
+            localChanges = FileProcessingKt.processFormatters(lines);
+        } else if (commitFile.getFileName() == "code/keys.py") {
+            localChanges = FileProcessingKt.processKeys(lines);
         } else {
             return new HashMap<>();
         }
-    }
-
-    private Map<String, String> processChanges(Map<String, String> changedWords, Map<String, String> localChanges) {
 
         Map<String, String> changedWordsReversed = new HashMap<>();
         if (!localChanges.isEmpty() && !changedWords.isEmpty()) {
@@ -221,4 +225,30 @@ public class UpdateTask implements Runnable {
 
         return changedWords;
     }
+
+//    private Map<String, String> processChanges(Map<String, String> changedWords, Map<String, String> localChanges) {
+//
+//        Map<String, String> changedWordsReversed = new HashMap<>();
+//        if (!localChanges.isEmpty() && !changedWords.isEmpty()) {
+//            for (var entry : changedWords.entrySet()) {
+//                changedWordsReversed.put(entry.getValue(), entry.getKey());
+//            }
+//        }
+//
+//        for (var entry : localChanges.entrySet()) {
+//            String oldWord = entry.getKey();
+//            String newWord = entry.getValue();
+//
+//            if (changedWords.containsKey(oldWord)) {
+//                String oldestWord = changedWordsReversed.get(oldWord);
+//                changedWordsReversed.put(newWord, oldestWord);
+//                changedWords.put(oldestWord, newWord);
+//            } else {
+//                changedWords.put(oldWord, newWord);
+//                changedWordsReversed.put(newWord, oldWord);
+//            }
+//        }
+//
+//        return changedWords;
+//    }
 }
