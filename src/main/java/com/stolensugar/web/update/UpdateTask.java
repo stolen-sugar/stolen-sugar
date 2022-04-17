@@ -3,6 +3,7 @@ package com.stolensugar.web.update;
 import com.stolensugar.web.Command;
 import com.stolensugar.web.CommandGroupMappings;
 import com.stolensugar.web.FileProcessingKt;
+import com.stolensugar.web.UserChanges;
 import com.stolensugar.web.dao.SpokenFormDao;
 import com.stolensugar.web.dao.SpokenFormUserDao;
 import com.stolensugar.web.dao.UserDao;
@@ -96,6 +97,7 @@ public class UpdateTask implements Runnable {
             }
 
             Map<String, Map<String, String>> changedWords = new HashMap<>();
+            UserChanges userChanges = new UserChanges(new HashMap<>(), new HashMap<>(), new ArrayList<>());
 
             for (var commit : commits) {
                 if (!baseCommitShas.contains(commit.getSHA1())) {
@@ -114,6 +116,8 @@ public class UpdateTask implements Runnable {
                     }
                 }
             }
+
+
         }
     }
 
