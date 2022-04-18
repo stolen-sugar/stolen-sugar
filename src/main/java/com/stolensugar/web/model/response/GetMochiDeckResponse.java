@@ -7,7 +7,7 @@ import net.minidev.json.JSONObject;
 @ToString
 @Builder
 @AllArgsConstructor
-public class CreateMochiDeckResponse {
-    private @Getter @Setter JSONObject mochiJson;
+public class GetMochiDeckResponse {
+    private @Getter @Setter String mochiJson;
 
 }
