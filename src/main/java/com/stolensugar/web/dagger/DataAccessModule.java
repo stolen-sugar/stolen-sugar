@@ -3,6 +3,7 @@ package com.stolensugar.web.dagger;
 import javax.inject.Singleton;
 
 import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
+import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
@@ -17,7 +18,7 @@ public class DataAccessModule {
     @Provides
     public DynamoDBMapper provideDynamoDBMapper() {
         AmazonDynamoDB amazonDynamoDBClient = AmazonDynamoDBClientBuilder.standard()
-                .withCredentials(DefaultAWSCredentialsProviderChain.getInstance())
+                .withCredentials(new ProfileCredentialsProvider("evan"))
                 .withRegion(Regions.US_EAST_2)
                 .build();
 

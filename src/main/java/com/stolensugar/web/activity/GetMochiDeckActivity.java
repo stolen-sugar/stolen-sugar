@@ -1,28 +1,24 @@
 package com.stolensugar.web.activity;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.stolensugar.web.controller.mappers.Mochi.*;
 import com.stolensugar.web.dao.SpokenFormUserDao;
 import com.stolensugar.web.dynamodb.models.SpokenFormUserModel;
 import com.stolensugar.web.model.requests.GetMochiDeckRequest;
-import com.stolensugar.web.model.response.GetMochiDeckResponse;
 
 import javax.inject.Inject;
-import java.io.File;
-import java.util.Iterator;
+import java.util.ArrayList;
 import java.util.List;
 
 public class GetMochiDeckActivity {
     private SpokenFormUserDao spokenFormUserDao;
-
     @Inject
     public GetMochiDeckActivity(SpokenFormUserDao spokenFormUserDao) {
 
         this.spokenFormUserDao = spokenFormUserDao;
     }
 
-    public GetMochiDeckResponse execute (final GetMochiDeckRequest request) throws Exception {
+    public String execute (final GetMochiDeckRequest request) throws Exception {
 
         if(request.getApp() == null || request.getApp() == "talon") {
             request.setApp("talon");
@@ -31,67 +27,94 @@ public class GetMochiDeckActivity {
         List<SpokenFormUserModel> spokenFormUsers = spokenFormUserDao.getByUser(request.getUserId(), request.getApp());
 
         ObjectMapper objectMapper = new ObjectMapper();
-        File jsonFile = new File("src/main/java/com/stolensugar/web/voiceCommands/tempFiles/mochiMasterTest.json");
 
-        JsonNode root = objectMapper.readTree(jsonFile);
-        JsonNode deck = root.get("~:decks");
-        JsonNode cards = deck.findValue("~:cards");
-        JsonNode list = cards.get("~#list");
+        MochiDeck mochiDeck = new MochiDeck();
+        Deck deck = new Deck();
+        Cards cards = new Cards();
 
-//        for(SpokenFormUserModel spokenFormUserModel : spokenFormUsers) {
-//            for (final JsonNode item : list) {
-//                if (item.findPath("~:name").asText().equals(spokenFormUserModel.getAction())) {
-//                    JsonNode fields = item.findValue("~:fields");
-//                    JsonNode choice = fields.findValue("~:jvjwdOZ1");
-//                    ((ObjectNode) choice).put("~:value", spokenFormUserModel.getChoice());
-//                }
-//            }
-//        }
-//        int i = 0;
-//        for(JsonNode item : list) {
-//
-//            JsonNode fields = item.findValue("~:fields");
-//            JsonNode choice = fields.findValue("~:jvjwdOZ1");
-//            JsonNode file = fields.findValue("~:nyZmZayN");
-//
-//            for(SpokenFormUserModel spokenFormUserModel : spokenFormUsers) {
-//                if (item.findPath("~:name").asText().equals(spokenFormUserModel.getAction())) {
-//                    if(file.findPath("~:value").asText().equals(spokenFormUserModel.getFile())) {
-//                        ((ObjectNode) choice).put("~:value", spokenFormUserModel.getChoice());
-//                        i = 1;
-//                    }
-//                } else {
-//                    i = -1;
-//                }
-//            }
-//        }
-        Iterator<JsonNode> itr = list.iterator();
-        while(itr.hasNext()) {
-            int i = 0;
-            JsonNode item = itr.next();
-            for(SpokenFormUserModel spokenFormUserModel : spokenFormUsers) {
-                if (item.findPath("~:name").asText().equals(spokenFormUserModel.getAction())) {
-                    JsonNode fields = item.findValue("~:fields");
-                    JsonNode choice = fields.findValue("~:jvjwdOZ1");
-                    JsonNode file = fields.findValue("~:nyZmZayN");
-                    if (file.findPath("~:value").asText().equals(spokenFormUserModel.getFile())) {
-                        ((ObjectNode) choice).put("~:value", spokenFormUserModel.getChoice());
-                        i = 1;
-                    }
-                } else {
-                    i = -1;
-                }
-            }
+        Templates templates = new Templates();
+        SingleTemplate ssTemplate = new SingleTemplate();
+        TemplateFields templateFields = new TemplateFields();
+        TemplateFieldParams templateName = new TemplateFieldParams();
+        TemplateFieldParams templateChoice = new TemplateFieldParams();
+        TemplateFieldParams templateContext = new TemplateFieldParams();
+        TemplateFieldParams templateFile = new TemplateFieldParams();
 
-            if(i == -1) {
-                itr.remove();
-            }
+        templateName.setId("~:name");
+        templateName.setName("action");
+        templateName.setPos("a");
+
+        templateChoice.setId("~:jvjwdOZ1");
+        templateChoice.setName("phrase");
+        templateChoice.setPos("m");
+
+        templateContext.setId("~:Spe228xW");
+        templateContext.setName("context");
+        templateContext.setPos("s");
+
+        templateFile.setId("~:nyZmZayN");
+        templateFile.setName("file");
+        templateFile.setPos("v");
+
+        templateFields.setName(templateName);
+        templateFields.setChoice(templateChoice);
+        templateFields.setContext(templateContext);
+        templateFields.setFile(templateFile);
+        List<SingleTemplate> ssTemplateList = new ArrayList<>();
+        ssTemplate.setFields(templateFields);
+        ssTemplateList.add(ssTemplate);
+
+        templates.setList(ssTemplateList);
+
+        mochiDeck.setTemplates(templates);
+
+        List<SingleCard> cardList = new ArrayList<>();
+
+        for(SpokenFormUserModel spokenFormUserModel : spokenFormUsers) {
+            SingleCard singleCard = new SingleCard();
+            Fields fields = new Fields();
+            FieldParams name = new FieldParams();
+            FieldParams choice = new FieldParams();
+            FieldParams context = new FieldParams();
+            FieldParams file = new FieldParams();
+
+            name.setId("~:name");
+            name.setValue(spokenFormUserModel.getAction());
+
+            choice.setId("~:jvjwdOZ1");
+            choice.setValue(spokenFormUserModel.getChoice());
+
+            context.setId("~:Spe228xW");
+            context.setValue(spokenFormUserModel.getContext());
+
+            file.setId("~:nyZmZayN");
+            file.setValue(spokenFormUserModel.getFile());
+
+            fields.setName(name);
+            fields.setChoice(choice);
+            fields.setContext(context);
+            fields.setFile(file);
+
+            singleCard.setName(spokenFormUserModel.getAction());
+            singleCard.setFields(fields);
+            cardList.add(singleCard);
         }
 
-        return GetMochiDeckResponse.builder()
-                .mochiJson(objectMapper.writeValueAsString(root))
-                .build();
+        cards.setList(cardList);
+        deck.setCards(cards);
 
+        List<Deck> deckList = new ArrayList<>();
+        deckList.add(deck);
+
+
+
+        mochiDeck.setDecks(deckList);
+
+        objectMapper.writeValueAsString(mochiDeck);
+
+
+
+        return objectMapper.writeValueAsString(mochiDeck);
     }
 
 
