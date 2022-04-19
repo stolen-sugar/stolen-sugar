@@ -1,4 +1,4 @@
-package com.stolensugar.web.controller.mappers.Mochi;
+package com.stolensugar.web.voiceCommands.Mochi;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

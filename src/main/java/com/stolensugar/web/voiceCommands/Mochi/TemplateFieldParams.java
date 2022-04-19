@@ -1,4 +1,4 @@
-package com.stolensugar.web.controller.mappers.Mochi;
+package com.stolensugar.web.voiceCommands.Mochi;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,16 +7,20 @@ import lombok.*;
 
 @JsonPropertyOrder({
         "~:id",
-        "~:value"
+        "~:name",
+        "~:pos"
 })
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @ToString
 @NoArgsConstructor(force = true, access = AccessLevel.PUBLIC)
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class FieldParams {
+public class TemplateFieldParams {
     @JsonProperty("~:id")
     private @Getter @Setter String id;
-    @JsonProperty("~:value")
-    private @Getter @Setter String value;
+    @JsonProperty("~:name")
+    private @Getter @Setter String name;
+    @JsonProperty("~:pos")
+    private @Getter @Setter String pos;
+
 }

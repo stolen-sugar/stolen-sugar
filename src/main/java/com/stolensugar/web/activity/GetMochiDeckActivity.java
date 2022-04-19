@@ -1,7 +1,7 @@
 package com.stolensugar.web.activity;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.stolensugar.web.controller.mappers.Mochi.*;
+import com.stolensugar.web.voiceCommands.Mochi.*;
 import com.stolensugar.web.dao.SpokenFormUserDao;
 import com.stolensugar.web.dynamodb.models.SpokenFormUserModel;
 import com.stolensugar.web.model.requests.GetMochiDeckRequest;

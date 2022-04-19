@@ -1,4 +1,4 @@
-package com.stolensugar.web.controller.mappers.Mochi;
+package com.stolensugar.web.voiceCommands.Mochi;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -18,17 +18,17 @@ import lombok.*;
 @NoArgsConstructor(force = true, access = AccessLevel.PUBLIC)
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class TemplateFields {
+public class Fields {
     @JsonProperty("~:name")
     private @Getter @Setter
-    com.stolensugar.web.controller.mappers.Mochi.TemplateFieldParams name;
+    com.stolensugar.web.voiceCommands.Mochi.FieldParams name;
     @JsonProperty("~:jvjwdOZ1")
     private @Getter @Setter
-    com.stolensugar.web.controller.mappers.Mochi.TemplateFieldParams choice;
+    com.stolensugar.web.voiceCommands.Mochi.FieldParams choice;
     @JsonProperty("~:Spe228xW")
     private @Getter @Setter
-    com.stolensugar.web.controller.mappers.Mochi.TemplateFieldParams context;
+    com.stolensugar.web.voiceCommands.Mochi.FieldParams context;
     @JsonProperty("~:nyZmZayN")
     private @Getter @Setter
-    com.stolensugar.web.controller.mappers.Mochi.TemplateFieldParams file;
+    com.stolensugar.web.voiceCommands.Mochi.FieldParams file;
 }
