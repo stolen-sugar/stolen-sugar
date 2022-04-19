@@ -1,25 +1,12 @@
 package com.stolensugar.web.controller;
 import com.stolensugar.web.AppApplication;
-import com.stolensugar.web.activity.CreateSpokenFormActivity;
-import com.stolensugar.web.activity.CreateSpokenFormUserActivity;
-import com.stolensugar.web.activity.CreateUserActivity;
-import com.stolensugar.web.activity.GetAllUsersActivity;
-import com.stolensugar.web.activity.GetSpokenFormActivity;
-import com.stolensugar.web.activity.GetSpokenFormByUserActivity;
-import com.stolensugar.web.activity.GetUserActivity;
-import com.stolensugar.web.activity.UpdateItemAlternativesActivity;
+import com.stolensugar.web.activity.*;
 import com.stolensugar.web.dynamodb.models.SpokenFormModel;
 import com.stolensugar.web.dynamodb.models.SpokenFormUserModel;
 import com.stolensugar.web.dynamodb.models.UserModel;
-import com.stolensugar.web.model.requests.AlternativesMapper;
-import com.stolensugar.web.model.requests.CreateSpokenFormRequest;
-import com.stolensugar.web.model.requests.CreateSpokenFormUserRequest;
-import com.stolensugar.web.model.requests.CreateUserRequest;
-import com.stolensugar.web.model.requests.GetSpokenFormRequest;
-import com.stolensugar.web.model.requests.GetUserRequest;
+import com.stolensugar.web.model.requests.*;
 import com.stolensugar.web.dagger.ApplicationComponent;
 
-import com.stolensugar.web.model.requests.UpdateItemAlternativesRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -128,4 +115,15 @@ public class Controller {
 
         return new ResponseEntity<>(spokenFormActivity.execute(spokenFormRequest), HttpStatus.OK);
     }
+
+//    @PostMapping(value = "/updatereposcontrol", consumes = {"application/json"},
+//            produces = {"application/json"})
+//    public ResponseEntity<?> controlUpdateRepos(@Valid @RequestBody String command) {
+//        UpdateReposControlActivity updateReposControlActivity = component.provideUpdateReposeControlActivity();
+//
+//        UpdateReposControlRequest updateReposControlRequest =
+//                UpdateReposControlRequest.builder().command(command).build();
+//
+//        return new ResponseEntity<>(updateReposControlActivity.execute(updateReposControlRequest), HttpStatus.OK);
+//    }
 }

@@ -11,9 +11,13 @@ import com.amazonaws.services.dynamodbv2.datamodeling.PaginatedQueryList;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.amazonaws.services.kms.model.NotFoundException;
 import com.stolensugar.web.dynamodb.models.SpokenFormUserModel;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class SpokenFormUserDao {
     private final DynamoDBMapper dynamoDbMapper;
+
+    private static final Logger LOG = LogManager.getLogger(SpokenFormUserDao.class);
 
     /**
      * Instantiates a new SpokenFormUser object.
@@ -86,6 +90,31 @@ public class SpokenFormUserDao {
     public void saveSpokenFormUser(List<SpokenFormUserModel> spokenFormUserModels) {
         List<DynamoDBMapper.FailedBatch> failedBatches =
                 dynamoDbMapper.batchSave(spokenFormUserModels);
-        System.out.println(failedBatches);
-    }    
+
+        for (var failedBatch : failedBatches) {
+            LOG.error("Failed to save batch " + failedBatch);
+        }
+    }
+
+    /**
+     * Retrieves query results for a given choice and fullName. Returns a list which
+     * should contain at most 1 element.
+     * @param choice The choice of the SpokenFormUserModel to be retrieved.
+     * @param fullName The fullName associated with this choice.
+     * @return List of matching SpokenFormUserModel (should contain at most 1 element)
+     */
+    public List<SpokenFormUserModel> querySpokenFormUsersByChoice(String choice, String fullName) {
+
+        Map<String, AttributeValue> valueMap = new HashMap<>();
+        valueMap.put(":choice", new AttributeValue().withS(choice));
+        valueMap.put(":fullName", new AttributeValue().withS(fullName));
+
+        DynamoDBQueryExpression<SpokenFormUserModel> queryExpression = new DynamoDBQueryExpression<SpokenFormUserModel>()
+                .withIndexName(SpokenFormUserModel.CHOICE_FULL_NAME_INDEX)
+                .withConsistentRead(false)
+                .withKeyConditionExpression("choice = :choice and fullName = :fullName")
+                .withExpressionAttributeValues(valueMap);
+
+        return dynamoDbMapper.query(SpokenFormUserModel.class, queryExpression);
+    }
 }

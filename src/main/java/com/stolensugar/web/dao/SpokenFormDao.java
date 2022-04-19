@@ -4,6 +4,9 @@ import com.amazonaws.services.dynamodbv2.datamodeling.*;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.amazonaws.services.kms.model.NotFoundException;
 import com.stolensugar.web.dynamodb.models.SpokenFormModel;
+import com.stolensugar.web.update.UpdateTask;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.inject.Inject;
 
@@ -15,6 +18,8 @@ import java.util.Set;
 
 public class SpokenFormDao {
     private final DynamoDBMapper dynamoDbMapper;
+
+    private static final Logger LOG = LogManager.getLogger(SpokenFormDao.class);
 
     /**
      * Instantiates a new SpokenForm object.
@@ -117,7 +122,9 @@ public class SpokenFormDao {
         List<DynamoDBMapper.FailedBatch> failedBatches =
                 dynamoDbMapper.batchSave(spokenFormModels);
 
-        System.out.println(failedBatches);
+        for (var failedBatch : failedBatches) {
+            LOG.error("Failed to save batch " + failedBatch);
+        }
     }
 
     /**

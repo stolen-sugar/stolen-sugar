@@ -1,6 +1,8 @@
 package com.stolensugar.web.update;
 
 import com.google.common.annotations.VisibleForTesting;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -14,14 +16,12 @@ import java.util.concurrent.TimeUnit;
 @Singleton
 public class Updater {
 
-    //private static final Logger log = LogManager.getLogger(BookPublisher.class);
-
     private final ScheduledExecutorService scheduledExecutorService;
     private final Runnable updateTask;
     private boolean isRunning;
 
     /**
-     * Instantiates a new BookPublisher object.
+     * Instantiates a new Updater object.
      *
      * @param scheduledExecutorService will schedule update tasks
      * @param updateTask the task that should be scheduled to update the database
@@ -41,7 +41,7 @@ public class Updater {
             return;
         }
         isRunning = true;
-        scheduledExecutorService.scheduleWithFixedDelay(updateTask, 1, 1, TimeUnit.DAYS);
+        scheduledExecutorService.scheduleWithFixedDelay(updateTask, 0, 1, TimeUnit.DAYS);
     }
 
     /**
