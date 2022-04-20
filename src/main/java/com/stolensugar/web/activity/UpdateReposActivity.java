@@ -52,7 +52,6 @@ public class UpdateReposActivity implements RequestHandler<ScheduledEvent, Strin
 
     @Override
     public String handleRequest(final ScheduledEvent input, Context context) {
-
         LOG.info("Executing UpdateTask");
         populateBaseCommands();
         try {
