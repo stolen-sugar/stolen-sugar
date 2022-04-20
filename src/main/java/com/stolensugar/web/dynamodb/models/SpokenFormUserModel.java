@@ -28,6 +28,7 @@ public class SpokenFormUserModel {
     private String app;
     @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String repo;
     @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String branch;
+
     @Getter(onMethod_={@DynamoDBAttribute, @DynamoDBIndexHashKey(globalSecondaryIndexName =
             CHOICE_FULL_NAME_INDEX, attributeName = "choice")}) @Setter private String choice;
     @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String lastUpdated;

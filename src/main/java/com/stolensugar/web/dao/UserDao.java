@@ -5,12 +5,16 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
 import com.amazonaws.services.kms.model.NotFoundException;
 import com.stolensugar.web.dynamodb.models.UserModel;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 
 
 public class UserDao {
     private final DynamoDBMapper dynamoDbMapper;
+
+    private static final Logger LOG = LogManager.getLogger(UserDao.class);
 
     /**
      * Instantiates a new UserDao object.
@@ -56,6 +60,11 @@ public class UserDao {
      * @param userModels list of models associated with the spokenFormUsers.
      */
     public void saveUser(List<UserModel> userModels) {
-        dynamoDbMapper.batchSave(userModels);
+
+        List<DynamoDBMapper.FailedBatch> failedBatches = dynamoDbMapper.batchSave(userModels);
+
+        for (var failedBatch : failedBatches) {
+            LOG.error("Failed to save batch " + failedBatch);
+        }
     }
 }

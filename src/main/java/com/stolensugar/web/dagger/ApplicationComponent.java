@@ -2,15 +2,8 @@ package com.stolensugar.web.dagger;
 
 import javax.inject.Singleton;
 
-import com.stolensugar.web.activity.CreateSpokenFormActivity;
-import com.stolensugar.web.activity.CreateUserActivity;
-import com.stolensugar.web.activity.GetSpokenFormActivity;
-import com.stolensugar.web.activity.GetUserActivity;
-import com.stolensugar.web.activity.CreateSpokenFormUserActivity;
-import com.stolensugar.web.activity.GetAllUsersActivity;
-import com.stolensugar.web.activity.GetSpokenFormByUserActivity;
+import com.stolensugar.web.activity.*;
 
-import com.stolensugar.web.activity.UpdateItemAlternativesActivity;
 import dagger.Component;
 
 @Singleton
@@ -26,4 +19,5 @@ public interface ApplicationComponent {
     GetAllUsersActivity provideGetAllUsersActivity();
     GetSpokenFormByUserActivity provideGetSpokenFormByUserActivity();
     GetSpokenFormActivity provideGetSpokenFormActivity();
+    UpdateReposActivity provideUpdateReposActivity();
 }
