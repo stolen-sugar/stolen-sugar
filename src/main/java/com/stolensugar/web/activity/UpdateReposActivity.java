@@ -13,7 +13,6 @@ import com.stolensugar.web.dao.UserDao;
 import com.stolensugar.web.dynamodb.models.SpokenFormModel;
 import com.stolensugar.web.dynamodb.models.SpokenFormUserModel;
 import com.stolensugar.web.dynamodb.models.UserModel;
-import com.stolensugar.web.update.UpdateTask;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
@@ -39,7 +38,7 @@ public class UpdateReposActivity implements RequestHandler<ScheduledEvent, Strin
 
     private static final String BASE_USER_ID = "15005956";
     private static final String BASE_REPO_NAME = "knausj85/knausj_talon";
-    private static final Logger LOG = LogManager.getLogger(UpdateTask.class);
+    private static final Logger LOG = LogManager.getLogger(UpdateReposActivity.class);
 
     @Inject
     public UpdateReposActivity(final SpokenFormDao spokenFormDao, final SpokenFormUserDao spokenFormUserDao, final UserDao userDao) {
@@ -80,10 +79,8 @@ public class UpdateReposActivity implements RequestHandler<ScheduledEvent, Strin
         }
 
         for (var fork : forks) {
-//        for (int i = 0; i < 50; i++) {
             try {
                 updateRepo(fork, baseCommitShas);
-//                updateRepo(forks.get(i), baseCommitShas);
             } catch (Exception e) {
                 LOG.error(e.getMessage());
                 e.printStackTrace();
@@ -176,19 +173,6 @@ public class UpdateReposActivity implements RequestHandler<ScheduledEvent, Strin
             }
             spokenFormDao.saveSpokenForm(spokenForms);
 
-//            for (var file : userChanges.getBaseChanges().keySet()) {
-//                System.out.println("File: " + file);
-//                for (var entry : userChanges.getBaseChanges().getOrDefault(file, Collections.emptyMap()).entrySet()) {
-//                    System.out.println(entry.getKey() + " : " + entry.getValue());
-//                }
-//            }
-//            for (var file : userChanges.getSpokenFormUsers().keySet()) {
-//                System.out.println("File: " + file);
-//                for (var spokenFormUser : userChanges.getSpokenFormUsers().getOrDefault(file, Collections.emptyMap()).values()) {
-//                    System.out.println(spokenFormUser);
-//                }
-//            }
-
             return;
         }
 
@@ -234,20 +218,6 @@ public class UpdateReposActivity implements RequestHandler<ScheduledEvent, Strin
             LOG.info("Saving " + spokenFormUser);
         }
         spokenFormUserDao.saveSpokenFormUser(spokenFormUsers);
-
-//        System.out.println("User ID: " + userChanges.getUserId());
-//        for (var file : userChanges.getBaseChanges().keySet()) {
-//            System.out.println("File: " + file);
-//            for (var entry : userChanges.getBaseChanges().getOrDefault(file, Collections.emptyMap()).entrySet()) {
-//                System.out.println(entry.getKey() + " : " + entry.getValue());
-//            }
-//        }
-//        for (var file : userChanges.getSpokenFormUsers().keySet()) {
-//            System.out.println("File: " + file);
-//            for (var spokenFormUser : userChanges.getSpokenFormUsers().getOrDefault(file, Collections.emptyMap()).values()) {
-//                System.out.println(spokenFormUser);
-//            }
-//        }
     }
 
     private Set<String> getCommitShas(GHRepository repo) throws IOException {

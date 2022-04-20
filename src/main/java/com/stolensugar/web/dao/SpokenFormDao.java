@@ -4,7 +4,6 @@ import com.amazonaws.services.dynamodbv2.datamodeling.*;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.amazonaws.services.kms.model.NotFoundException;
 import com.stolensugar.web.dynamodb.models.SpokenFormModel;
-import com.stolensugar.web.update.UpdateTask;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

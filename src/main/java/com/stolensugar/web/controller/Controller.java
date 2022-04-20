@@ -115,15 +115,4 @@ public class Controller {
 
         return new ResponseEntity<>(spokenFormActivity.execute(spokenFormRequest), HttpStatus.OK);
     }
-
-//    @PostMapping(value = "/updatereposcontrol", consumes = {"application/json"},
-//            produces = {"application/json"})
-//    public ResponseEntity<?> controlUpdateRepos(@Valid @RequestBody String command) {
-//        UpdateReposControlActivity updateReposControlActivity = component.provideUpdateReposeControlActivity();
-//
-//        UpdateReposControlRequest updateReposControlRequest =
-//                UpdateReposControlRequest.builder().command(command).build();
-//
-//        return new ResponseEntity<>(updateReposControlActivity.execute(updateReposControlRequest), HttpStatus.OK);
-//    }
 }
