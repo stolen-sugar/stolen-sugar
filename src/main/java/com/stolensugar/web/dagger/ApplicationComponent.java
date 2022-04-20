@@ -19,5 +19,5 @@ public interface ApplicationComponent {
     GetAllUsersActivity provideGetAllUsersActivity();
     GetSpokenFormByUserActivity provideGetSpokenFormByUserActivity();
     GetSpokenFormActivity provideGetSpokenFormActivity();
-//    UpdateActivity provideUpdateActivity();
+    UpdateActivity provideUpdateActivity();
 }
