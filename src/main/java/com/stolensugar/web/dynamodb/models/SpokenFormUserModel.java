@@ -18,6 +18,7 @@ import lombok.*;
 public class SpokenFormUserModel {
     public static final String USER_ID_APP_INDEX = "userId-app-index";
     public static final String CHOICE_FULL_NAME_INDEX = "choice-fullName-index";
+    
 
     @Getter(onMethod_={@DynamoDBHashKey}) @Setter @EqualsAndHashCode.Include  private String action;
     @Getter(onMethod_={@DynamoDBRangeKey, @DynamoDBIndexRangeKey(globalSecondaryIndexName =
@@ -27,7 +28,8 @@ public class SpokenFormUserModel {
     private String app;
     @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String repo;
     @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String branch;
-    @Getter(onMethod_={@DynamoDBIndexHashKey(globalSecondaryIndexName =
+
+    @Getter(onMethod_={@DynamoDBAttribute, @DynamoDBIndexHashKey(globalSecondaryIndexName =
             CHOICE_FULL_NAME_INDEX, attributeName = "choice")}) @Setter private String choice;
     @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String lastUpdated;
     @Getter(onMethod_={@DynamoDBAttribute}) @Setter private String file;
