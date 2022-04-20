@@ -2,7 +2,6 @@ package com.stolensugar.web.activity;
 
 import com.amazonaws.services.kms.model.NotFoundException;
 import com.amazonaws.services.lambda.runtime.Context;
-import com.amazonaws.services.lambda.runtime.LambdaLogger;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.amazonaws.services.lambda.runtime.events.ScheduledEvent;
 import com.stolensugar.web.CommandGroupMappings;
@@ -23,7 +22,6 @@ import org.joda.time.DateTimeZone;
 import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.ISODateTimeFormat;
 import org.kohsuke.github.*;
-import org.springframework.http.codec.json.Jackson2JsonEncoder;
 
 import javax.inject.Inject;
 import java.io.IOException;
@@ -31,7 +29,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class UpdateActivity implements RequestHandler<ScheduledEvent, String> {
+public class UpdateReposActivity implements RequestHandler<ScheduledEvent, String> {
 
     private final SpokenFormDao spokenFormDao;
     private final SpokenFormUserDao spokenFormUserDao;
@@ -44,7 +42,7 @@ public class UpdateActivity implements RequestHandler<ScheduledEvent, String> {
     private static final Logger LOG = LogManager.getLogger(UpdateTask.class);
 
     @Inject
-    public UpdateActivity(final SpokenFormDao spokenFormDao, final SpokenFormUserDao spokenFormUserDao, final UserDao userDao) {
+    public UpdateReposActivity(final SpokenFormDao spokenFormDao, final SpokenFormUserDao spokenFormUserDao, final UserDao userDao) {
         this.spokenFormDao = spokenFormDao;
         this.spokenFormUserDao = spokenFormUserDao;
         this.userDao = userDao;

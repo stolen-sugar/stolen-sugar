@@ -5,14 +5,15 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.amazonaws.services.lambda.runtime.events.ScheduledEvent;
 import com.stolensugar.web.dagger.DaggerApplicationComponent;
 
-public class UpdateActivityProvider  implements RequestHandler<ScheduledEvent, String> {
+public class UpdateReposActivityProvider implements RequestHandler<ScheduledEvent, String> {
 
-    public UpdateActivityProvider() {
+    public UpdateReposActivityProvider() {
 
     }
 
     @Override
     public String handleRequest(final ScheduledEvent event, Context context) {
-        return DaggerApplicationComponent.create().provideUpdateActivity().handleRequest(event, context);
+        return DaggerApplicationComponent.create()
+                .provideUpdateReposActivity().handleRequest(event, context);
     }
 }
