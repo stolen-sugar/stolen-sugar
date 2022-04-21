@@ -113,7 +113,7 @@ public class Controller {
     }
 
     @GetMapping(value = "/flashcards/{id}", produces = {"application/json"})
-    public ResponseEntity<?> GetMochiDeck(@PathVariable String id, @RequestParam(value = "app", required = false) String app, @RequestParam(value="file", required = false) String file) throws Exception {
+    public ResponseEntity<?> GetMochiDeck(@PathVariable String id, @RequestParam(value = "app", required = false, defaultValue = "talon") String app, @RequestParam(value="file", required = false) String file) {
         GetMochiDeckActivity getMochiDeckActivity = component.provideGetMochiDeckActivity();
 
         GetMochiDeckRequest getMochiDeckRequest =
