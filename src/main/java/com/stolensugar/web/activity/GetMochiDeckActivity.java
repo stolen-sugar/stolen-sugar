@@ -7,11 +7,15 @@ import com.stolensugar.web.dynamodb.models.SpokenFormUserModel;
 import com.stolensugar.web.model.requests.GetMochiDeckRequest;
 
 import javax.inject.Inject;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class GetMochiDeckActivity {
     private SpokenFormUserDao spokenFormUserDao;
+
     @Inject
     public GetMochiDeckActivity(SpokenFormUserDao spokenFormUserDao) {
 
@@ -20,101 +24,51 @@ public class GetMochiDeckActivity {
 
     public String execute (final GetMochiDeckRequest request) throws Exception {
 
-        if(request.getApp() == null || request.getApp() == "talon") {
+        if(request.getApp() == null || Objects.equals(request.getApp(), "talon")) {
             request.setApp("talon");
         }
 
-        List<SpokenFormUserModel> spokenFormUsers = spokenFormUserDao.getByUser(request.getUserId(), request.getApp());
+        List<SpokenFormUserModel> spokenFormUsersDAO = spokenFormUserDao.getByUser(request.getUserId(), request.getApp());
+        List<SpokenFormUserModel> spokenFormUsers = new CopyOnWriteArrayList<>(spokenFormUsersDAO);
 
-        ObjectMapper objectMapper = new ObjectMapper();
+        ObjectMapper mapper = new ObjectMapper();
 
-        MochiDeck mochiDeck = new MochiDeck();
-        Deck deck = new Deck();
-        Cards cards = new Cards();
+        MochiDeck mochiDeck = mapper.readValue(Paths.get("src/main/java" +
+                                "/com/stolensugar" +
+                                "/web/voiceCommands/tempFiles" +
+                                "/mochiMasterTest.json").toFile(),
+                                MochiDeck.class);
 
-        Templates templates = new Templates();
-        SingleTemplate ssTemplate = new SingleTemplate();
-        TemplateFields templateFields = new TemplateFields();
-        TemplateFieldParams templateName = new TemplateFieldParams();
-        TemplateFieldParams templateChoice = new TemplateFieldParams();
-        TemplateFieldParams templateContext = new TemplateFieldParams();
-        TemplateFieldParams templateFile = new TemplateFieldParams();
+        List<SingleCard> cardList = mochiDeck.getDecks().get(0).getCards().getList();
 
-        templateName.setId("~:name");
-        templateName.setName("action");
-        templateName.setPos("a");
+        if(request.getFile() != null) {
+            spokenFormUsers.removeIf(spokenFormUserModel -> !Objects.equals(spokenFormUserModel.getFile(), request.getFile()));
 
-        templateChoice.setId("~:jvjwdOZ1");
-        templateChoice.setName("phrase");
-        templateChoice.setPos("m");
+            cardList.removeIf(card -> !Objects.equals(card.getFields().getFile().getValue(), request.getFile()));
 
-        templateContext.setId("~:Spe228xW");
-        templateContext.setName("context");
-        templateContext.setPos("s");
+            for(SingleCard card : cardList) {
+                for(SpokenFormUserModel spokenFormUserModel : spokenFormUsers) {
+                    if (card.getFields().getName().getValue().equals(spokenFormUserModel.getAction())) {
+                        card.getFields().getChoice().setValue(spokenFormUserModel.getChoice());
+                        spokenFormUsers.remove(spokenFormUserModel);
+                    }
+                }
+            }
 
-        templateFile.setId("~:nyZmZayN");
-        templateFile.setName("file");
-        templateFile.setPos("v");
+            if(spokenFormUsers.size() > 0) {
+                for(SpokenFormUserModel spokenFormUserModel : spokenFormUsers) {
+                    SingleCard card = cardList.get(0);
+                    card.getFields().getName().setValue(spokenFormUserModel.getAction());
+                    card.getFields().getChoice().setValue(spokenFormUserModel.getChoice());
+                    cardList.add(card);
+                }
+            }
 
-        templateFields.setName(templateName);
-        templateFields.setChoice(templateChoice);
-        templateFields.setContext(templateContext);
-        templateFields.setFile(templateFile);
-        List<SingleTemplate> ssTemplateList = new ArrayList<>();
-        ssTemplate.setFields(templateFields);
-        ssTemplateList.add(ssTemplate);
-
-        templates.setList(ssTemplateList);
-
-        mochiDeck.setTemplates(templates);
-
-        List<SingleCard> cardList = new ArrayList<>();
-
-        for(SpokenFormUserModel spokenFormUserModel : spokenFormUsers) {
-            SingleCard singleCard = new SingleCard();
-            Fields fields = new Fields();
-            FieldParams name = new FieldParams();
-            FieldParams choice = new FieldParams();
-            FieldParams context = new FieldParams();
-            FieldParams file = new FieldParams();
-
-            name.setId("~:name");
-            name.setValue(spokenFormUserModel.getAction());
-
-            choice.setId("~:jvjwdOZ1");
-            choice.setValue(spokenFormUserModel.getChoice());
-
-            context.setId("~:Spe228xW");
-            context.setValue(spokenFormUserModel.getContext());
-
-            file.setId("~:nyZmZayN");
-            file.setValue(spokenFormUserModel.getFile());
-
-            fields.setName(name);
-            fields.setChoice(choice);
-            fields.setContext(context);
-            fields.setFile(file);
-
-            singleCard.setName(spokenFormUserModel.getAction());
-            singleCard.setFields(fields);
-            cardList.add(singleCard);
+            mochiDeck.getDecks().get(0).getCards().setList(cardList);
         }
 
-        cards.setList(cardList);
-        deck.setCards(cards);
 
-        List<Deck> deckList = new ArrayList<>();
-        deckList.add(deck);
-
-
-
-        mochiDeck.setDecks(deckList);
-
-        objectMapper.writeValueAsString(mochiDeck);
-
-
-
-        return objectMapper.writeValueAsString(mochiDeck);
+        return mapper.writeValueAsString(mochiDeck);
     }
 
 

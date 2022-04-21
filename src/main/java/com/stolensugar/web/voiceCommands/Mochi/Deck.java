@@ -22,11 +22,11 @@ import lombok.*;
 public class Deck {
 
     @JsonProperty("~:name")
-    private @Getter @Setter String name = "keys";
+    private @Getter @Setter String name;
     @JsonProperty("~:id")
-    private @Getter @Setter String id = "~:UHiXar0B";
+    private @Getter @Setter String id;
     @JsonProperty("~:sort")
-    private @Getter @Setter Integer sort = 0;
+    private @Getter @Setter Integer sort;
     @JsonProperty("~:cards")
     private @Getter @Setter Cards cards;
 

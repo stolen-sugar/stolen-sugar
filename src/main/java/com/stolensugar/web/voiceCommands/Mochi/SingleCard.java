@@ -21,13 +21,13 @@ import lombok.*;
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class SingleCard {
     @JsonProperty("~:content")
-    private @Getter @Setter String content = "**What is talon the phrase for action below?**";
+    private @Getter @Setter String content;
     @JsonProperty("~:name")
     private @Getter @Setter String name;
     @JsonProperty("~:deck-id")
-    private @Getter @Setter String deckId = "~:UHiXar0B";
+    private @Getter @Setter String deckId;
     @JsonProperty("~:fields")
     private @Getter @Setter Fields fields;
     @JsonProperty("~:template-id")
-    private @Getter @Setter String templateId = "~:ftOIZq7E";
+    private @Getter @Setter String templateId;
 }

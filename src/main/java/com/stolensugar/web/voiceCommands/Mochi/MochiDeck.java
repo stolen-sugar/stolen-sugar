@@ -23,7 +23,7 @@ import java.util.List;
 public class MochiDeck {
 
     @JsonProperty("~:decks")
-    private @Getter @Setter List<Deck> decks = new ArrayList<>();
+    private @Getter @Setter List<Deck> decks;
     @JsonProperty("~:version")
     private @Getter @Setter Integer version = 2;
     @JsonProperty("~:templates")

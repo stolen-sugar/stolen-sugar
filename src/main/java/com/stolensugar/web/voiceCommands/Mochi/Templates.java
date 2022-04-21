@@ -20,6 +20,6 @@ import java.util.List;
 public class Templates {
 
     @JsonProperty("~#list")
-    private @Getter @Setter List<SingleTemplate> list = null;
+    private @Getter @Setter List<SingleTemplate> list;
 
 }

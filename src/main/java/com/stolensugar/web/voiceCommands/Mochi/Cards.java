@@ -20,5 +20,5 @@ import java.util.List;
 public class Cards {
 
     @JsonProperty("~#list")
-    private @Getter @Setter List<SingleCard> list = null;
+    private @Getter @Setter List<SingleCard> list;
 }

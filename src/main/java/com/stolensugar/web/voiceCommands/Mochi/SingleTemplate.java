@@ -24,13 +24,13 @@ import lombok.*;
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class SingleTemplate {
     @JsonProperty("~:id")
-    private @Getter @Setter String id = "~:ftOIZq7E";
+    private @Getter @Setter String id;
     @JsonProperty("~:name")
-    private @Getter @Setter String name = "stolen-sugar";
+    private @Getter @Setter String name;
     @JsonProperty("~:content")
-    private @Getter @Setter String content = "**What is talon the phrase for action below?** \n\n> <span style=\"color:red\"><<action>></span>\n\n**context**: <<context>>\n**file**: <<file>>\n---\n**<<phrase>>**";
+    private @Getter @Setter String content;
     @JsonProperty("~:pos")
-    private @Getter @Setter String pos = "zU";
+    private @Getter @Setter String pos;
     @JsonProperty("~:fields")
     private @Getter @Setter TemplateFields fields;
 }

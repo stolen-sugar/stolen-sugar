@@ -20,15 +20,11 @@ import lombok.*;
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class Fields {
     @JsonProperty("~:name")
-    private @Getter @Setter
-    com.stolensugar.web.voiceCommands.Mochi.FieldParams name;
+    private @Getter @Setter FieldParams name;
     @JsonProperty("~:jvjwdOZ1")
-    private @Getter @Setter
-    com.stolensugar.web.voiceCommands.Mochi.FieldParams choice;
+    private @Getter @Setter FieldParams choice;
     @JsonProperty("~:Spe228xW")
-    private @Getter @Setter
-    com.stolensugar.web.voiceCommands.Mochi.FieldParams context;
+    private @Getter @Setter FieldParams context;
     @JsonProperty("~:nyZmZayN")
-    private @Getter @Setter
-    com.stolensugar.web.voiceCommands.Mochi.FieldParams file;
+    private @Getter @Setter FieldParams file;
 }

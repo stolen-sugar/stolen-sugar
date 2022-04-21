@@ -20,15 +20,11 @@ import lombok.*;
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class TemplateFields {
     @JsonProperty("~:name")
-    private @Getter @Setter
-    com.stolensugar.web.voiceCommands.Mochi.TemplateFieldParams name;
+    private @Getter @Setter TemplateFieldParams name;
     @JsonProperty("~:jvjwdOZ1")
-    private @Getter @Setter
-    com.stolensugar.web.voiceCommands.Mochi.TemplateFieldParams choice;
+    private @Getter @Setter TemplateFieldParams choice;
     @JsonProperty("~:Spe228xW")
-    private @Getter @Setter
-    com.stolensugar.web.voiceCommands.Mochi.TemplateFieldParams context;
+    private @Getter @Setter TemplateFieldParams context;
     @JsonProperty("~:nyZmZayN")
-    private @Getter @Setter
-    com.stolensugar.web.voiceCommands.Mochi.TemplateFieldParams file;
+    private @Getter @Setter TemplateFieldParams file;
 }
