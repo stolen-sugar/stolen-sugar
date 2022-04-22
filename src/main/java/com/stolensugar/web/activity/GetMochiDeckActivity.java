@@ -1,6 +1,5 @@
 package com.stolensugar.web.activity;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.stolensugar.web.voiceCommands.Mochi.*;
 import com.stolensugar.web.dao.SpokenFormUserDao;
@@ -12,7 +11,6 @@ import javax.inject.Inject;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.Locale;
 import java.util.Objects;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -37,7 +35,7 @@ public class GetMochiDeckActivity {
      * @param request Request object containing the user ID, app (optional), and file (optional)
      * @return JSON formatted String
      */
-    public String execute (final GetMochiDeckRequest request) {
+    public MochiDeck execute (final GetMochiDeckRequest request) {
 
         // Retrieve list of spoken forms from DB for the requested user and app
         List<SpokenFormUserModel> spokenFormUsersDAO = spokenFormUserDao.getByUser(request.getUserId(), request.getApp());
@@ -124,15 +122,8 @@ public class GetMochiDeckActivity {
         mochiDeck.getDecks().get(0).getCards().setList(cardList);
 
 
-        // Return mochi deck json
-        try {
-            return mapper.writeValueAsString(mochiDeck);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-            System.out.println("Failed to write MochiDeck object to String!");
-        }
-
-        return "Failed to build deck";
+        // Return mochi deck
+        return mochiDeck;
     }
 
 
