@@ -11,8 +11,10 @@ import javax.inject.Inject;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class GetMochiDeckActivity {
     private SpokenFormUserDao spokenFormUserDao;
@@ -38,10 +40,9 @@ public class GetMochiDeckActivity {
     public MochiDeck execute (final GetMochiDeckRequest request) {
 
         // Retrieve list of spoken forms from DB for the requested user and app
-        List<SpokenFormUserModel> spokenFormUsersDAO = spokenFormUserDao.getByUser(request.getUserId(), request.getApp());
+        List<SpokenFormUserModel> spokenFormUsers = spokenFormUserDao.getByUser(request.getUserId(), request.getApp());
 
-        // Copy list to thread safe and modifiable collection type
-        List<SpokenFormUserModel> spokenFormUsers = new CopyOnWriteArrayList<>(spokenFormUsersDAO);
+        Map<String, SpokenFormUserModel> spokenFormUserByAction;
 
         ObjectMapper mapper = new ObjectMapper();
 
@@ -62,45 +63,36 @@ public class GetMochiDeckActivity {
         // Get the list of cards from the master deck
         List<SingleCard> cardList = mochiDeck.getDecks().get(0).getCards().getList();
 
-        if(request.getFile() != null) {
-            // Remove the spoken forms which are not for the requested file
-            spokenFormUsers.removeIf(spokenFormUserModel -> !Objects.equals(spokenFormUserModel.getFile(), request.getFile()));
+        // group spokenFormUsers by Action
+        spokenFormUserByAction =
+                spokenFormUsers.stream().filter(x -> x.getFile().equals(request.getFile()))
+                        .collect(Collectors.toMap(SpokenFormUserModel::getAction,
+                                Function.identity(), (existing,
+                                replacement) -> existing));
 
-            // Remove the cards which are not for the requested file
-            cardList.removeIf(card -> !Objects.equals(card.getFields().getFile().getValue(), request.getFile()));
 
-            //Set deck name to refer to file for easier ID
-            mochiDeck.getDecks().get(0).setName(request.getFile() + " Spoken Phrases");
+        // Remove the cards which are not for the requested file
+        cardList.removeIf(card -> !Objects.equals(card.getFields().getFile().getValue(), request.getFile()));
 
-            // For each card, find the spoken form that matches and assign the users specified choice to that card
-            for(SingleCard card : cardList) {
-                for(SpokenFormUserModel spokenFormUserModel : spokenFormUsers) {
-                    if (card.getFields().getName().getValue().equals(spokenFormUserModel.getAction())) {
-                        card.getFields().getChoice().setValue(spokenFormUserModel.getChoice());
-                        //Remove the spoken form from the users list of spoken forms if a match is found
-                        spokenFormUsers.remove(spokenFormUserModel);
-                    }
-                }
-            }
-        // If no file was specified in request, find and replace all the users custom spoken forms regardless of file
-        } else {
-            mochiDeck.getDecks().get(0).setName("Spoken Phrases (Complete)");
-            for(SingleCard card : cardList) {
-                for(SpokenFormUserModel spokenFormUserModel : spokenFormUsers) {
-                    if (card.getFields().getName().getValue().equals(spokenFormUserModel.getAction()) &&
-                            card.getFields().getFile().getValue().equals(spokenFormUserModel.getFile())) {
+        //Set deck name to refer to file for easier ID
+        mochiDeck.getDecks().get(0).setName(request.getFile() + " Spoken Phrases");
 
-                        card.getFields().getChoice().setValue(spokenFormUserModel.getChoice());
-                        // Remove the spoken form from the users list of spoken forms if a match is found
-                        spokenFormUsers.remove(spokenFormUserModel);
-                    }
-                }
+        // For each card, find the spoken form that matches and assign the users specified choice to that card
+        for(SingleCard card : cardList) {
+            String action = card.getFields().getName().getValue();
+            if(spokenFormUserByAction.containsKey(action)) {
+                String customChoice =
+                        spokenFormUserByAction.get(action).getChoice();
+
+                card.getFields().getChoice().setValue(customChoice);
+                spokenFormUserByAction.remove(action);
             }
         }
 
-        // If a user has a spoken form that wasn't able to find a match from the master card list, build and add it
-        if(spokenFormUsers.size() > 0) {
-            for(SpokenFormUserModel spokenFormUserModel : spokenFormUsers) {
+//         If a user has a spoken form that wasn't able to find a match from the master card list, build and add it
+        if(spokenFormUserByAction.values().size() > 0) {
+            for(SpokenFormUserModel spokenFormUserModel :
+                    spokenFormUserByAction.values()) {
                 SingleCard card = cardList.get(0);
                 card.getFields().getName().setValue(spokenFormUserModel.getAction());
                 card.getFields().getChoice().setValue(spokenFormUserModel.getChoice());
