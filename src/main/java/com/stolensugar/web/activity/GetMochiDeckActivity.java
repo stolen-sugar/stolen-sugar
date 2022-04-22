@@ -6,11 +6,13 @@ import com.stolensugar.web.voiceCommands.Mochi.*;
 import com.stolensugar.web.dao.SpokenFormUserDao;
 import com.stolensugar.web.dynamodb.models.SpokenFormUserModel;
 import com.stolensugar.web.model.requests.GetMochiDeckRequest;
+import org.apache.commons.lang3.RandomStringUtils;
 
 import javax.inject.Inject;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -69,6 +71,9 @@ public class GetMochiDeckActivity {
             // Remove the cards which are not for the requested file
             cardList.removeIf(card -> !Objects.equals(card.getFields().getFile().getValue(), request.getFile()));
 
+            //Set deck name to refer to file for easier ID
+            mochiDeck.getDecks().get(0).setName(request.getFile() + " Spoken Phrases");
+
             // For each card, find the spoken form that matches and assign the users specified choice to that card
             for(SingleCard card : cardList) {
                 for(SpokenFormUserModel spokenFormUserModel : spokenFormUsers) {
@@ -81,6 +86,7 @@ public class GetMochiDeckActivity {
             }
         // If no file was specified in request, find and replace all the users custom spoken forms regardless of file
         } else {
+            mochiDeck.getDecks().get(0).setName("Spoken Phrases (Complete)");
             for(SingleCard card : cardList) {
                 for(SpokenFormUserModel spokenFormUserModel : spokenFormUsers) {
                     if (card.getFields().getName().getValue().equals(spokenFormUserModel.getAction()) &&
@@ -105,9 +111,18 @@ public class GetMochiDeckActivity {
                 cardList.add(card);
             }
         }
+        // Generate new deck id so there are no duplicates
+        String newDeckId = "~:" + RandomStringUtils.randomAlphanumeric(8).toUpperCase();
+        mochiDeck.getDecks().get(0).setId(newDeckId);
+
+        // Set every card's deck id to the new deck id
+        for(SingleCard card : cardList) {
+            card.setDeckId(newDeckId);
+        }
 
         // Set the deck card list to the updated list
         mochiDeck.getDecks().get(0).getCards().setList(cardList);
+
 
         // Return mochi deck json
         try {
