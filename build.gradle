@@ -89,3 +89,12 @@ compileTestKotlin {
         jvmTarget = "1.8"
     }
 }
+
+task buildZip(type: Zip) {
+	from compileJava
+	from compileKotlin
+	from processResources
+	into('./lib') {
+		from configurations.runtimeClasspath
+	}
+}
