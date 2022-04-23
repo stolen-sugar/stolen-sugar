@@ -38,47 +38,51 @@ public class GetMochiDeckActivity {
      * @return JSON formatted String
      */
     public MochiDeck execute (final GetMochiDeckRequest request) {
-
-        // Retrieve list of spoken forms from DB for the requested user and app
         List<SpokenFormUserModel> spokenFormUsers = spokenFormUserDao.getByUser(request.getUserId(), request.getApp());
-
-        Map<String, SpokenFormUserModel> spokenFormUserByAction;
-
-        ObjectMapper mapper = new ObjectMapper();
-
-        MochiDeck mochiDeck = null;
-
-        // Read in mochi master deck json to a MochiDeck object
-        try {
-            mochiDeck = mapper.readValue(Paths.get("src/main/java" +
-                                    "/com/stolensugar" +
-                                    "/web/voiceCommands/tempFiles" +
-                                    "/mochiMasterTest.json").toFile(),
-                                    MochiDeck.class);
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("Failed to access master file!");
-        }
-
-        // Get the list of cards from the master deck
-        List<SingleCard> cardList = mochiDeck.getDecks().get(0).getCards().getList();
-
-        // group spokenFormUsers by Action
-        spokenFormUserByAction =
-                spokenFormUsers.stream().filter(x -> x.getFile().equals(request.getFile()))
-                        .collect(Collectors.toMap(SpokenFormUserModel::getAction,
-                                Function.identity(), (existing,
-                                replacement) -> existing));
-
-
-        // Remove the cards which are not for the requested file
-        cardList.removeIf(card -> !Objects.equals(card.getFields().getFile().getValue(), request.getFile()));
-
-        //Set deck name to refer to file for easier ID
+        MochiDeck mochiDeck = createMochiDeckFromFile();
         mochiDeck.getDecks().get(0).setName(request.getFile() + " Spoken Phrases");
+        List<SingleCard> cardList = mochiDeck.getDecks().get(0).getCards().getList();
+        Map<String, SpokenFormUserModel> spokenFormUsersByAction = groupByAction(spokenFormUsers, request.getFile());
+        cardList.removeIf(card -> !Objects.equals(card.getFields().getFile().getValue(), request.getFile()));
+        assignCustomSpokenForms(cardList, spokenFormUsersByAction);
+        createOrphanCards(cardList, spokenFormUsersByAction);
+        generateNewDeckId(mochiDeck, cardList);
 
-        // For each card, find the spoken form that matches and assign the users specified choice to that card
-        for(SingleCard card : cardList) {
+        return mochiDeck;
+    }
+
+    /**
+     * Filter SpokenFormUserModels that contain a given file, then group the
+     * remaining by action.
+     * @param spokenFormUsers The list of custom spoken forms for a single user
+     * @param file the file used for filtering
+    */
+    private Map<String, SpokenFormUserModel> groupByAction(
+            List<SpokenFormUserModel> spokenFormUsers,
+            String file)
+    {
+      return spokenFormUsers.stream()
+              .filter(x -> x.getFile().equals(file))
+              .collect(Collectors.toMap(
+                      SpokenFormUserModel::getAction,
+                      Function.identity(),
+                      (existing, replacement) -> existing)
+              );
+    }
+
+    /**
+     * For each card, replace the spoken form if the user is using an
+     * alternative.
+     * @param cardList List of cards which contain default values for each
+     *                 spoken form
+     * @param spokenFormUserByAction List of a user's custom spoken forms
+     */
+    private void assignCustomSpokenForms(
+            List<SingleCard> cardList,
+            Map<String, SpokenFormUserModel> spokenFormUserByAction)
+        {
+
+        cardList.forEach( card -> {
             String action = card.getFields().getName().getValue();
             if(spokenFormUserByAction.containsKey(action)) {
                 String customChoice =
@@ -87,12 +91,21 @@ public class GetMochiDeckActivity {
                 card.getFields().getChoice().setValue(customChoice);
                 spokenFormUserByAction.remove(action);
             }
-        }
+        });
+    }
 
-//         If a user has a spoken form that wasn't able to find a match from the master card list, build and add it
-        if(spokenFormUserByAction.values().size() > 0) {
+    /**
+     * Create a new card for each spoken form that was not included in the
+     * master card list
+     * @param cardList List of cards which contain default values for each
+     *                 spoken form
+     * @param spokenFormUserByActions List of a user's custom spoken forms
+     */
+    private void createOrphanCards(List<SingleCard> cardList,
+            Map<String, SpokenFormUserModel> spokenFormUserByActions) {
+        if(spokenFormUserByActions.size() > 0) {
             for(SpokenFormUserModel spokenFormUserModel :
-                    spokenFormUserByAction.values()) {
+                    spokenFormUserByActions.values()) {
                 SingleCard card = cardList.get(0);
                 card.getFields().getName().setValue(spokenFormUserModel.getAction());
                 card.getFields().getChoice().setValue(spokenFormUserModel.getChoice());
@@ -101,22 +114,39 @@ public class GetMochiDeckActivity {
                 cardList.add(card);
             }
         }
-        // Generate new deck id so there are no duplicates
-        String newDeckId = "~:" + RandomStringUtils.randomAlphanumeric(8).toUpperCase();
-        mochiDeck.getDecks().get(0).setId(newDeckId);
+    }
 
-        // Set every card's deck id to the new deck id
-        for(SingleCard card : cardList) {
-            card.setDeckId(newDeckId);
+    /**
+     * Create MochiDeck object from master file
+     */
+    private MochiDeck createMochiDeckFromFile() {
+        MochiDeck mochiDeck = null;
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            mochiDeck = mapper.readValue(Paths.get("src/main/java" +
+                            "/com/stolensugar" +
+                            "/web/voiceCommands/tempFiles" +
+                            "/mochiMasterTest.json").toFile(),
+                    MochiDeck.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Failed to access master file!");
         }
 
-        // Set the deck card list to the updated list
-        mochiDeck.getDecks().get(0).getCards().setList(cardList);
-
-
-        // Return mochi deck
         return mochiDeck;
     }
 
+    /**
+     * Generate new Deck id and attach each card to the deck
+     * @param mochiDeck
+     * @param cardList
+     */
+    private void generateNewDeckId(MochiDeck mochiDeck, List<SingleCard> cardList) {
+        String newDeckId = "~:" + RandomStringUtils.randomAlphanumeric(8).toUpperCase();
+        mochiDeck.getDecks().get(0).setId(newDeckId);
 
+        for(SingleCard card : cardList) {
+            card.setDeckId(newDeckId);
+        }
+    }
 }
