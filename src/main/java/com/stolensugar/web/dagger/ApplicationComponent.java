@@ -20,4 +20,5 @@ public interface ApplicationComponent {
     GetSpokenFormByUserActivity provideGetSpokenFormByUserActivity();
     GetSpokenFormActivity provideGetSpokenFormActivity();
     GetMochiDeckActivity provideGetMochiDeckActivity();
+    UpdateReposActivity provideUpdateReposActivity();
 }

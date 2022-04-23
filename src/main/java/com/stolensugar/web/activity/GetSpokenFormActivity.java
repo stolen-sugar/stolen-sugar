@@ -52,10 +52,16 @@ public class GetSpokenFormActivity {
             spokenFormModels.forEach(spokenForm -> spokenForms.add(ModelConverter.toSpokenForm(spokenForm)));
 
             return GetSpokenFormResponse.builder()
-                    .spokenFormGroups(groupSpokenForms(spokenForms))
+                    .spokenFormGroups(groupSpokenForms(removeEmptySpokenForms(spokenForms)))
                     .build();
         }
         return null;
+    }
+
+    private List<SpokenForm> removeEmptySpokenForms(List<SpokenForm> spokenForms) {
+        spokenForms.removeIf(x -> x.getAlternatives() == null || x.getAlternatives().size() == 0);
+
+        return spokenForms;
     }
 
     private Map<String, List<SpokenForm>> groupSpokenForms(List<SpokenForm> spokenForms) {
